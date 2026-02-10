@@ -6,8 +6,7 @@ import threading
 class DownloadManager:
     def __init__(self, total_files):
         self.total_files = total_files
-        self.active_downloads = {} # file_id -> info
-        self.completed_downloads = []
+        self.downloads = {} # file_id -> info
         self.lock = threading.Lock()
         self.start_line = 0
         self.last_draw_time = 0
@@ -19,7 +18,8 @@ class DownloadManager:
             if file_id not in self.scroll_offsets:
                 self.scroll_offsets[file_id] = 0
                 
-            self.active_downloads[file_id] = {
+            self.downloads[file_id] = {
+                'file_id': file_id,
                 'filename': filename,
                 'percent': percent,
                 'rate': rate_str,
@@ -30,22 +30,23 @@ class DownloadManager:
 
     def complete_download(self, file_id, filename, rate_str, error=None, final=True):
         with self.lock:
-            if file_id in self.active_downloads:
-                info = self.active_downloads.pop(file_id)
+            if file_id in self.downloads:
+                info = self.downloads[file_id]
                 if file_id in self.scroll_offsets:
                     del self.scroll_offsets[file_id]
                 if error:
                     if final:
-                        info['status'] = f"Failed"
+                        info['status'] = "Failed"
                     else:
                         info['status'] = "Queued"
                     info['percent'] = 0
+                    info['rate'] = "0.0 KB/s"
+                    info['eta'] = "--"
                 else:
                     info['status'] = "Completed"
                     info['percent'] = 100
-                info['rate'] = rate_str
-                info['eta'] = "Done" if not error else "--"
-                self.completed_downloads.append(info)
+                    info['rate'] = rate_str
+                    info['eta'] = "Done"
             self._draw()
 
     def _draw(self):
@@ -53,23 +54,35 @@ class DownloadManager:
         
         # Update scroll offsets every 0.3 seconds
         if current_time - self.last_scroll_time >= 0.3:
-            for file_id, info in self.active_downloads.items():
+            for file_id, info in self.downloads.items():
                 filename = info['filename']
                 if len(filename) > 20:
                     self.scroll_offsets[file_id] = (self.scroll_offsets.get(file_id, 0) + 1) % (len(filename) + 5)
             self.last_scroll_time = current_time
 
-        if current_time - self.last_draw_time < 0.1 and len(self.active_downloads) > 0:
+        active_count = sum(1 for info in self.downloads.values() if info['status'] == "Downloading")
+        if current_time - self.last_draw_time < 0.1 and active_count > 0:
              return
         self.last_draw_time = current_time
 
-        # Clean way:
-        output = []
-        for info in self.completed_downloads:
-            output.append(self._format_line(info, is_completed=True))
+        # Sort: Completed/Failed/Skipped on top, Downloading/Queued on bottom
+        # Within each group, sort by file_id
+        def sort_key(item):
+            info = item[1]
+            status = info['status']
+            priority = 0
+            if status in ["Completed", "Failed", "Skipped"]:
+                priority = 0
+            else:
+                priority = 1
+            return (priority, item[0])
+
+        sorted_items = sorted(self.downloads.items(), key=sort_key)
         
-        for file_id in sorted(self.active_downloads.keys()):
-            output.append(self._format_line(self.active_downloads[file_id], file_id=file_id))
+        output = []
+        for file_id, info in sorted_items:
+            is_done = info['status'] in ["Completed", "Failed", "Skipped"]
+            output.append(self._format_line(info, file_id=file_id, is_completed=is_done))
             
         # Move up by the number of lines we previously drew
         if hasattr(self, 'prev_lines') and self.prev_lines > 0:
@@ -89,16 +102,13 @@ class DownloadManager:
         eta_str = info['eta']
         status = info['status']
         
-        # Scroll or truncate filename
+        # Scroll filename
         display_filename = filename
         if len(filename) > 20:
-            if is_completed:
-                display_filename = filename[:17] + "..."
-            else:
-                offset = self.scroll_offsets.get(file_id, 0)
-                # Padding filename with spaces for smooth loop
-                padded_name = filename + "     "
-                display_filename = (padded_name[offset:] + padded_name[:offset])[:20]
+            offset = self.scroll_offsets.get(file_id, 0)
+            # Padding filename with spaces for smooth loop
+            padded_name = filename + "     "
+            display_filename = (padded_name[offset:] + padded_name[:offset])[:20]
         
         # Truncate filename if too long for simple fallback
         try:

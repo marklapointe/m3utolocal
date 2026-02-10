@@ -96,7 +96,7 @@ def main():
 
     print("\nStarting downloads...")
     
-    manager = DownloadManager(len(matches)) if args.threads > 1 else None
+    manager = DownloadManager(len(matches))
     
     def process_download(i, channel, final=True):
         tvg_id = channel.get('tvg-id', '')
@@ -104,6 +104,11 @@ def main():
         url = channel['url']
         
         display_name = tvg_id if tvg_id else tvg_name
+        
+        # Ensure it exists in manager early with Queued status if not already there
+        if manager:
+            # We don't have all info here yet, but download_file will call update_progress
+            pass
         safe_base = sanitize_filename(display_name)
         
         ext_match = re.search(r'(\.[a-zA-Z0-9]{2,4})(\?.*)?$', url)
@@ -123,8 +128,6 @@ def main():
             else:
                 download_file(url, temp_path, manager=manager, file_id=i, final=final)
                 if os.path.exists(temp_path):
-                    if manager is None:
-                        print(f"Moving '{target_filename}' to current directory.")
                     if os.path.exists(final_path):
                         os.remove(final_path)
                     os.rename(temp_path, final_path)
@@ -135,9 +138,22 @@ def main():
         failed_downloads = []
         current_threads = args.threads
         
+        # Initialize manager with all files as Queued if multi-file
+        for i, channel in enumerate(matches):
+            tvg_id = channel.get('tvg-id', '')
+            tvg_name = channel.get('tvg-name', '')
+            display_name = tvg_id if tvg_id else tvg_name
+            # Truncate filename logic for target_filename
+            ext_match = re.search(r'(\.[a-zA-Z0-9]{2,4})(\?.*)?$', channel['url'])
+            extension = ext_match.group(1) if ext_match else ""
+            if len(matches) > 1:
+                target_filename = f"{sanitize_filename(display_name)}_{i+1}{extension}"
+            else:
+                target_filename = f"{sanitize_filename(display_name)}{extension}"
+            manager.update_progress(i, target_filename, 0, "0.0 KB/s", "--", status="Queued")
+
         if current_threads > 1:
             # Multi-threaded pass with dynamic thread reduction
-            manager = DownloadManager(len(matches))
             active_futures = {}
             remaining_to_submit = list(enumerate(matches))
             

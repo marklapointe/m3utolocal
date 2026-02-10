@@ -18,6 +18,7 @@ This application parses an M3U file (`chans.m3u`), searches for specific content
 - **Conflict Resolution**: Appends a numeric suffix to filenames if multiple matches for the same title are found.
 - **User Confirmation**: Displays matched items and asks for confirmation before starting downloads.
 - **Automation Friendly**: Includes a `-y` flag to bypass confirmation prompts.
+- **Simultaneous Downloads**: Use the `-t` or `--threads` flag to specify the number of concurrent downloads.
 - **Custom M3U Path**: Specify an alternative M3U file using the `-m` or `--m3u` argument.
 
 ## Installation
@@ -75,7 +76,11 @@ m3utolocal -m /path/to/your/playlist.m3u "Movie Title"
 ```
 
 ## Directory Structure
-- `main.py`: The main script.
+- `main.py`: The entry point of the application.
+- `utils.py`: Utility functions for size formatting, time formatting, and M3U parsing.
+- `tui.py`: Interactive TUI selection menu using curses.
+- `download_manager.py`: Manages multi-threaded download progress and UI updates.
+- `downloader.py`: Logic for downloading files with support for resume and progress bars.
 - `Makefile`: Build and installation script.
 - `requirements.txt`: Python dependencies.
 - `ports/`: FreeBSD ports entry.

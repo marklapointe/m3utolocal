@@ -15,16 +15,24 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	mlapointe
 GH_PROJECT=	m3uToLocal
 
-SHEBANG_FILES=	main.py
+SHEBANG_FILES=	main.py utils.py tui.py download_manager.py downloader.py
 
 NO_ARCH=	yes
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/m3utolocal \
+		bin/utils.py \
+		bin/tui.py \
+		bin/download_manager.py \
+		bin/downloader.py \
 		share/man/man1/m3utolocal.1.gz
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/main.py ${STAGEDIR}${PREFIX}/bin/m3utolocal
+	${INSTALL_DATA} ${WRKSRC}/utils.py ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_DATA} ${WRKSRC}/tui.py ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_DATA} ${WRKSRC}/download_manager.py ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_DATA} ${WRKSRC}/downloader.py ${STAGEDIR}${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/man/m3utolocal.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
 .include <bsd.port.mk>

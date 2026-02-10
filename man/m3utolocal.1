@@ -1,0 +1,35 @@
+.TH M3UTOLOCAL 1 "February 2026" "m3utolocal 1.0.0" "User Commands"
+.SH NAME
+m3utolocal \- Download files from an M3U file based on search query
+.SH SYNOPSIS
+.B m3utolocal
+[\fIOPTIONS\fR] \fIQUERY\fR
+.SH DESCRIPTION
+.B m3utolocal
+is a command-line tool that searches for channels in an M3U playlist file and downloads the associated files. It filters out live streams by checking file extensions and provides an interactive TUI selection menu to choose specific matches. It also features a granular, color-coded progress bar during downloads.
+.PP
+The tool validates file sizes before downloading. If a local file already exists and its size matches the remote file, the download is skipped. If the sizes differ, the file is redownloaded.
+.SH ARGUMENTS
+.TP
+.I QUERY
+Search query to match against \fBtvg-id\fR or \fBtvg-name\fR attributes in the M3U file.
+.SH OPTIONS
+.TP
+.BR \-m ", " \-\-m3u " \fIFILE\fR"
+Path to the M3U file (default: \fIchans.m3u\fR).
+.TP
+.BR \-y ", " \-\-yes
+Bypass the interactive TUI selection and download all matches automatically.
+.TP
+.BR \-h ", " \-\-help
+Show the help message and exit.
+.SH FILES
+.TP
+.I downloads/
+Directory where downloaded files are stored.
+.SH SEE ALSO
+.BR python (1)
+.SH AUTHOR
+Originally written by Mark LaPointe <mark@cloudbsd.org>.
+.SH LICENSE
+This project is licensed under the 2-Clause BSD License.

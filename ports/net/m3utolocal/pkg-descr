@@ -1,0 +1,4 @@
+m3utolocal is a command-line tool to parse M3U playlists and download
+video files (MP4, MKV, etc.) based on search queries matching tvg-id
+or tvg-name fields. It avoids downloading live streams by checking
+file extensions and uses temporary files for safe downloads.

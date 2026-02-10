@@ -4,7 +4,7 @@ import time
 import requests
 from utils import format_time
 
-def download_file(url, target_filename, manager=None, file_id=None):
+def download_file(url, target_filename, manager=None, file_id=None, final=True):
     display_name = os.path.basename(target_filename)
     try:
         # Get remote file size first
@@ -17,7 +17,7 @@ def download_file(url, target_filename, manager=None, file_id=None):
                 local_size = os.path.getsize(target_filename)
                 if total_size > 0 and local_size == total_size:
                     if manager:
-                        manager.complete_download(file_id, display_name, "Skipped")
+                        manager.complete_download(file_id, display_name, "Skipped", final=final)
                     else:
                         print(f"File '{target_filename}' already exists and size matches. Skipping.")
                     return
@@ -135,7 +135,7 @@ def download_file(url, target_filename, manager=None, file_id=None):
                                         last_update_time = current_time
                     except KeyboardInterrupt:
                         if manager:
-                             manager.complete_download(file_id, display_name, "0.0 KB/s", error="Interrupted")
+                             manager.complete_download(file_id, display_name, "0.0 KB/s", error="Interrupted", final=final)
                         else:
                              # For single thread, this is caught by the loop in main()
                              pass
@@ -149,12 +149,16 @@ def download_file(url, target_filename, manager=None, file_id=None):
                 os.rename(temp_path, target_filename)
                 
                 if manager:
-                    manager.complete_download(file_id, display_name, rate_str)
+                    manager.complete_download(file_id, display_name, rate_str, final=final)
                 else:
                     print(f"Successfully downloaded '{target_filename}'.")
                     
+    except KeyboardInterrupt:
+        # Re-raise KeyboardInterrupt to be handled by the main thread
+        raise
     except Exception as e:
         if manager:
-            manager.complete_download(file_id, display_name, "0.0 KB/s", error=str(e))
+            manager.complete_download(file_id, display_name, "0.0 KB/s", error=str(e), final=final)
         else:
             print(f"\nFailed to download '{url}': {e}")
+        raise # Re-raise to let main know it failed

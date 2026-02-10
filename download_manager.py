@@ -28,20 +28,23 @@ class DownloadManager:
             }
             self._draw()
 
-    def complete_download(self, file_id, filename, rate_str, error=None):
+    def complete_download(self, file_id, filename, rate_str, error=None, final=True):
         with self.lock:
             if file_id in self.active_downloads:
                 info = self.active_downloads.pop(file_id)
                 if file_id in self.scroll_offsets:
                     del self.scroll_offsets[file_id]
                 if error:
-                    info['status'] = f"Failed: {error}"
+                    if final:
+                        info['status'] = f"Failed"
+                    else:
+                        info['status'] = "Queued"
                     info['percent'] = 0
                 else:
                     info['status'] = "Completed"
                     info['percent'] = 100
                 info['rate'] = rate_str
-                info['eta'] = "Done"
+                info['eta'] = "Done" if not error else "--"
                 self.completed_downloads.append(info)
             self._draw()
 
@@ -103,8 +106,14 @@ class DownloadManager:
         except OSError:
             columns = 80
             
-        # ANSI colors for percentage
-        if percent < 33:
+        # ANSI colors for percentage and status
+        if status == "Failed":
+            color = "\033[91m" # Red
+        elif status == "Queued":
+            color = "\033[93m" # Yellow
+        elif status == "Skipped":
+            color = "\033[92m" # Green
+        elif percent < 33:
             color = "\033[91m" # Red
         elif percent < 66:
             color = "\033[93m" # Yellow
@@ -115,12 +124,24 @@ class DownloadManager:
         reset = "\033[0m"
         
         percent_str = f"{percent:6.1f}%"
+        if status == "Queued":
+            percent_str = "QUEUED"
+        elif status == "Failed":
+            percent_str = "FAILED"
+        elif status == "Skipped":
+            percent_str = "SKIPPED"
+            
         rate_str_fixed = f"{rate_str:>10}"
         eta_str_fixed = f"{eta_str:<15}"
         
         prefix = f"{display_filename:<20} ["
         suffix = f"] {percent_str} {rate_str_fixed} {eta_str_fixed}"
-        colored_suffix = f"] {color}{percent_str}{reset} {rate_str_fixed} {eta_str_fixed}"
+        
+        # Adjust colored_suffix based on status
+        if status in ["Queued", "Failed", "Skipped"]:
+            colored_suffix = f"] {color}{percent_str:^6}{reset} {rate_str_fixed} {eta_str_fixed}"
+        else:
+            colored_suffix = f"] {color}{percent_str}{reset} {rate_str_fixed} {eta_str_fixed}"
         
         bar_width = columns - len(prefix) - len(suffix) - 2
         if bar_width > 0:

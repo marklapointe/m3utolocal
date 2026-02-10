@@ -96,7 +96,7 @@ def main():
     
     manager = DownloadManager(len(matches)) if args.threads > 1 else None
     
-    def process_download(i, channel):
+    def process_download(i, channel, final=True):
         tvg_id = channel.get('tvg-id', '')
         tvg_name = channel.get('tvg-name', '')
         url = channel['url']
@@ -115,40 +115,79 @@ def main():
         final_path = os.path.join(".", target_filename)
         temp_path = os.path.join(download_dir, target_filename)
         
-        if os.path.exists(final_path):
-            download_file(url, final_path, manager=manager, file_id=i)
-        else:
-            download_file(url, temp_path, manager=manager, file_id=i)
-            if os.path.exists(temp_path):
-                if manager is None:
-                    print(f"Moving '{target_filename}' to current directory.")
-                if os.path.exists(final_path):
-                    os.remove(final_path)
-                os.rename(temp_path, final_path)
+        try:
+            if os.path.exists(final_path):
+                download_file(url, final_path, manager=manager, file_id=i, final=final)
+            else:
+                download_file(url, temp_path, manager=manager, file_id=i, final=final)
+                if os.path.exists(temp_path):
+                    if manager is None:
+                        print(f"Moving '{target_filename}' to current directory.")
+                    if os.path.exists(final_path):
+                        os.remove(final_path)
+                    os.rename(temp_path, final_path)
+        except Exception:
+            raise # Re-raise to be handled by executor
 
     try:
-        if args.threads > 1:
+        failed_downloads = []
+        current_threads = args.threads
+        
+        if current_threads > 1:
+            # Multi-threaded pass with dynamic thread reduction
+            manager = DownloadManager(len(matches))
+            active_futures = {}
+            remaining_to_submit = list(enumerate(matches))
+            
             with concurrent.futures.ThreadPoolExecutor(max_workers=args.threads) as executor:
-                # Create a list of futures
-                futures = [executor.submit(process_download, i, channel) for i, channel in enumerate(matches)]
-                try:
-                    # Wait for all futures to complete, but allow interruption
-                    for future in concurrent.futures.as_completed(futures):
+                while remaining_to_submit or active_futures:
+                    # Submit new tasks up to current_threads
+                    while remaining_to_submit and len(active_futures) < current_threads:
+                        i, channel = remaining_to_submit.pop(0)
+                        future = executor.submit(process_download, i, channel, final=False)
+                        active_futures[future] = (i, channel)
+                    
+                    if not active_futures:
+                        break
+                        
+                    done, _ = concurrent.futures.wait(active_futures.keys(), return_when=concurrent.futures.FIRST_COMPLETED)
+                    
+                    for future in done:
+                        i, channel = active_futures.pop(future)
                         try:
-                            future.result() # Catch exceptions if any
-                        except Exception as e:
-                            # If a single thread fails, we might want to know, 
-                            # but we shouldn't necessarily stop all other downloads
-                            # unless it's a KeyboardInterrupt
-                            pass
-                except KeyboardInterrupt:
-                    print("\n\nInterrupted by user. Shutting down threads...")
-                    executor.shutdown(wait=False, cancel_futures=True)
-                    # We still want to let the main block handle final exit message
-                    raise 
+                            future.result()
+                        except KeyboardInterrupt:
+                            print("\n\nInterrupted by user. Shutting down threads...")
+                            executor.shutdown(wait=False, cancel_futures=True)
+                            sys.exit(1)
+                        except Exception:
+                            failed_downloads.append((i, channel))
+                            if current_threads > 1:
+                                current_threads -= 1
         else:
+            # Single threaded pass
             for i, channel in enumerate(matches):
-                process_download(i, channel)
+                try:
+                    process_download(i, channel, final=True)
+                except KeyboardInterrupt:
+                    raise
+                except Exception:
+                    failed_downloads.append((i, channel))
+
+        # Retry failed downloads one by one
+        if failed_downloads:
+            if not manager:
+                print(f"\nRetrying {len(failed_downloads)} failed downloads...")
+            
+            for i, channel in failed_downloads:
+                try:
+                    # final=True here to mark it as Failed if it fails again
+                    process_download(i, channel, final=True)
+                except KeyboardInterrupt:
+                    raise
+                except Exception:
+                    pass
+
         print("\nAll downloads completed.")
     except KeyboardInterrupt:
         print("\nDownload cancelled by user.")

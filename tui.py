@@ -118,4 +118,7 @@ def tui_select(matches):
             elif key == curses.KEY_RESIZE:
                 stdscr.erase()
                 
-    return curses.wrapper(main_tui)
+    try:
+        return curses.wrapper(main_tui)
+    except KeyboardInterrupt:
+        return None

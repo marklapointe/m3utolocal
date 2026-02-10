@@ -19,6 +19,7 @@ This application parses an M3U file (`chans.m3u`), searches for specific content
 - **User Confirmation**: Displays matched items and asks for confirmation before starting downloads.
 - **Automation Friendly**: Includes a `-y` flag to bypass confirmation prompts.
 - **Simultaneous Downloads**: Use the `-t` or `--threads` flag to specify the number of concurrent downloads.
+- **Retry Mechanism**: Automatically retries failed downloads. Use `-r` or `--retries` to set the number of retry attempts.
 - **Custom M3U Path**: Specify an alternative M3U file using the `-m` or `--m3u` argument.
 
 ## Installation

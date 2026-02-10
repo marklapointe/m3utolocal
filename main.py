@@ -9,6 +9,7 @@ import argparse
 import os
 import re
 import sys
+import time
 import concurrent.futures
 
 from utils import format_size, get_file_size, parse_m3u, sanitize_filename
@@ -22,6 +23,7 @@ def main():
     parser.add_argument("-y", "--yes", action="store_true", help="Bypass confirmation and download all matches")
     parser.add_argument("-m", "--m3u", default="chans.m3u", help="Path to the M3U file (default: chans.m3u)")
     parser.add_argument("-t", "--threads", type=int, default=1, help="Number of simultaneous downloads (default: 1)")
+    parser.add_argument("-r", "--retries", type=int, default=1, help="Number of times to retry failed downloads (default: 1)")
     
     args = parser.parse_args()
     
@@ -174,19 +176,28 @@ def main():
                 except Exception:
                     failed_downloads.append((i, channel))
 
-        # Retry failed downloads one by one
-        if failed_downloads:
+        # Retry failed downloads
+        retry_count = 0
+        while failed_downloads and retry_count < args.retries:
+            retry_count += 1
             if not manager:
-                print(f"\nRetrying {len(failed_downloads)} failed downloads...")
+                print(f"\nRetrying {len(failed_downloads)} failed downloads (Attempt {retry_count}/{args.retries})...")
             
-            for i, channel in failed_downloads:
+            # Create a copy to iterate over while we update failed_downloads for the next pass
+            to_retry = list(failed_downloads)
+            failed_downloads = []
+            
+            for i, channel in to_retry:
+                # Small delay before each retry
+                time.sleep(1)
                 try:
-                    # final=True here to mark it as Failed if it fails again
-                    process_download(i, channel, final=True)
+                    # final=True if this is the absolute last attempt
+                    is_last_attempt = (retry_count == args.retries)
+                    process_download(i, channel, final=is_last_attempt)
                 except KeyboardInterrupt:
                     raise
                 except Exception:
-                    pass
+                    failed_downloads.append((i, channel))
 
         print("\nAll downloads completed.")
     except KeyboardInterrupt:

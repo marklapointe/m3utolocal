@@ -19,7 +19,9 @@ def download_file(url, target_filename, manager=None, file_id=None, final=True):
                     if manager:
                         manager.complete_download(file_id, display_name, "Skipped", final=final)
                     else:
-                        print(f"File '{target_filename}' already exists and size matches. Skipping.")
+                        magenta = "\033[95m"
+                        reset = "\033[0m"
+                        print(f"{magenta}File '{target_filename}' already exists and size matches. Skipping.{reset}")
                     return
                 else:
                     if not manager:
@@ -65,6 +67,21 @@ def download_file(url, target_filename, manager=None, file_id=None, final=True):
                                 
                                 current_time = time.time()
                                 if current_time - last_update_time >= 0.1 or downloaded == total_size:
+                                    # Handle terminal resize artifacts in single-threaded mode
+                                    try:
+                                        terminal_size = os.get_terminal_size()
+                                        columns = terminal_size.columns
+                                    except OSError:
+                                        columns = 80
+                                    
+                                    if not hasattr(download_file, 'prev_width'):
+                                        download_file.prev_width = columns
+                                    
+                                    if columns != download_file.prev_width:
+                                        # Clear screen below current position if width changed
+                                        sys.stdout.write("\033[J")
+                                        download_file.prev_width = columns
+
                                     if total_size > 0:
                                         percent = downloaded / total_size * 100
                                         elapsed = current_time - start_time
@@ -93,10 +110,7 @@ def download_file(url, target_filename, manager=None, file_id=None, final=True):
                                             manager.update_progress(file_id, display_name, percent, rate_str, eta_str)
                                         else:
                                             # Standard single-line progress bar logic...
-                                            try:
-                                                columns = os.get_terminal_size().columns
-                                            except OSError:
-                                                columns = 80
+                                            # columns already fetched above for resize detection
                                             
                                             # Scroll filename if too long (single-threaded mode)
                                             display_name_scrolled = display_name
@@ -151,7 +165,9 @@ def download_file(url, target_filename, manager=None, file_id=None, final=True):
                 if manager:
                     manager.complete_download(file_id, display_name, rate_str, final=final)
                 else:
-                    print(f"Successfully downloaded '{target_filename}'.")
+                    green = "\033[92m"
+                    reset = "\033[0m"
+                    print(f"{green}Successfully downloaded '{target_filename}'.{reset}")
                     
     except KeyboardInterrupt:
         # Re-raise KeyboardInterrupt to be handled by the main thread

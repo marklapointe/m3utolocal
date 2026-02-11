@@ -58,7 +58,17 @@ def main():
     reset = "\033[0m"
     
     try:
+        prev_width = 0
         for i, match in enumerate(matches):
+            try:
+                columns = os.get_terminal_size().columns
+            except OSError:
+                columns = 80
+            
+            if columns != prev_width:
+                sys.stdout.write("\033[J") # Clear below if width changed
+                prev_width = columns
+
             num_dots = (i % 3) + 1
             dots = "." * num_dots
             color = dot_colors[i % len(dot_colors)]
@@ -66,10 +76,12 @@ def main():
             # Print with colorful dots, padded to avoid flickering
             print(f"\r[{percent:5.1f}%] Fetching sizes {color}{dots:<3}{reset}", end="", flush=True)
             match['size'] = get_file_size(match['url'])
-        print(f"\r[100.0%] Fetching sizes Done.             ")
+        print(f"\r[100.0%] Fetching sizes {dot_colors[2]}Done.{reset}             ")
     except KeyboardInterrupt:
         print("\n\nCancelled by user.")
         return
+
+    green = "\033[92m"
 
     if not args.yes:
         selected_indices = tui_select(matches)
@@ -114,10 +126,7 @@ def main():
         ext_match = re.search(r'(\.[a-zA-Z0-9]{2,4})(\?.*)?$', url)
         extension = ext_match.group(1) if ext_match else ""
         
-        if len(matches) > 1:
-            target_filename = f"{safe_base}_{i+1}{extension}"
-        else:
-            target_filename = f"{safe_base}{extension}"
+        target_filename = f"{safe_base}{extension}"
             
         final_path = os.path.join(".", target_filename)
         temp_path = os.path.join(download_dir, target_filename)
@@ -146,10 +155,7 @@ def main():
             # Truncate filename logic for target_filename
             ext_match = re.search(r'(\.[a-zA-Z0-9]{2,4})(\?.*)?$', channel['url'])
             extension = ext_match.group(1) if ext_match else ""
-            if len(matches) > 1:
-                target_filename = f"{sanitize_filename(display_name)}_{i+1}{extension}"
-            else:
-                target_filename = f"{sanitize_filename(display_name)}{extension}"
+            target_filename = f"{sanitize_filename(display_name)}{extension}"
             manager.update_progress(i, target_filename, 0, "0.0 KB/s", "--", status="Queued")
 
         if current_threads > 1:
@@ -215,7 +221,7 @@ def main():
                 except Exception:
                     failed_downloads.append((i, channel))
 
-        print("\nAll downloads completed.")
+        print(f"\n{green}All downloads completed.{reset}")
     except KeyboardInterrupt:
         print("\nDownload cancelled by user.")
         sys.exit(1)

@@ -12,6 +12,8 @@ class DownloadManager:
         self.last_draw_time = 0
         self.scroll_offsets = {} # file_id -> current offset
         self.last_scroll_time = 0
+        self.prev_width = 0
+        self.first_draw = True
 
     def update_progress(self, file_id, filename, percent, rate_str, eta_str, status="Downloading"):
         with self.lock:
@@ -65,34 +67,69 @@ class DownloadManager:
              return
         self.last_draw_time = current_time
 
-        # Sort: Completed/Failed/Skipped on top, Downloading/Queued on bottom
+        # Sort: Downloading on top, then Queued, then Completed/Failed/Skipped
         # Within each group, sort by file_id
         def sort_key(item):
             info = item[1]
             status = info['status']
-            priority = 0
-            if status in ["Completed", "Failed", "Skipped"]:
+            if status == "Downloading":
                 priority = 0
-            else:
+            elif status == "Queued":
                 priority = 1
+            else: # Completed, Failed, Skipped
+                priority = 2
             return (priority, item[0])
 
         sorted_items = sorted(self.downloads.items(), key=sort_key)
         
+        try:
+            terminal_size = os.get_terminal_size()
+            terminal_height = terminal_size.lines
+            terminal_width = terminal_size.columns
+        except OSError:
+            terminal_height = 24
+            terminal_width = 80
+
+        # Detect terminal resize
+        resized = False
+        if terminal_width != self.prev_width:
+            resized = True
+            self.prev_width = terminal_width
+
+        if self.first_draw:
+            # Add an extra newline on the first draw to "move everything down a bit"
+            sys.stdout.write("\n")
+            self.first_draw = False
+
+        # Leave more room at the bottom to avoid issues with terminal height
+        # and cursor positioning. Using -3 instead of -1.
+        max_display = terminal_height - 3
+        
+        display_items = sorted_items[:max_display]
+        
         output = []
-        for file_id, info in sorted_items:
+        for file_id, info in display_items:
             is_done = info['status'] in ["Completed", "Failed", "Skipped"]
             output.append(self._format_line(info, file_id=file_id, is_completed=is_done))
             
         # Move up by the number of lines we previously drew
         if hasattr(self, 'prev_lines') and self.prev_lines > 0:
-            sys.stdout.write(f"\033[{self.prev_lines}F")
+            if resized:
+                # If width changed, move up and clear everything below to remove artifacts
+                sys.stdout.write(f"\033[{self.prev_lines}F\033[J")
+            else:
+                sys.stdout.write(f"\033[{self.prev_lines}F")
             
         for line in output:
             # Clear line and print
             sys.stdout.write("\033[K" + line + "\n")
             
-        self.prev_lines = len(output)
+        # If we truncated, add a line indicating more
+        if len(sorted_items) > max_display:
+            sys.stdout.write(f"\033[K... and {len(sorted_items) - max_display} more items\n")
+            self.prev_lines = len(output) + 1
+        else:
+            self.prev_lines = len(output)
         sys.stdout.flush()
 
     def _format_line(self, info, file_id=None, is_completed=False):
@@ -122,7 +159,7 @@ class DownloadManager:
         elif status == "Queued":
             color = "\033[93m" # Yellow
         elif status == "Skipped":
-            color = "\033[92m" # Green
+            color = "\033[95m" # Magenta
         elif percent < 33:
             color = "\033[91m" # Red
         elif percent < 66:
@@ -140,6 +177,8 @@ class DownloadManager:
             percent_str = "FAILED"
         elif status == "Skipped":
             percent_str = "SKIPPED"
+        elif status == "Completed":
+            percent_str = " DONE "
             
         rate_str_fixed = f"{rate_str:>10}"
         eta_str_fixed = f"{eta_str:<15}"
@@ -148,7 +187,7 @@ class DownloadManager:
         suffix = f"] {percent_str} {rate_str_fixed} {eta_str_fixed}"
         
         # Adjust colored_suffix based on status
-        if status in ["Queued", "Failed", "Skipped"]:
+        if status in ["Queued", "Failed", "Skipped", "Completed"]:
             colored_suffix = f"] {color}{percent_str:^6}{reset} {rate_str_fixed} {eta_str_fixed}"
         else:
             colored_suffix = f"] {color}{percent_str}{reset} {rate_str_fixed} {eta_str_fixed}"

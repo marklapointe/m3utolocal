@@ -110,38 +110,30 @@ def main():
     
     manager = DownloadManager(len(matches))
     
-    def process_download(i, channel, final=True):
+    def get_target_filename(channel):
         tvg_id = channel.get('tvg-id', '')
         tvg_name = channel.get('tvg-name', '')
         url = channel['url']
-        
         display_name = tvg_id if tvg_id else tvg_name
-        
-        # Ensure it exists in manager early with Queued status if not already there
-        if manager:
-            # We don't have all info here yet, but download_file will call update_progress
-            pass
         safe_base = sanitize_filename(display_name)
-        
         ext_match = re.search(r'(\.[a-zA-Z0-9]{2,4})(\?.*)?$', url)
         extension = ext_match.group(1) if ext_match else ""
-        
-        target_filename = f"{safe_base}{extension}"
-            
+        return f"{safe_base}{extension}"
+
+    def process_download(i, channel, final=True):
+        url = channel['url']
+        target_filename = get_target_filename(channel)
         final_path = os.path.join(".", target_filename)
         temp_path = os.path.join(download_dir, target_filename)
         
-        try:
-            if os.path.exists(final_path):
-                download_file(url, final_path, manager=manager, file_id=i, final=final)
-            else:
-                download_file(url, temp_path, manager=manager, file_id=i, final=final)
-                if os.path.exists(temp_path):
-                    if os.path.exists(final_path):
-                        os.remove(final_path)
-                    os.rename(temp_path, final_path)
-        except Exception:
-            raise # Re-raise to be handled by executor
+        if os.path.exists(final_path):
+            download_file(url, final_path, manager=manager, file_id=i, final=final)
+        else:
+            download_file(url, temp_path, manager=manager, file_id=i, final=final)
+            if os.path.exists(temp_path):
+                if os.path.exists(final_path):
+                    os.remove(final_path)
+                os.rename(temp_path, final_path)
 
     try:
         failed_downloads = []
@@ -149,13 +141,7 @@ def main():
         
         # Initialize manager with all files as Queued if multi-file
         for i, channel in enumerate(matches):
-            tvg_id = channel.get('tvg-id', '')
-            tvg_name = channel.get('tvg-name', '')
-            display_name = tvg_id if tvg_id else tvg_name
-            # Truncate filename logic for target_filename
-            ext_match = re.search(r'(\.[a-zA-Z0-9]{2,4})(\?.*)?$', channel['url'])
-            extension = ext_match.group(1) if ext_match else ""
-            target_filename = f"{sanitize_filename(display_name)}{extension}"
+            target_filename = get_target_filename(channel)
             manager.update_progress(i, target_filename, 0, "0.0 KB/s", "--", status="Queued")
 
         if current_threads > 1:
@@ -170,20 +156,19 @@ def main():
                         i, channel = remaining_to_submit.pop(0)
                         future = executor.submit(process_download, i, channel, final=False)
                         active_futures[future] = (i, channel)
-                    
+                
                     if not active_futures:
                         break
-                        
-                    done, _ = concurrent.futures.wait(active_futures.keys(), return_when=concurrent.futures.FIRST_COMPLETED)
                     
+                    done, _ = concurrent.futures.wait(active_futures.keys(), return_when=concurrent.futures.FIRST_COMPLETED)
+                
                     for future in done:
                         i, channel = active_futures.pop(future)
                         try:
                             future.result()
-                        except KeyboardInterrupt:
-                            print("\n\nInterrupted by user. Shutting down threads...")
-                            executor.shutdown(wait=False, cancel_futures=True)
-                            sys.exit(1)
+                        except (KeyboardInterrupt, SystemExit):
+                            # Propagate KeyboardInterrupt and SystemExit to the main try-except block
+                            raise
                         except Exception:
                             failed_downloads.append((i, channel))
                             if current_threads > 1:

@@ -4,11 +4,11 @@ BINDIR ?= $(PREFIX)/bin
 MANDIR ?= $(PREFIX)/share/man/man1
 PORTSDIR ?= /usr/ports
 
-.PHONY: all install uninstall run clean help install-port
+.PHONY: all install uninstall run clean help install-port install-deps install-freebsd install-ubuntu install-generic
 
 all: help
 
-install:
+install: install-deps
 	mkdir -p $(DESTDIR)$(BINDIR)
 	mkdir -p $(DESTDIR)$(MANDIR)
 	# Install main script with shebang fix
@@ -19,6 +19,31 @@ install:
 	chmod 644 $(DESTDIR)$(BINDIR)/utils.py $(DESTDIR)$(BINDIR)/tui.py $(DESTDIR)$(BINDIR)/download_manager.py $(DESTDIR)$(BINDIR)/downloader.py
 	cp man/m3utolocal.1 $(DESTDIR)$(MANDIR)/
 	chmod 644 $(DESTDIR)$(MANDIR)/m3utolocal.1
+
+install-deps:
+	@if [ "$$(uname -s)" = "FreeBSD" ]; then \
+		$(MAKE) install-freebsd; \
+	elif [ "$$(uname -s)" = "Linux" ]; then \
+		if [ -f /etc/os-release ] && grep -qi ubuntu /etc/os-release; then \
+			$(MAKE) install-ubuntu; \
+		else \
+			$(MAKE) install-generic; \
+		fi \
+	else \
+		$(MAKE) install-generic; \
+	fi
+
+install-freebsd:
+	@echo "Installing dependencies for FreeBSD..."
+	pkg install -y python3
+	pkg install -y py311-requests
+
+install-ubuntu:
+	@echo "Installing dependencies for Ubuntu..."
+	apt-get update && apt-get install -y python3-requests
+
+install-generic:
+	@echo "Installing dependencies via pip..."
 	$(PYTHON) -m pip install -r requirements.txt
 
 uninstall:

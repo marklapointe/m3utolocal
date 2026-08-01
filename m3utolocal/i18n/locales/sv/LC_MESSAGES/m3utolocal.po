@@ -1,0 +1,208 @@
+# m3utolocal translation catalog
+# Language: sv
+msgid ""
+msgstr ""
+"Project-Id-Version: m3utolocal 1.1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+
+msgid "All downloads completed under {path}"
+msgstr "Alla nedladdningar slutförda under{path}"
+
+msgid "Apply"
+msgstr "Verkställ"
+
+msgid "Apply cleanup"
+msgstr "Tillämpa rengöring"
+
+msgid "Back"
+msgstr "Tillbaka"
+
+msgid "Cancel"
+msgstr "Avbryt"
+
+msgid "Cleanup"
+msgstr "Rensning"
+
+msgid "Cleanup library"
+msgstr "Rensningsbibliotek"
+
+msgid "Cleanup preview"
+msgstr "Förhandsgranskning av rengöring"
+
+msgid "Close"
+msgstr "Stäng"
+
+msgid "Complete"
+msgstr "Komplett"
+
+msgid "Confirm"
+msgstr "Bekräfta"
+
+msgid "Done"
+msgstr "Klar"
+
+msgid "Download selected"
+msgstr "Ladda ner valda"
+
+msgid "Download {n} files ({size})?"
+msgstr "Ladda ner{n}filer ({size})?"
+
+msgid "Downloading {name}…"
+msgstr "Laddar ner{name}…"
+
+msgid "Downloading…"
+msgstr "Laddar ner…"
+
+msgid "Downloads"
+msgstr "Nedladdningar"
+
+msgid "ETA"
+msgstr "ETA"
+
+msgid "Error"
+msgstr "Fel"
+
+msgid "Failed"
+msgstr "Misslyckades"
+
+msgid "File"
+msgstr "Fil"
+
+msgid "Finished with {n} failure(s)."
+msgstr "Avslutade med{n}misslyckanden."
+
+msgid "Found {n} matches · {sel} selected"
+msgstr "Hittade{n}matcher ·{sel}vald"
+
+msgid "Help"
+msgstr "Hjälp"
+
+msgid "Invalid threads/retries"
+msgstr "Ogiltiga trådar/försök igen"
+
+msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
+msgstr "Tangenter: j/k eller pilar flyttas · Enter välj · Mellanslag växla · a alla · n inga · d ladda ner · c rensning · L språk · s inställningar · ? hjälp · q/Esc tillbaka eller avsluta"
+
+msgid "Language"
+msgstr "Språk"
+
+msgid "Language…"
+msgstr "Språk…"
+
+msgid "Library: {path}"
+msgstr "Bibliotek:{path}"
+
+msgid "M3U not found: {path}"
+msgstr "M3U hittades inte:{path}"
+
+msgid "M3U path"
+msgstr "M3U-väg"
+
+msgid "M3U: {path} · lang: {lang}"
+msgstr "M3U:{path}· lång:{lang}"
+
+msgid "Name"
+msgstr "Namn"
+
+msgid "Nothing to clean."
+msgstr "Inget att rengöra."
+
+msgid "Output directory (empty = XDG library)"
+msgstr "Utdatakatalog (tom = XDG-bibliotek)"
+
+msgid "Output: {path}"
+msgstr "Produktion:{path}"
+
+msgid "Overall progress"
+msgstr "Total framsteg"
+
+msgid "Plan: {n} items ({size})"
+msgstr "Planera:{n}föremål ({size})"
+
+msgid "Preparing…"
+msgstr "Förbereder…"
+
+msgid "Preview"
+msgstr "Förhandsvisning"
+
+msgid "Progress"
+msgstr "Framsteg"
+
+msgid "Queued"
+msgstr "Köad"
+
+msgid "Quit"
+msgstr "Avsluta"
+
+msgid "Rate"
+msgstr "Hastighet"
+
+msgid "Removed {n} items."
+msgstr "Borttagen{n}föremål."
+
+msgid "Retries"
+msgstr "Försöker igen"
+
+msgid "Save"
+msgstr "Spara"
+
+msgid "Saved {path}"
+msgstr "Sparad{path}"
+
+msgid "Search"
+msgstr "Sök"
+
+msgid "Search playlist"
+msgstr "Sök spellista"
+
+msgid "Search tvg-id / tvg-name…"
+msgstr "Sök tvg-id / tvg-namn..."
+
+msgid "Select at least one item."
+msgstr "Välj minst ett objekt."
+
+msgid "Settings"
+msgstr "Inställningar"
+
+msgid "Size"
+msgstr "Storlek"
+
+msgid "Skipped"
+msgstr "Hoppade över"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Threads"
+msgstr "Trådar"
+
+msgid "Waiting…"
+msgstr "Väntan…"
+
+msgid "m3utolocal"
+msgstr "m3utolocal"
+
+msgid "orphan temporary file"
+msgstr "föräldralös temporär fil"
+
+msgid "stale partial download"
+msgstr "inaktuell partiell nedladdning"
+
+msgid "zero-byte file"
+msgstr "noll-byte-fil"
+
+msgid "{percent:.0f}% · {rate} · {eta}"
+msgstr "{percent:.0f}% · {rate} · {eta}"
+
+msgid "{n} file"
+msgid_plural "{n} files"
+msgstr[0] "{n} file"
+msgstr[1] "{n} files"
+
+msgid "{n} item"
+msgid_plural "{n} items"
+msgstr[0] "{n} item"
+msgstr[1] "{n} items"

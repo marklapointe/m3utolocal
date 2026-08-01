@@ -1,0 +1,208 @@
+# m3utolocal translation catalog
+# Language: ar
+msgid ""
+msgstr ""
+"Project-Id-Version: m3utolocal 1.1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+
+msgid "All downloads completed under {path}"
+msgstr "تم الانتهاء من جميع التنزيلات تحت{path}"
+
+msgid "Apply"
+msgstr "تطبيق"
+
+msgid "Apply cleanup"
+msgstr "تطبيق التنظيف"
+
+msgid "Back"
+msgstr "رجوع"
+
+msgid "Cancel"
+msgstr "إلغاء"
+
+msgid "Cleanup"
+msgstr "تنظيف"
+
+msgid "Cleanup library"
+msgstr "مكتبة التنظيف"
+
+msgid "Cleanup preview"
+msgstr "معاينة التنظيف"
+
+msgid "Close"
+msgstr "إغلاق"
+
+msgid "Complete"
+msgstr "مكتمل"
+
+msgid "Confirm"
+msgstr "تأكيد"
+
+msgid "Done"
+msgstr "تم"
+
+msgid "Download selected"
+msgstr "تنزيل المحدد"
+
+msgid "Download {n} files ({size})?"
+msgstr "تحميل{n}ملفات ({size})؟"
+
+msgid "Downloading {name}…"
+msgstr "جارٍ التنزيل{name}…"
+
+msgid "Downloading…"
+msgstr "جارٍ التنزيل…"
+
+msgid "Downloads"
+msgstr "التنزيلات"
+
+msgid "ETA"
+msgstr "الوقت المتوقع للوصول"
+
+msgid "Error"
+msgstr "خطأ"
+
+msgid "Failed"
+msgstr "فشل"
+
+msgid "File"
+msgstr "ملف"
+
+msgid "Finished with {n} failure(s)."
+msgstr "انتهى ب{n}الفشل (الفشل)."
+
+msgid "Found {n} matches · {sel} selected"
+msgstr "وجد{n}المباريات ·{sel}مختارة"
+
+msgid "Help"
+msgstr "مساعدة"
+
+msgid "Invalid threads/retries"
+msgstr "المواضيع/إعادة المحاولة غير صالحة"
+
+msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
+msgstr "المفاتيح: تحرك j/k أو الأسهم · أدخل حدد · تبديل المسافة · الكل · لا شيء · تنزيل d · تنظيف c · لغة L · إعدادات s · ؟ مساعدة · س/الخروج أو العودة"
+
+msgid "Language"
+msgstr "اللغة"
+
+msgid "Language…"
+msgstr "لغة…"
+
+msgid "Library: {path}"
+msgstr "مكتبة:{path}"
+
+msgid "M3U not found: {path}"
+msgstr "لم يتم العثور على M3U:{path}"
+
+msgid "M3U path"
+msgstr "مسار M3U"
+
+msgid "M3U: {path} · lang: {lang}"
+msgstr "M3U:{path}· اللغة:{lang}"
+
+msgid "Name"
+msgstr "اسم"
+
+msgid "Nothing to clean."
+msgstr "لا شيء لتنظيف."
+
+msgid "Output directory (empty = XDG library)"
+msgstr "دليل الإخراج (فارغ = مكتبة XDG)"
+
+msgid "Output: {path}"
+msgstr "الإخراج:{path}"
+
+msgid "Overall progress"
+msgstr "التقدم الإجمالي"
+
+msgid "Plan: {n} items ({size})"
+msgstr "يخطط:{n}أغراض ({size})"
+
+msgid "Preparing…"
+msgstr "جارٍ التحضير…"
+
+msgid "Preview"
+msgstr "معاينة"
+
+msgid "Progress"
+msgstr "تقدم"
+
+msgid "Queued"
+msgstr "في الانتظار"
+
+msgid "Quit"
+msgstr "خروج"
+
+msgid "Rate"
+msgstr "معدل"
+
+msgid "Removed {n} items."
+msgstr "تمت الإزالة{n}أغراض."
+
+msgid "Retries"
+msgstr "إعادة المحاولة"
+
+msgid "Save"
+msgstr "حفظ"
+
+msgid "Saved {path}"
+msgstr "أنقذ{path}"
+
+msgid "Search"
+msgstr "بحث"
+
+msgid "Search playlist"
+msgstr "بحث في قائمة التشغيل"
+
+msgid "Search tvg-id / tvg-name…"
+msgstr "ابحث عن معرف tvg / اسم tvg..."
+
+msgid "Select at least one item."
+msgstr "حدد عنصرًا واحدًا على الأقل."
+
+msgid "Settings"
+msgstr "الإعدادات"
+
+msgid "Size"
+msgstr "مقاس"
+
+msgid "Skipped"
+msgstr "تم تخطيه"
+
+msgid "Status"
+msgstr "الحالة"
+
+msgid "Threads"
+msgstr "المواضيع"
+
+msgid "Waiting…"
+msgstr "منتظر…"
+
+msgid "m3utolocal"
+msgstr "m3utolocal"
+
+msgid "orphan temporary file"
+msgstr "ملف مؤقت يتيم"
+
+msgid "stale partial download"
+msgstr "تحميل جزئي قديم"
+
+msgid "zero-byte file"
+msgstr "ملف صفر بايت"
+
+msgid "{percent:.0f}% · {rate} · {eta}"
+msgstr "{percent:.0f}% · {rate} · {eta}"
+
+msgid "{n} file"
+msgid_plural "{n} files"
+msgstr[0] "{n} file"
+msgstr[1] "{n} files"
+
+msgid "{n} item"
+msgid_plural "{n} items"
+msgstr[0] "{n} item"
+msgstr[1] "{n} items"

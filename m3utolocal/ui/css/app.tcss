@@ -1,0 +1,363 @@
+/* m3utolocal Textual CSS Theme */
+
+Screen {
+    background: $surface;
+    color: $text;
+}
+
+Header {
+    dock: top;
+    background: $accent-darken-2;
+    color: $text;
+}
+
+Footer {
+    dock: bottom;
+    height: 1;
+    background: $surface-darken-1;
+    color: $text-muted;
+}
+
+/* Common Panels & Containers */
+.panel {
+    margin: 1 2;
+    padding: 1 2;
+    border: round $accent;
+    background: $surface-darken-1;
+    height: 1fr;
+}
+
+.screen-title {
+    text-style: bold;
+    color: $accent-lighten-2;
+    text-align: center;
+    margin-bottom: 1;
+    border-bottom: solid $accent;
+    padding-bottom: 0;
+    width: 100%;
+}
+
+/* Home Screen Banner & Dashboard */
+#home-banner {
+    text-align: center;
+    align: center middle;
+    padding: 1 0;
+    margin-bottom: 1;
+    border-bottom: solid $accent;
+    height: auto;
+    width: 100%;
+}
+
+#home-title {
+    text-style: bold;
+    color: $accent-lighten-2;
+    text-align: center;
+    width: 100%;
+}
+
+#home-subtitle {
+    color: $text-muted;
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+}
+
+.stat-grid {
+    layout: grid;
+    grid-size: 3 1;
+    grid-columns: 1fr 1fr 1fr;
+    height: auto;
+    margin: 1 0;
+}
+
+.stat-card {
+    border: round $primary;
+    background: $surface;
+    padding: 1 2;
+    margin: 0 1;
+    height: auto;
+    min-height: 5;
+}
+
+.stat-title {
+    text-style: bold;
+    color: $accent;
+    margin-bottom: 0;
+}
+
+.stat-val {
+    color: $text;
+}
+
+/* Home Action Menu */
+#home-menu-title {
+    text-style: bold;
+    color: $accent-lighten-1;
+    margin-top: 1;
+    margin-bottom: 1;
+    text-align: center;
+}
+
+#home-actions {
+    height: auto;
+    align: center middle;
+    margin-top: 0;
+}
+
+.action-btn {
+    margin: 1 2;
+    min-width: 32;
+    height: 3;
+}
+
+/* Buttons */
+Button {
+    margin: 0 1;
+    min-width: 12;
+    height: 3;
+}
+
+Button.-primary {
+    background: $accent;
+    color: $text;
+    text-style: bold;
+}
+
+Button.-success {
+    background: $success;
+    color: $text;
+    text-style: bold;
+}
+
+Button.-warning {
+    background: $warning;
+    color: $text;
+}
+
+Button.-error {
+    background: $error;
+    color: $text;
+    text-style: bold;
+}
+
+/* Search Screen */
+#query {
+    margin-bottom: 1;
+    border: round $accent;
+    background: $surface;
+}
+
+#summary-bar {
+    height: 3;
+    padding: 0 2;
+    border: round $primary;
+    background: $surface;
+    margin-bottom: 1;
+    align: center middle;
+    content-align: center middle;
+    text-style: bold;
+    color: $accent-lighten-2;
+    width: 100%;
+}
+
+#match-list {
+    height: 1fr;
+    border: round $accent;
+    background: $surface;
+}
+
+#item-inspector {
+    height: auto;
+    min-height: 3;
+    border: round $primary;
+    background: $surface;
+    padding: 0 1;
+    margin-top: 1;
+    margin-bottom: 1;
+}
+
+.inspector-title {
+    text-style: bold;
+    color: $accent;
+}
+
+.inspector-detail {
+    color: $text;
+}
+
+.selected-badge {
+    color: $success;
+    text-style: bold;
+}
+
+.unselected-badge {
+    color: $text-muted;
+}
+
+#status {
+    height: 1;
+    padding: 0 1;
+    color: $text-muted;
+    margin-top: 0;
+    margin-bottom: 1;
+}
+
+.action-bar {
+    height: auto;
+    align: center middle;
+    margin-top: 1;
+}
+
+/* Downloads Screen */
+.dl-card {
+    border: round $primary;
+    padding: 0 2;
+    margin-bottom: 1;
+    background: $surface;
+    height: auto;
+    width: 100%;
+}
+
+#dl-title {
+    text-style: bold;
+    color: $accent;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#dl-status {
+    text-style: bold;
+    color: $accent-lighten-1;
+    margin-bottom: 0;
+}
+
+ProgressBar {
+    width: 100%;
+    margin: 0;
+}
+
+ProgressBar > Bar {
+    width: 1fr;
+}
+
+ProgressBar .bar--bar {
+    width: 1fr;
+}
+
+#dl-overall, #dl-current {
+    width: 100%;
+    margin: 0;
+}
+
+#dl-overall Bar, #dl-current Bar {
+    width: 1fr;
+}
+
+#dl-overall-detail, #dl-current-detail {
+    color: $text-muted;
+    margin: 0 0 1 0;
+    width: 100%;
+}
+
+#dl-table {
+    width: 100%;
+    height: 1fr;
+    border: round $accent;
+    background: $surface;
+}
+
+/* Settings Form */
+.form-card {
+    border: round $primary;
+    background: $surface;
+    padding: 1 2;
+    margin-bottom: 1;
+    height: auto;
+}
+
+.form-label {
+    text-style: bold;
+    color: $accent;
+    margin-top: 1;
+    margin-bottom: 0;
+}
+
+.form-input {
+    margin-bottom: 1;
+    border: round $accent;
+    background: $surface-darken-1;
+}
+
+#set-status {
+    height: 2;
+    margin-top: 1;
+    text-style: bold;
+    color: $success;
+}
+
+/* Modals Centering */
+ModalScreen {
+    align: center middle;
+    content-align: center middle;
+    background: $surface 60%;
+}
+
+.modal-box {
+    width: 80%;
+    max-width: 86;
+    height: auto;
+    max-height: 85%;
+    border: double $accent;
+    background: $surface-darken-1;
+    padding: 1 2;
+    align: center middle;
+}
+
+.modal-title {
+    text-style: bold;
+    color: $accent-lighten-2;
+    border-bottom: solid $accent;
+    margin-bottom: 1;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+#cleanup-list {
+    height: 14;
+    border: round $error;
+    background: $surface;
+    padding: 1;
+    margin-bottom: 1;
+}
+
+#lang-list {
+    height: 16;
+    border: round $accent;
+    background: $surface;
+    margin-bottom: 1;
+}
+
+/* Help Keybinding Layout */
+.help-section {
+    text-style: bold;
+    color: $accent;
+    margin-top: 1;
+}
+
+.help-row {
+    color: $text;
+    margin-left: 2;
+}
+
+/* Right to Left (RTL) Layout Adjustments */
+.rtl Label, .rtl Static, .rtl Input {
+    text-align: right;
+}
+
+.rtl .stat-title, .rtl .stat-val, .rtl .inspector-title {
+    text-align: right;
+}
+
+.rtl .action-bar, .rtl #home-actions {
+    align: center middle;
+}

@@ -1,0 +1,193 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: m3utolocal 1.1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "All downloads completed under {path}"
+msgstr ""
+
+msgid "Apply"
+msgstr ""
+
+msgid "Apply cleanup"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Cleanup"
+msgstr ""
+
+msgid "Cleanup library"
+msgstr ""
+
+msgid "Cleanup preview"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Complete"
+msgstr ""
+
+msgid "Confirm"
+msgstr ""
+
+msgid "Done"
+msgstr ""
+
+msgid "Download selected"
+msgstr ""
+
+msgid "Download {n} files ({size})?"
+msgstr ""
+
+msgid "Downloading {name}…"
+msgstr ""
+
+msgid "Downloading…"
+msgstr ""
+
+msgid "Downloads"
+msgstr ""
+
+msgid "ETA"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Failed"
+msgstr ""
+
+msgid "File"
+msgstr ""
+
+msgid "Finished with {n} failure(s)."
+msgstr ""
+
+msgid "Found {n} matches · {sel} selected"
+msgstr ""
+
+msgid "Help"
+msgstr ""
+
+msgid "Invalid threads/retries"
+msgstr ""
+
+msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Language…"
+msgstr ""
+
+msgid "Library: {path}"
+msgstr ""
+
+msgid "M3U not found: {path}"
+msgstr ""
+
+msgid "M3U path"
+msgstr ""
+
+msgid "M3U: {path} · lang: {lang}"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Nothing to clean."
+msgstr ""
+
+msgid "Output directory (empty = XDG library)"
+msgstr ""
+
+msgid "Output: {path}"
+msgstr ""
+
+msgid "Overall progress"
+msgstr ""
+
+msgid "Plan: {n} items ({size})"
+msgstr ""
+
+msgid "Preparing…"
+msgstr ""
+
+msgid "Preview"
+msgstr ""
+
+msgid "Progress"
+msgstr ""
+
+msgid "Queued"
+msgstr ""
+
+msgid "Quit"
+msgstr ""
+
+msgid "Rate"
+msgstr ""
+
+msgid "Removed {n} items."
+msgstr ""
+
+msgid "Retries"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Saved {path}"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Search playlist"
+msgstr ""
+
+msgid "Search tvg-id / tvg-name…"
+msgstr ""
+
+msgid "Select at least one item."
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Skipped"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Threads"
+msgstr ""
+
+msgid "Waiting…"
+msgstr ""
+
+msgid "m3utolocal"
+msgstr ""
+
+msgid "orphan temporary file"
+msgstr ""
+
+msgid "stale partial download"
+msgstr ""
+
+msgid "zero-byte file"
+msgstr ""
+
+msgid "{percent:.0f}% · {rate} · {eta}"
+msgstr ""

@@ -1,0 +1,208 @@
+# m3utolocal translation catalog
+# Language: zh_CN
+msgid ""
+msgstr ""
+"Project-Id-Version: m3utolocal 1.1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+
+msgid "All downloads completed under {path}"
+msgstr "所有下载均已完成{path}"
+
+msgid "Apply"
+msgstr "应用"
+
+msgid "Apply cleanup"
+msgstr "执行清理"
+
+msgid "Back"
+msgstr "返回"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Cleanup"
+msgstr "清理"
+
+msgid "Cleanup library"
+msgstr "清理媒体库"
+
+msgid "Cleanup preview"
+msgstr "清理预览"
+
+msgid "Close"
+msgstr "关闭"
+
+msgid "Complete"
+msgstr "完成"
+
+msgid "Confirm"
+msgstr "确认"
+
+msgid "Done"
+msgstr "完成"
+
+msgid "Download selected"
+msgstr "下载所选"
+
+msgid "Download {n} files ({size})?"
+msgstr "下载{n}文件（{size}）？"
+
+msgid "Downloading {name}…"
+msgstr "正在下载 {name}…"
+
+msgid "Downloading…"
+msgstr "下载中…"
+
+msgid "Downloads"
+msgstr "下载"
+
+msgid "ETA"
+msgstr "预计到达时间"
+
+msgid "Error"
+msgstr "错误"
+
+msgid "Failed"
+msgstr "失败"
+
+msgid "File"
+msgstr "文件"
+
+msgid "Finished with {n} failure(s)."
+msgstr "Finished with {n} failure(s)."
+
+msgid "Found {n} matches · {sel} selected"
+msgstr "成立{n}比赛 ·{sel}已选择"
+
+msgid "Help"
+msgstr "帮助"
+
+msgid "Invalid threads/retries"
+msgstr "无效线程/重试"
+
+msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
+msgstr "键：j/k 或箭头移动·Enter 选择·空格切换·a 全部·n 无·d 下载·c 清理·L 语言·s 设置·？帮助 · q/Esc 返回或退出"
+
+msgid "Language"
+msgstr "语言"
+
+msgid "Language…"
+msgstr "语言…"
+
+msgid "Library: {path}"
+msgstr "图书馆：{path}"
+
+msgid "M3U not found: {path}"
+msgstr "未找到 M3U：{path}"
+
+msgid "M3U path"
+msgstr "M3U path"
+
+msgid "M3U: {path} · lang: {lang}"
+msgstr "M3U：{path}· 郎：{lang}"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "Nothing to clean."
+msgstr "没有可清理的内容。"
+
+msgid "Output directory (empty = XDG library)"
+msgstr "输出目录（空= XDG库）"
+
+msgid "Output: {path}"
+msgstr "输出：{path}"
+
+msgid "Overall progress"
+msgstr "总体进度"
+
+msgid "Plan: {n} items ({size})"
+msgstr "计划：{n}项目 （{size}）"
+
+msgid "Preparing…"
+msgstr "准备中…"
+
+msgid "Preview"
+msgstr "预览"
+
+msgid "Progress"
+msgstr "进度"
+
+msgid "Queued"
+msgstr "排队中"
+
+msgid "Quit"
+msgstr "退出"
+
+msgid "Rate"
+msgstr "速度"
+
+msgid "Removed {n} items."
+msgstr "已删除{n}项目。"
+
+msgid "Retries"
+msgstr "重试"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Saved {path}"
+msgstr "已保存{path}"
+
+msgid "Search"
+msgstr "搜索"
+
+msgid "Search playlist"
+msgstr "搜索播放列表"
+
+msgid "Search tvg-id / tvg-name…"
+msgstr "搜索 tvg-id / tvg-name..."
+
+msgid "Select at least one item."
+msgstr "至少选择一项。"
+
+msgid "Settings"
+msgstr "设置"
+
+msgid "Size"
+msgstr "大小"
+
+msgid "Skipped"
+msgstr "已跳过"
+
+msgid "Status"
+msgstr "状态"
+
+msgid "Threads"
+msgstr "线程数"
+
+msgid "Waiting…"
+msgstr "等待中…"
+
+msgid "m3utolocal"
+msgstr "m3autolocal"
+
+msgid "orphan temporary file"
+msgstr "孤立临时文件"
+
+msgid "stale partial download"
+msgstr "陈旧的部分下载"
+
+msgid "zero-byte file"
+msgstr "零字节文件"
+
+msgid "{percent:.0f}% · {rate} · {eta}"
+msgstr "{percent:.0f}%·{rate} · {eta}"
+
+msgid "{n} file"
+msgid_plural "{n} files"
+msgstr[0] "{n} file"
+msgstr[1] "{n} files"
+
+msgid "{n} item"
+msgid_plural "{n} items"
+msgstr[0] "{n} item"
+msgstr[1] "{n} items"

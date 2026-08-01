@@ -1,0 +1,208 @@
+# m3utolocal translation catalog
+# Language: el
+msgid ""
+msgstr ""
+"Project-Id-Version: m3utolocal 1.1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+
+msgid "All downloads completed under {path}"
+msgstr "Όλες οι λήψεις ολοκληρώθηκαν κάτω από{path}"
+
+msgid "Apply"
+msgstr "Εφαρμόζω"
+
+msgid "Apply cleanup"
+msgstr "Εφαρμόστε καθαρισμό"
+
+msgid "Back"
+msgstr "Πίσω"
+
+msgid "Cancel"
+msgstr "Ματαίωση"
+
+msgid "Cleanup"
+msgstr "Καθαρισμός"
+
+msgid "Cleanup library"
+msgstr "Εκκαθάριση βιβλιοθήκης"
+
+msgid "Cleanup preview"
+msgstr "Προεπισκόπηση εκκαθάρισης"
+
+msgid "Close"
+msgstr "Κοντά"
+
+msgid "Complete"
+msgstr "Πλήρης"
+
+msgid "Confirm"
+msgstr "Επιβεβαιώνω"
+
+msgid "Done"
+msgstr "Γινώμενος"
+
+msgid "Download selected"
+msgstr "Επιλέχθηκε η λήψη"
+
+msgid "Download {n} files ({size})?"
+msgstr "Λήψη{n}αρχεία ({size})?"
+
+msgid "Downloading {name}…"
+msgstr "Λήψη{name}…"
+
+msgid "Downloading…"
+msgstr "Λήψη…"
+
+msgid "Downloads"
+msgstr "Λήψεις"
+
+msgid "ETA"
+msgstr "ΕΤΑ"
+
+msgid "Error"
+msgstr "Σφάλμα"
+
+msgid "Failed"
+msgstr "Αποτυχημένος"
+
+msgid "File"
+msgstr "Αρχείο"
+
+msgid "Finished with {n} failure(s)."
+msgstr "Ολοκληρώθηκε με{n}αποτυχία(ες)."
+
+msgid "Found {n} matches · {sel} selected"
+msgstr "Θεμελιώ{n}αγώνες ·{sel}επιλεγμένο"
+
+msgid "Help"
+msgstr "Βοήθεια"
+
+msgid "Invalid threads/retries"
+msgstr "Μη έγκυρα νήματα/επανάληψη"
+
+msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
+msgstr "Πλήκτρα: j/k ή βέλη μετακίνηση · Εισαγωγή επιλογής · Εναλλαγή διαστήματος · όλα · n κανένα · d λήψη · c εκκαθάριση · L γλώσσα · ρυθμίσεις · ? βοήθεια · q/Esc επιστρέψτε ή σταματήστε"
+
+msgid "Language"
+msgstr "Γλώσσα"
+
+msgid "Language…"
+msgstr "Γλώσσα…"
+
+msgid "Library: {path}"
+msgstr "Βιβλιοθήκη:{path}"
+
+msgid "M3U not found: {path}"
+msgstr "Το M3U δεν βρέθηκε:{path}"
+
+msgid "M3U path"
+msgstr "Διαδρομή M3U"
+
+msgid "M3U: {path} · lang: {lang}"
+msgstr "M3U:{path}· γλώσσα:{lang}"
+
+msgid "Name"
+msgstr "Ονομα"
+
+msgid "Nothing to clean."
+msgstr "Τίποτα για καθαρισμό."
+
+msgid "Output directory (empty = XDG library)"
+msgstr "Κατάλογος εξόδου (κενός = βιβλιοθήκη XDG)"
+
+msgid "Output: {path}"
+msgstr "Παραγωγή:{path}"
+
+msgid "Overall progress"
+msgstr "Συνολική πρόοδος"
+
+msgid "Plan: {n} items ({size})"
+msgstr "Σχέδιο:{n}αντικείμενα ({size})"
+
+msgid "Preparing…"
+msgstr "Προετοιμασία…"
+
+msgid "Preview"
+msgstr "Πρεμιέρα"
+
+msgid "Progress"
+msgstr "Πρόοδος"
+
+msgid "Queued"
+msgstr "Σε ουρά"
+
+msgid "Quit"
+msgstr "Εγκαταλείπω"
+
+msgid "Rate"
+msgstr "Τιμή"
+
+msgid "Removed {n} items."
+msgstr "Καταργήθηκε{n}είδη."
+
+msgid "Retries"
+msgstr "Επανάληψη"
+
+msgid "Save"
+msgstr "Εκτός"
+
+msgid "Saved {path}"
+msgstr "Αποθηκεύτηκε{path}"
+
+msgid "Search"
+msgstr "Ερευνα"
+
+msgid "Search playlist"
+msgstr "Αναζήτηση λίστας αναπαραγωγής"
+
+msgid "Search tvg-id / tvg-name…"
+msgstr "Αναζήτηση tvg-id / tvg-name…"
+
+msgid "Select at least one item."
+msgstr "Επιλέξτε τουλάχιστον ένα στοιχείο."
+
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+msgid "Size"
+msgstr "Μέγεθος"
+
+msgid "Skipped"
+msgstr "Παράλειψη"
+
+msgid "Status"
+msgstr "Κατάσταση"
+
+msgid "Threads"
+msgstr "Νήματα"
+
+msgid "Waiting…"
+msgstr "Αναμονή…"
+
+msgid "m3utolocal"
+msgstr "m3utolocal"
+
+msgid "orphan temporary file"
+msgstr "ορφανό προσωρινό αρχείο"
+
+msgid "stale partial download"
+msgstr "μπαγιάτικη μερική λήψη"
+
+msgid "zero-byte file"
+msgstr "αρχείο μηδενικού byte"
+
+msgid "{percent:.0f}% · {rate} · {eta}"
+msgstr "{percent:.0f}% · {rate} · {eta}"
+
+msgid "{n} file"
+msgid_plural "{n} files"
+msgstr[0] "{n} file"
+msgstr[1] "{n} files"
+
+msgid "{n} item"
+msgid_plural "{n} items"
+msgstr[0] "{n} item"
+msgstr[1] "{n} items"

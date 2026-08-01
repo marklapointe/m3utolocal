@@ -1,89 +1,119 @@
-# M3U to Local Downloader
+# m3utolocal
 
-A Python script to search and download VOD content from M3U playlist files.
+Search M3U playlists by `tvg-id` / `tvg-name` and download **VOD** media (mp4, mkv, …). Live streams and `.m3u8` are skipped.
 
-## Description
+## Features
 
-This application parses an M3U file (`chans.m3u`), searches for specific content based on `tvg-id` or `tvg-name`, and downloads the matched video files locally. It is designed to specifically target static video files (like `.mp4`, `.mkv`, etc.) while ignoring live TV streams.
+- **Full-screen Textual TUI** (default when run with no args): Home, Search, Downloads, Cleanup, Settings, language picker, modals
+- **Headless CLI** for scripts: `-y`, cleanup, init
+- Downloads go under **XDG data library** (`$XDG_DATA_HOME/m3utolocal/library/`) or `-o` — **never** litter the CWD
+- Resume via `.part`, multi-thread (`-t`), retries (`-r`)
+- **Cleanup** of stale parts / empty / temps; optional CWD media migration
+- Config: JSON under `$XDG_CONFIG_HOME/m3utolocal/config.json`
+- Language: `--lang` / config / `LANG` (gettext-ready)
+- FreeBSD port sketch: `ports/net/m3utolocal` (Python **3.12** / `py312-*`)
 
-## Key Features
+## Install
 
-- **M3U Parsing**: Specifically looks for `tvg-id`, `tvg-name`, and stream URLs in `#EXTINF` tags.
-- **Smart Search**: Performs a case-insensitive search across both `tvg-id` and `tvg-name` fields.
-- **Live Stream Filtering**: Automatically skips entries that don't end with common video file extensions, preventing accidental downloads of infinite live streams.
-- **Safe Downloads**: 
-    - Uses temporary filenames during the download process to prevent corrupted files from incomplete downloads.
-    - Checks if a file already exists before downloading to avoid duplicates.
-    - Sanitizes filenames to ensure compatibility with different operating systems.
-- **Conflict Resolution**: Appends a numeric suffix to filenames if multiple matches for the same title are found.
-- **User Confirmation**: Displays matched items and asks for confirmation before starting downloads.
-- **Automation Friendly**: Includes a `-y` flag to bypass confirmation prompts.
-- **Simultaneous Downloads**: Use the `-t` or `--threads` flag to specify the number of concurrent downloads.
-- **Retry Mechanism**: Automatically retries failed downloads. Use `-r` or `--retries` to set the number of retry attempts.
-- **Custom M3U Path**: Specify an alternative M3U file using the `-m` or `--m3u` argument.
+### FreeBSD (app-test-001 / ports)
 
-## Installation
-
-### Using Makefile (Recommended)
-You can install the script as a system-wide command `m3utolocal`:
 ```bash
-make install
-```
-This will install the script to `/usr/local/bin` and install dependencies.
-
-### Manual Installation
-1. Ensure you have Python 3 installed.
-2. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Place your `chans.m3u` file in the same directory where you run the command.
-
-## Usage
-
-### System-wide Command
-After installation, you can use `m3utolocal` from anywhere:
-```bash
-m3utolocal "Movie Title"
+sudo pkg install -y python312 py312-requests py312-textual
+# From a checkout with LOCAL_SRC:
+cd /usr/ports/net/m3utolocal
+sudo make LOCAL_SRC_PATH=/path/to/m3utolocal -DLOCAL_SRC package
+sudo pkg install ./work-py312/pkg/m3utolocal-*.pkg
 ```
 
-### Local Execution
-You can also run it locally using `make`:
-```bash
-make run ARGS="Movie Title"
-```
-Or directly with Python:
-```bash
-python3 main.py "Movie Title"
-```
-The script will list all matches found and ask: `Do you want to download these files? (y/N):`.
+### Makefile
 
-### Bypass Confirmation
-Use the `-y` or `--yes` flag to start downloads immediately:
 ```bash
-python main.py -y "Movie Title"
+make install          # system install
+make test             # pytest
+make test-freebsd     # rsync + pytest on app-test-001
 ```
 
-### Help
-To see all available options:
+### pip / venv
+
 ```bash
-python main.py -h
+python3 -m venv .venv
+.venv/bin/pip install -r requirements-dev.txt
+.venv/bin/pytest -q
 ```
 
-### Specifying an M3U file
-To use a different M3U file:
+## Quick start
+
 ```bash
-m3utolocal -m /path/to/your/playlist.m3u "Movie Title"
+# Interactive TUI
+m3utolocal
+# or
+python3 main.py
+
+# Headless download
+python3 main.py -y -m playlist.m3u -o /path/to/library "Movie Title"
+
+# Config + cleanup
+python3 main.py init
+python3 main.py cleanup --dry-run
+python3 main.py cleanup --apply
+python3 main.py cleanup --migrate-cwd --apply   # move *.mp4 etc from CWD into library
 ```
 
-## Directory Structure
-- `main.py`: The entry point of the application.
-- `utils.py`: Utility functions for size formatting, time formatting, and M3U parsing.
-- `tui.py`: Interactive TUI selection menu using curses.
-- `download_manager.py`: Manages multi-threaded download progress and UI updates.
-- `downloader.py`: Logic for downloading files with support for resume and progress bars.
-- `Makefile`: Build and installation script.
-- `requirements.txt`: Python dependencies.
-- `ports/`: FreeBSD ports entry.
-- `chans.m3u`: Your input M3U playlist (expected in the root).
-- `downloads/`: All downloaded files are placed here.
+## Options
+
+| Flag | Meaning |
+|------|---------|
+| `-m` / `--m3u` | Playlist path |
+| `-o` / `--output` | Output root (default: XDG library) |
+| `-t` / `--threads` | Concurrent downloads |
+| `-r` / `--retries` | Retry failed downloads |
+| `-y` / `--yes` | Headless: download all matches |
+| `-L` / `--lang` | Language code |
+| `--tui` | Force Textual TUI |
+| `--auto-clean` | Sweep junk before download |
+
+## TUI keys (CloudBSD-style)
+
+| Key | Action |
+|-----|--------|
+| `j`/`k` or arrows | Move |
+| `Enter` | Confirm / activate |
+| `Space` | Toggle selection |
+| `a` / `n` | All / none |
+| `d` | Download selected |
+| `c` | Cleanup |
+| `L` | Language |
+| `s` | Settings |
+| `?` | Help |
+| `q` / `Esc` | Back / quit |
+
+## Configuration
+
+See [docs/CONFIGURATION.md](docs/CONFIGURATION.md).
+
+```json
+{
+  "language": "en",
+  "m3u_path": "chans.m3u",
+  "output_dir": "",
+  "threads": 1,
+  "retries": 1,
+  "auto_clean_parts": false,
+  "log_level": "INFO",
+  "theme": "default"
+}
+```
+
+## Development
+
+- Planning: `AGENTS_START_HERE.md`, `.plan/`
+- Tests: [docs/TESTING.md](docs/TESTING.md)
+- FreeBSD host: **app-test-001** / `172.16.176.133`
+
+```bash
+make test-freebsd
+```
+
+## License
+
+2-Clause BSD — see `LICENSE`.

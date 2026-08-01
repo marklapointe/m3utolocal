@@ -1,0 +1,208 @@
+# m3utolocal translation catalog
+# Language: hi
+msgid ""
+msgstr ""
+"Project-Id-Version: m3utolocal 1.1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+
+msgid "All downloads completed under {path}"
+msgstr "सभी डाउनलोड नीचे पूर्ण हो गए{path}"
+
+msgid "Apply"
+msgstr "लागू करें"
+
+msgid "Apply cleanup"
+msgstr "सफ़ाई लागू करें"
+
+msgid "Back"
+msgstr "वापस"
+
+msgid "Cancel"
+msgstr "रद्द करें"
+
+msgid "Cleanup"
+msgstr "सफ़ाई"
+
+msgid "Cleanup library"
+msgstr "सफाई पुस्तकालय"
+
+msgid "Cleanup preview"
+msgstr "सफ़ाई पूर्वावलोकन"
+
+msgid "Close"
+msgstr "बंद करें"
+
+msgid "Complete"
+msgstr "पूरा"
+
+msgid "Confirm"
+msgstr "पुष्टि करें"
+
+msgid "Done"
+msgstr "हो गया"
+
+msgid "Download selected"
+msgstr "चयनित डाउनलोड करें"
+
+msgid "Download {n} files ({size})?"
+msgstr "डाउनलोड करना{n}फ़ाइलें ({size})?"
+
+msgid "Downloading {name}…"
+msgstr "डाउनलोड{name}…"
+
+msgid "Downloading…"
+msgstr "डाउनलोड हो रहा है…"
+
+msgid "Downloads"
+msgstr "डाउनलोड"
+
+msgid "ETA"
+msgstr "ईटा"
+
+msgid "Error"
+msgstr "गलती"
+
+msgid "Failed"
+msgstr "विफल"
+
+msgid "File"
+msgstr "फ़ाइल"
+
+msgid "Finished with {n} failure(s)."
+msgstr "के साथ ख़त्म करना{n}विफलता(ओं)."
+
+msgid "Found {n} matches · {sel} selected"
+msgstr "मिला{n}मिलान ·{sel}चयनित"
+
+msgid "Help"
+msgstr "सहायता"
+
+msgid "Invalid threads/retries"
+msgstr "अमान्य थ्रेड/पुनर्प्रयास"
+
+msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
+msgstr "कुंजियाँ: जे/के या तीर चलते हैं · एंटर सेलेक्ट करें · स्पेस टॉगल · ए ऑल · एन नो · डी डाउनलोड · सी क्लीनअप · एल लैंग्वेज · एस सेटिंग्स · ? सहायता · क्यू/ईएससी वापस आएं या छोड़ें"
+
+msgid "Language"
+msgstr "भाषा"
+
+msgid "Language…"
+msgstr "भाषा…"
+
+msgid "Library: {path}"
+msgstr "पुस्तकालय:{path}"
+
+msgid "M3U not found: {path}"
+msgstr "M3U नहीं मिला:{path}"
+
+msgid "M3U path"
+msgstr "M3U पथ"
+
+msgid "M3U: {path} · lang: {lang}"
+msgstr "एम3यू:{path}· लैंग:{lang}"
+
+msgid "Name"
+msgstr "नाम"
+
+msgid "Nothing to clean."
+msgstr "साफ़ करने के लिए कुछ भी नहीं."
+
+msgid "Output directory (empty = XDG library)"
+msgstr "आउटपुट निर्देशिका (खाली = XDG लाइब्रेरी)"
+
+msgid "Output: {path}"
+msgstr "आउटपुट:{path}"
+
+msgid "Overall progress"
+msgstr "कुल प्रगति"
+
+msgid "Plan: {n} items ({size})"
+msgstr "योजना:{n}सामान ({size})"
+
+msgid "Preparing…"
+msgstr "तैयार हो रहा है…"
+
+msgid "Preview"
+msgstr "पूर्व दर्शन"
+
+msgid "Progress"
+msgstr "प्रगति"
+
+msgid "Queued"
+msgstr "कतार में"
+
+msgid "Quit"
+msgstr "बाहर निकलें"
+
+msgid "Rate"
+msgstr "दर"
+
+msgid "Removed {n} items."
+msgstr "निकाला गया{n}सामान।"
+
+msgid "Retries"
+msgstr "पुनर्प्रयास"
+
+msgid "Save"
+msgstr "सहेजें"
+
+msgid "Saved {path}"
+msgstr "सहेजा गया{path}"
+
+msgid "Search"
+msgstr "खोजें"
+
+msgid "Search playlist"
+msgstr "प्लेलिस्ट खोजें"
+
+msgid "Search tvg-id / tvg-name…"
+msgstr "टीवीजी-आईडी / टीवीजी-नाम खोजें..."
+
+msgid "Select at least one item."
+msgstr "कम से कम एक आइटम चुनें."
+
+msgid "Settings"
+msgstr "सेटिंग्स"
+
+msgid "Size"
+msgstr "आकार"
+
+msgid "Skipped"
+msgstr "छोड़ा गया"
+
+msgid "Status"
+msgstr "स्थिति"
+
+msgid "Threads"
+msgstr "धागे"
+
+msgid "Waiting…"
+msgstr "इंतज़ार में…"
+
+msgid "m3utolocal"
+msgstr "m3यूटोलोकल"
+
+msgid "orphan temporary file"
+msgstr "अनाथ अस्थायी फ़ाइल"
+
+msgid "stale partial download"
+msgstr "बासी आंशिक डाउनलोड"
+
+msgid "zero-byte file"
+msgstr "शून्य-बाइट फ़ाइल"
+
+msgid "{percent:.0f}% · {rate} · {eta}"
+msgstr "{percent:.0f}%·{rate} · {eta}"
+
+msgid "{n} file"
+msgid_plural "{n} files"
+msgstr[0] "{n} file"
+msgstr[1] "{n} files"
+
+msgid "{n} item"
+msgid_plural "{n} items"
+msgstr[0] "{n} item"
+msgstr[1] "{n} items"

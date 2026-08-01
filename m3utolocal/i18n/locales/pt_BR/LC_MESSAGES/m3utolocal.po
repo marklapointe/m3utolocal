@@ -1,0 +1,208 @@
+# m3utolocal translation catalog
+# Language: pt_BR
+msgid ""
+msgstr ""
+"Project-Id-Version: m3utolocal 1.1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+
+msgid "All downloads completed under {path}"
+msgstr "Downloads concluídos em {path}"
+
+msgid "Apply"
+msgstr "Aplicar"
+
+msgid "Apply cleanup"
+msgstr "Aplicar limpeza"
+
+msgid "Back"
+msgstr "Voltar"
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Cleanup"
+msgstr "Limpeza"
+
+msgid "Cleanup library"
+msgstr "Limpar biblioteca"
+
+msgid "Cleanup preview"
+msgstr "Prévia da limpeza"
+
+msgid "Close"
+msgstr "Fechar"
+
+msgid "Complete"
+msgstr "Completo"
+
+msgid "Confirm"
+msgstr "Confirmar"
+
+msgid "Done"
+msgstr "Concluído"
+
+msgid "Download selected"
+msgstr "Baixar selecionados"
+
+msgid "Download {n} files ({size})?"
+msgstr "Baixar {n} arquivos ({size})?"
+
+msgid "Downloading {name}…"
+msgstr "Baixando {name}…"
+
+msgid "Downloading…"
+msgstr "Baixando…"
+
+msgid "Downloads"
+msgstr "Descargas"
+
+msgid "ETA"
+msgstr "ETA"
+
+msgid "Error"
+msgstr "Erro"
+
+msgid "Failed"
+msgstr "Falhou"
+
+msgid "File"
+msgstr "Arquivo"
+
+msgid "Finished with {n} failure(s)."
+msgstr "Concluído com {n} falha(s)."
+
+msgid "Found {n} matches · {sel} selected"
+msgstr "{n} encontrados · {sel} selecionados"
+
+msgid "Help"
+msgstr "Ajuda"
+
+msgid "Invalid threads/retries"
+msgstr "Threads/tentativas inválidos"
+
+msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
+msgstr "Teclas: j/k o flechas · Enter seleccionar · Espacio alternar · a todo · n nada · d descargar · c limpiar · L idioma · s ajustes · ? ayuda · q/Esc atrás o salir"
+
+msgid "Language"
+msgstr "Idioma"
+
+msgid "Language…"
+msgstr "Idioma…"
+
+msgid "Library: {path}"
+msgstr "Biblioteca: {path}"
+
+msgid "M3U not found: {path}"
+msgstr "M3U não encontrado: {path}"
+
+msgid "M3U path"
+msgstr "Caminho M3U"
+
+msgid "M3U: {path} · lang: {lang}"
+msgstr "M3U: {path} · idioma: {lang}"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Nothing to clean."
+msgstr "Nada a limpar."
+
+msgid "Output directory (empty = XDG library)"
+msgstr "Diretório de saída (vazio = biblioteca XDG)"
+
+msgid "Output: {path}"
+msgstr "Saída: {path}"
+
+msgid "Overall progress"
+msgstr "Progresso geral"
+
+msgid "Plan: {n} items ({size})"
+msgstr "Plano: {n} itens ({size})"
+
+msgid "Preparing…"
+msgstr "Preparando…"
+
+msgid "Preview"
+msgstr "Prévia"
+
+msgid "Progress"
+msgstr "Progresso"
+
+msgid "Queued"
+msgstr "Na fila"
+
+msgid "Quit"
+msgstr "Sair"
+
+msgid "Rate"
+msgstr "Taxa"
+
+msgid "Removed {n} items."
+msgstr "{n} itens removidos."
+
+msgid "Retries"
+msgstr "Tentativas"
+
+msgid "Save"
+msgstr "Salvar"
+
+msgid "Saved {path}"
+msgstr "Salvo {path}"
+
+msgid "Search"
+msgstr "Pesquisar"
+
+msgid "Search playlist"
+msgstr "Pesquisar playlist"
+
+msgid "Search tvg-id / tvg-name…"
+msgstr "Pesquisar tvg-id / tvg-name…"
+
+msgid "Select at least one item."
+msgstr "Selecione pelo menos um item."
+
+msgid "Settings"
+msgstr "Configurações"
+
+msgid "Size"
+msgstr "Tamanho"
+
+msgid "Skipped"
+msgstr "Ignorado"
+
+msgid "Status"
+msgstr "Estado"
+
+msgid "Threads"
+msgstr "Hilos"
+
+msgid "Waiting…"
+msgstr "Aguardando…"
+
+msgid "m3utolocal"
+msgstr "m3utolocal"
+
+msgid "orphan temporary file"
+msgstr "arquivo temporário órfão"
+
+msgid "stale partial download"
+msgstr "download parcial antigo"
+
+msgid "zero-byte file"
+msgstr "arquivo de zero bytes"
+
+msgid "{percent:.0f}% · {rate} · {eta}"
+msgstr "{percent:.0f}% · {rate} · {eta}"
+
+msgid "{n} file"
+msgid_plural "{n} files"
+msgstr[0] "{n} file"
+msgstr[1] "{n} files"
+
+msgid "{n} item"
+msgid_plural "{n} items"
+msgstr[0] "{n} item"
+msgstr[1] "{n} items"

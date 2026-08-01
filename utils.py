@@ -4,8 +4,8 @@ import requests
 import time
 
 def format_size(size_bytes):
-    if size_bytes < 0:
-        return "0 B"
+    if size_bytes is None or size_bytes <= 0:
+        return "Unknown"
     if size_bytes < 1024:
         return f"{size_bytes} B"
     
@@ -20,18 +20,34 @@ def format_size(size_bytes):
     return f"{size:.2f} {units[unit_idx]}"
 
 def get_file_size(url):
+    headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) VLC/3.0.18"}
     try:
-        # Try HEAD request first as it's faster
-        response = requests.head(url, allow_redirects=True, timeout=5)
-        size = int(response.headers.get('content-length', 0))
-        if size > 0:
-            return size
+        response = requests.head(url, allow_redirects=True, headers=headers, timeout=5)
+        if response.status_code < 400:
+            size = int(response.headers.get('content-length', 0) or 0)
+            if size > 0:
+                return size
+            cr = response.headers.get('content-range', '')
+            if '/' in cr:
+                try:
+                    return int(cr.split('/')[-1])
+                except ValueError:
+                    pass
         
-        # If HEAD doesn't give size, try GET with stream=True
-        with requests.get(url, stream=True, timeout=5) as r:
-            return int(r.headers.get('content-length', 0))
+        with requests.get(url, headers=headers, stream=True, timeout=5) as r:
+            if r.status_code < 400:
+                size = int(r.headers.get('content-length', 0) or 0)
+                if size > 0:
+                    return size
+                cr = r.headers.get('content-range', '')
+                if '/' in cr:
+                    try:
+                        return int(cr.split('/')[-1])
+                    except ValueError:
+                        pass
     except Exception:
-        return 0
+        pass
+    return 0
 
 def parse_m3u(file_path):
     channels = []
@@ -67,9 +83,36 @@ def parse_m3u(file_path):
                 current_channel = {}
     return channels
 
-def sanitize_filename(filename):
-    # Remove characters that are not allowed in filenames
-    return re.sub(r'[\\/*?:"<>|]', "_", filename)
+def sanitize_filename(filename, max_length=200):
+    """Sanitize a filename for cross-platform safety.
+
+    Removes path separators and reserved characters. Empty results become
+    ``"unnamed"``. Length is capped while trying to preserve a short extension.
+    """
+    if filename is None:
+        return "unnamed"
+    name = str(filename).strip()
+    name = re.sub(r'[\\/*?:"<>|\x00-\x1f]', "_", name)
+    name = name.strip(" .")
+    # If only underscores/noise remain after stripping, treat as empty
+    if not name or re.fullmatch(r"[_.]+", name):
+        # Keep pure-underscore replacements of illegal-only strings as underscores
+        # when original had non-space content that became underscores
+        if name and set(name) <= {"_"}:
+            return name if name else "unnamed"
+        return "unnamed"
+    if len(name) > max_length:
+        # Preserve short extension if present
+        if "." in name[1:]:
+            stem, ext = name.rsplit(".", 1)
+            if len(ext) <= 8:
+                keep = max_length - len(ext) - 1
+                name = f"{stem[:keep]}.{ext}" if keep > 0 else name[:max_length]
+            else:
+                name = name[:max_length]
+        else:
+            name = name[:max_length]
+    return name
 
 def format_time(seconds):
     if seconds < 0:

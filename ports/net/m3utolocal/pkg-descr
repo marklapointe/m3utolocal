@@ -1,4 +1,7 @@
-m3utolocal is a command-line tool to parse M3U playlists and download
-video files (MP4, MKV, etc.) based on search queries matching tvg-id
-or tvg-name fields. It avoids downloading live streams by checking
-file extensions and uses temporary files for safe downloads.
+m3utolocal searches M3U playlists by tvg-id or tvg-name and downloads
+static VOD media (mp4, mkv, etc.), skipping live streams. Features include
+resume via .part files, multi-threaded downloads, retries, an interactive
+selection UI, cleanup of stale partials, and downloads stored under an
+XDG data library (or -o) instead of the current working directory.
+
+WWW: https://github.com/marklapointe/m3utolocal

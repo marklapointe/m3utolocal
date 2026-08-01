@@ -1,0 +1,208 @@
+# m3utolocal translation catalog
+# Language: he
+msgid ""
+msgstr ""
+"Project-Id-Version: m3utolocal 1.1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+
+msgid "All downloads completed under {path}"
+msgstr "כל ההורדות הושלמו תחת{path}"
+
+msgid "Apply"
+msgstr "החל"
+
+msgid "Apply cleanup"
+msgstr "החל ניקוי"
+
+msgid "Back"
+msgstr "חזרה"
+
+msgid "Cancel"
+msgstr "ביטול"
+
+msgid "Cleanup"
+msgstr "ניקוי"
+
+msgid "Cleanup library"
+msgstr "ספריית ניקוי"
+
+msgid "Cleanup preview"
+msgstr "תצוגה מקדימה של ניקוי"
+
+msgid "Close"
+msgstr "סגור"
+
+msgid "Complete"
+msgstr "לְהַשְׁלִים"
+
+msgid "Confirm"
+msgstr "אישור"
+
+msgid "Done"
+msgstr "בוצע"
+
+msgid "Download selected"
+msgstr "הורד נבחרים"
+
+msgid "Download {n} files ({size})?"
+msgstr "הורד{n}קבצים ({size})?"
+
+msgid "Downloading {name}…"
+msgstr "מוריד{name}…"
+
+msgid "Downloading…"
+msgstr "מוריד…"
+
+msgid "Downloads"
+msgstr "הורדות"
+
+msgid "ETA"
+msgstr "זמן הגעה"
+
+msgid "Error"
+msgstr "שגיאה"
+
+msgid "Failed"
+msgstr "נכשל"
+
+msgid "File"
+msgstr "קובץ"
+
+msgid "Finished with {n} failure(s)."
+msgstr "סיים עם{n}כשל(ים)."
+
+msgid "Found {n} matches · {sel} selected"
+msgstr "נמצא{n}התאמות ·{sel}נִבחָר"
+
+msgid "Help"
+msgstr "עזרה"
+
+msgid "Invalid threads/retries"
+msgstr "שרשורים/נסיונות חוזרים לא חוקיים"
+
+msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
+msgstr "מקשים: j/k או חצים זזים · הזן בחר · החלפת רווח · a הכל · n אין · d הורדה · c ניקוי · L שפה · הגדרות · ? עזרה · q/Esc חזרה או צא"
+
+msgid "Language"
+msgstr "שפה"
+
+msgid "Language…"
+msgstr "שָׂפָה…"
+
+msgid "Library: {path}"
+msgstr "סִפְרִיָה:{path}"
+
+msgid "M3U not found: {path}"
+msgstr "M3U לא נמצא:{path}"
+
+msgid "M3U path"
+msgstr "נתיב M3U"
+
+msgid "M3U: {path} · lang: {lang}"
+msgstr "M3U:{path}· lang:{lang}"
+
+msgid "Name"
+msgstr "שֵׁם"
+
+msgid "Nothing to clean."
+msgstr "אין מה לנקות."
+
+msgid "Output directory (empty = XDG library)"
+msgstr "ספריית פלט (ריקה = ספריית XDG)"
+
+msgid "Output: {path}"
+msgstr "תְפוּקָה:{path}"
+
+msgid "Overall progress"
+msgstr "התקדמות כוללת"
+
+msgid "Plan: {n} items ({size})"
+msgstr "לְתַכְנֵן:{n}פריטים ({size})"
+
+msgid "Preparing…"
+msgstr "מכין…"
+
+msgid "Preview"
+msgstr "תצוגה מקדימה"
+
+msgid "Progress"
+msgstr "הִתקַדְמוּת"
+
+msgid "Queued"
+msgstr "בתור"
+
+msgid "Quit"
+msgstr "יציאה"
+
+msgid "Rate"
+msgstr "קֶצֶב"
+
+msgid "Removed {n} items."
+msgstr "הוסר{n}פריטים."
+
+msgid "Retries"
+msgstr "מנסה שוב"
+
+msgid "Save"
+msgstr "שמור"
+
+msgid "Saved {path}"
+msgstr "נשמר{path}"
+
+msgid "Search"
+msgstr "חיפוש"
+
+msgid "Search playlist"
+msgstr "חפש ברשימת השמעה"
+
+msgid "Search tvg-id / tvg-name…"
+msgstr "חפש tvg-id / tvg-name..."
+
+msgid "Select at least one item."
+msgstr "בחר פריט אחד לפחות."
+
+msgid "Settings"
+msgstr "הגדרות"
+
+msgid "Size"
+msgstr "גוֹדֶל"
+
+msgid "Skipped"
+msgstr "דילג"
+
+msgid "Status"
+msgstr "מצב"
+
+msgid "Threads"
+msgstr "חוטים"
+
+msgid "Waiting…"
+msgstr "הַמתָנָה…"
+
+msgid "m3utolocal"
+msgstr "m3utolocal"
+
+msgid "orphan temporary file"
+msgstr "קובץ זמני יתום"
+
+msgid "stale partial download"
+msgstr "הורדה חלקית מעופשת"
+
+msgid "zero-byte file"
+msgstr "קובץ אפס בתים"
+
+msgid "{percent:.0f}% · {rate} · {eta}"
+msgstr "{percent:.0f}% · {rate} · {eta}"
+
+msgid "{n} file"
+msgid_plural "{n} files"
+msgstr[0] "{n} file"
+msgstr[1] "{n} files"
+
+msgid "{n} item"
+msgid_plural "{n} items"
+msgstr[0] "{n} item"
+msgstr[1] "{n} items"

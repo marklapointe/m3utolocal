@@ -1,41 +1,156 @@
-.TH M3UTOLOCAL 1 "February 2026" "m3utolocal 1.0.0" "User Commands"
+.TH M3UTOLOCAL 1 "August 2026" "m3utolocal 1.1.0" "User Commands"
 .SH NAME
-m3utolocal \- Download files from an M3U file based on search query
+m3utolocal \- search M3U playlists and download VOD files
 .SH SYNOPSIS
 .B m3utolocal
-[\fIOPTIONS\fR] \fIQUERY\fR
+[\fIOPTIONS\fR]
+.br
+.B m3utolocal
+[\fIOPTIONS\fR]
+.I QUERY
+.br
+.B m3utolocal
+.B cleanup
+[\fI--apply\fR] [\fI--migrate-cwd\fR] [\fI-o DIR\fR]
+.br
+.B m3utolocal
+.B init
 .SH DESCRIPTION
 .B m3utolocal
-is a command-line tool that searches for channels in an M3U playlist file and downloads the associated files. It filters out live streams by checking file extensions and provides an interactive TUI selection menu to choose specific matches. It also features a granular, color-coded progress bar during downloads.
+searches an M3U playlist for entries matching
+.I QUERY
+against
+.B tvg-id
+or
+.B tvg-name
+and downloads static video files.
+Live streams and
+.B .m3u8
+URLs are skipped.
 .PP
-The tool validates file sizes before downloading. If a local file already exists and its size matches the remote file, the download is skipped. If the sizes differ, the file is redownloaded.
+With no arguments, a full-screen Textual TUI is started.
+With
+.B \-y
+,
+downloads run headless without interactive selection.
+Finished files are written under an output root (XDG data library by default),
+never the current working directory.
 .SH ARGUMENTS
 .TP
 .I QUERY
-Search query to match against \fBtvg-id\fR or \fBtvg-name\fR attributes in the M3U file.
+Search string for tvg-id or tvg-name (optional when launching the TUI).
 .SH OPTIONS
 .TP
 .BR \-m ", " \-\-m3u " \fIFILE\fR"
-Path to the M3U file (default: \fIchans.m3u\fR).
+Path to the M3U playlist (default from config or
+.IR chans.m3u ).
+.TP
+.BR \-o ", " \-\-output " \fIDIR\fR"
+Output directory for downloads (default:
+.IR $XDG_DATA_HOME/m3utolocal/library ).
 .TP
 .BR \-t ", " \-\-threads " \fIN\fR"
 Number of simultaneous downloads (default: 1).
 .TP
 .BR \-r ", " \-\-retries " \fIN\fR"
-Number of times to retry failed downloads (default: 1).
+Retries for failed downloads (default: 1).
 .TP
 .BR \-y ", " \-\-yes
-Bypass the interactive TUI selection and download all matches automatically.
+Headless mode: download all matches without prompts.
+.TP
+.BR \-L ", " \-\-lang " \fICODE\fR"
+UI language code (for example
+.BR en ,
+.BR es ).
+.TP
+.B \-\-tui
+Force the full-screen Textual interface.
+.TP
+.B \-\-auto\-clean
+Remove classified junk under the output root before downloading.
 .TP
 .BR \-h ", " \-\-help
-Show the help message and exit.
+Show help and exit.
+.SH COMMANDS
+.TP
+.B cleanup
+Plan or apply removal of stale
+.BR .part
+files, zero-byte files, and orphan temps under the output root.
+.RS
+.TP
+.B \-\-apply
+Delete planned items (default is dry-run).
+.TP
+.B \-\-parts\-only
+Only consider
+.B .part
+files.
+.TP
+.B \-\-migrate\-cwd
+Move media files from the current directory into the output root.
+.RE
+.TP
+.B init
+Write a default JSON config under
+.IR $XDG_CONFIG_HOME/m3utolocal/config.json .
 .SH FILES
 .TP
-.I downloads/
-Directory where downloaded files are stored.
+.I $XDG_CONFIG_HOME/m3utolocal/config.json
+User configuration.
+.TP
+.I $XDG_DATA_HOME/m3utolocal/library/
+Default download library.
+.TP
+.I /usr/local/etc/cloudbsd/m3utolocal/config.json
+System-wide defaults (optional).
+.TP
+.I *.part
+In-progress download sidecars under the output root.
+.SH ENVIRONMENT
+.TP
+.B LANG ", " LC_ALL ", " LC_MESSAGES
+Locale used when no
+.B \-\-lang
+or config language is set.
+.TP
+.B XDG_CONFIG_HOME ", " XDG_DATA_HOME ", " XDG_CACHE_HOME
+Base directories for config, library, and cache.
+.TP
+.B M3UTOLOCAL_LANG ", " M3UTOLOCAL_OUTPUT_DIR ", " M3UTOLOCAL_M3U
+Optional environment overrides.
+.TP
+.B NO_COLOR
+Disable colorized CLI progress where applicable.
+.SH EXIT STATUS
+.TP
+.B 0
+Success.
+.TP
+.B 1
+Usage error, missing files, or hard failure.
+.TP
+.B 2
+Partial download failure.
+.TP
+.B 130
+Interrupted by the user.
+.SH EXAMPLES
+.TP
+Open the TUI:
+.B m3utolocal
+.TP
+Headless download:
+.B m3utolocal \-y \-m /path/playlist.m3u \-o ~/videos "Title"
+.TP
+Preview cleanup:
+.B m3utolocal cleanup \-\-dry\-run
+.TP
+Spanish UI:
+.B m3utolocal \-\-lang es
 .SH SEE ALSO
 .BR python (1)
 .SH AUTHOR
-Originally written by Mark LaPointe <mark@cloudbsd.org>.
+Mark LaPointe <mark@cloudbsd.org>
 .SH LICENSE
-This project is licensed under the 2-Clause BSD License.
+2-Clause BSD License.

@@ -1,0 +1,208 @@
+# m3utolocal translation catalog
+# Language: ro
+msgid ""
+msgstr ""
+"Project-Id-Version: m3utolocal 1.1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+
+msgid "All downloads completed under {path}"
+msgstr "Téléchargements terminés dans {path}"
+
+msgid "Apply"
+msgstr "Aplică"
+
+msgid "Apply cleanup"
+msgstr "Appliquer le nettoyage"
+
+msgid "Back"
+msgstr "Înapoi"
+
+msgid "Cancel"
+msgstr "Anulează"
+
+msgid "Cleanup"
+msgstr "Curățare"
+
+msgid "Cleanup library"
+msgstr "Nettoyer la bibliothèque"
+
+msgid "Cleanup preview"
+msgstr "Aperçu du nettoyage"
+
+msgid "Close"
+msgstr "Închide"
+
+msgid "Complete"
+msgstr "Terminé"
+
+msgid "Confirm"
+msgstr "Confirmă"
+
+msgid "Done"
+msgstr "Gata"
+
+msgid "Download selected"
+msgstr "Descarcă selecția"
+
+msgid "Download {n} files ({size})?"
+msgstr "Télécharger {n} fichiers ({size}) ?"
+
+msgid "Downloading {name}…"
+msgstr "Téléchargement de {name}…"
+
+msgid "Downloading…"
+msgstr "Se descarcă…"
+
+msgid "Downloads"
+msgstr "Descărcări"
+
+msgid "ETA"
+msgstr "ETA"
+
+msgid "Error"
+msgstr "Erreur"
+
+msgid "Failed"
+msgstr "Eșuat"
+
+msgid "File"
+msgstr "Fișier"
+
+msgid "Finished with {n} failure(s)."
+msgstr "Terminé avec {n} échec(s)."
+
+msgid "Found {n} matches · {sel} selected"
+msgstr "{n} résultat(s) · {sel} sélectionné(s)"
+
+msgid "Help"
+msgstr "Ajutor"
+
+msgid "Invalid threads/retries"
+msgstr "Threads/tentatives invalides"
+
+msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
+msgstr "Touches : j/k ou flèches · Entrée sélection · Espace bascule · a tout · n aucun · d télécharger · c nettoyer · L langue · s paramètres · ? aide · q/Échap retour ou quitter"
+
+msgid "Language"
+msgstr "Limbă"
+
+msgid "Language…"
+msgstr "Langue…"
+
+msgid "Library: {path}"
+msgstr "Bibliothèque : {path}"
+
+msgid "M3U not found: {path}"
+msgstr "M3U introuvable : {path}"
+
+msgid "M3U path"
+msgstr "Chemin M3U"
+
+msgid "M3U: {path} · lang: {lang}"
+msgstr "M3U : {path} · langue : {lang}"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Nothing to clean."
+msgstr "Rien à nettoyer."
+
+msgid "Output directory (empty = XDG library)"
+msgstr "Répertoire de sortie (vide = bibliothèque XDG)"
+
+msgid "Output: {path}"
+msgstr "Sortie : {path}"
+
+msgid "Overall progress"
+msgstr "Progres general"
+
+msgid "Plan: {n} items ({size})"
+msgstr "Plan : {n} éléments ({size})"
+
+msgid "Preparing…"
+msgstr "Se pregătește…"
+
+msgid "Preview"
+msgstr "Aperçu"
+
+msgid "Progress"
+msgstr "Progression"
+
+msgid "Queued"
+msgstr "În coadă"
+
+msgid "Quit"
+msgstr "Ieșire"
+
+msgid "Rate"
+msgstr "Débit"
+
+msgid "Removed {n} items."
+msgstr "{n} élément(s) supprimé(s)."
+
+msgid "Retries"
+msgstr "Tentatives"
+
+msgid "Save"
+msgstr "Salvează"
+
+msgid "Saved {path}"
+msgstr "Enregistré {path}"
+
+msgid "Search"
+msgstr "Caută"
+
+msgid "Search playlist"
+msgstr "Rechercher dans la liste"
+
+msgid "Search tvg-id / tvg-name…"
+msgstr "Rechercher tvg-id / tvg-name…"
+
+msgid "Select at least one item."
+msgstr "Sélectionnez au moins un élément."
+
+msgid "Settings"
+msgstr "Setări"
+
+msgid "Size"
+msgstr "Taille"
+
+msgid "Skipped"
+msgstr "Ignoré"
+
+msgid "Status"
+msgstr "Stare"
+
+msgid "Threads"
+msgstr "Hilos"
+
+msgid "Waiting…"
+msgstr "En attente…"
+
+msgid "m3utolocal"
+msgstr "m3utolocal"
+
+msgid "orphan temporary file"
+msgstr "fichier temporaire orphelin"
+
+msgid "stale partial download"
+msgstr "téléchargement partiel obsolète"
+
+msgid "zero-byte file"
+msgstr "fichier de zéro octet"
+
+msgid "{percent:.0f}% · {rate} · {eta}"
+msgstr "{percent:.0f}% · {rate} · {eta}"
+
+msgid "{n} file"
+msgid_plural "{n} files"
+msgstr[0] "{n} file"
+msgstr[1] "{n} files"
+
+msgid "{n} item"
+msgid_plural "{n} items"
+msgstr[0] "{n} item"
+msgstr[1] "{n} items"

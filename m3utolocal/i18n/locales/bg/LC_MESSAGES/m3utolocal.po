@@ -1,0 +1,208 @@
+# m3utolocal translation catalog
+# Language: bg
+msgid ""
+msgstr ""
+"Project-Id-Version: m3utolocal 1.1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+
+msgid "All downloads completed under {path}"
+msgstr "Всички изтегляния са завършени под{path}"
+
+msgid "Apply"
+msgstr "Применить"
+
+msgid "Apply cleanup"
+msgstr "Выполнить очистку"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Cleanup"
+msgstr "Очистка"
+
+msgid "Cleanup library"
+msgstr "Очистить библиотеку"
+
+msgid "Cleanup preview"
+msgstr "Предпросмотр очистки"
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "Complete"
+msgstr "Завершено"
+
+msgid "Confirm"
+msgstr "Подтвердить"
+
+msgid "Done"
+msgstr "Готово"
+
+msgid "Download selected"
+msgstr "Скачать выбранное"
+
+msgid "Download {n} files ({size})?"
+msgstr "Изтегляне{n}файлове ({size})?"
+
+msgid "Downloading {name}…"
+msgstr "Загрузка {name}…"
+
+msgid "Downloading…"
+msgstr "Загрузка…"
+
+msgid "Downloads"
+msgstr "Загрузки"
+
+msgid "ETA"
+msgstr "ETA"
+
+msgid "Error"
+msgstr "Ошибка"
+
+msgid "Failed"
+msgstr "Ошибка"
+
+msgid "File"
+msgstr "Файл"
+
+msgid "Finished with {n} failure(s)."
+msgstr "Завърших с{n}повреда(и)."
+
+msgid "Found {n} matches · {sel} selected"
+msgstr "Намерени{n}мачове ·{sel}избрани"
+
+msgid "Help"
+msgstr "Справка"
+
+msgid "Invalid threads/retries"
+msgstr "Невалидни нишки/повторни опити"
+
+msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
+msgstr "Клавиши: j/k или стрелки преместване · Въведете избор · Интервал превключване · a всички · n няма · d изтегляне · c почистване · L език · s настройки · ? помощ · q/Esc назад или изход"
+
+msgid "Language"
+msgstr "Язык"
+
+msgid "Language…"
+msgstr "език..."
+
+msgid "Library: {path}"
+msgstr "Библиотека:{path}"
+
+msgid "M3U not found: {path}"
+msgstr "M3U не е намерен:{path}"
+
+msgid "M3U path"
+msgstr "M3U път"
+
+msgid "M3U: {path} · lang: {lang}"
+msgstr "M3U:{path}· език:{lang}"
+
+msgid "Name"
+msgstr "Имя"
+
+msgid "Nothing to clean."
+msgstr "Нечего очищать."
+
+msgid "Output directory (empty = XDG library)"
+msgstr "Изходна директория (празна = XDG библиотека)"
+
+msgid "Output: {path}"
+msgstr "Изход:{path}"
+
+msgid "Overall progress"
+msgstr "Общий прогресс"
+
+msgid "Plan: {n} items ({size})"
+msgstr "План:{n}елементи ({size})"
+
+msgid "Preparing…"
+msgstr "Подготовка…"
+
+msgid "Preview"
+msgstr "Просмотр"
+
+msgid "Progress"
+msgstr "Напредък"
+
+msgid "Queued"
+msgstr "В очереди"
+
+msgid "Quit"
+msgstr "Выход"
+
+msgid "Rate"
+msgstr "Оценете"
+
+msgid "Removed {n} items."
+msgstr "Премахнато{n}елементи."
+
+msgid "Retries"
+msgstr "Повторни опити"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "Saved {path}"
+msgstr "Запазено{path}"
+
+msgid "Search"
+msgstr "Поиск"
+
+msgid "Search playlist"
+msgstr "Поиск в плейлисте"
+
+msgid "Search tvg-id / tvg-name…"
+msgstr "Търсене на tvg-id / tvg-име..."
+
+msgid "Select at least one item."
+msgstr "Изберете поне един елемент."
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "Size"
+msgstr "Размер"
+
+msgid "Skipped"
+msgstr "Пропущено"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Threads"
+msgstr "нишки"
+
+msgid "Waiting…"
+msgstr "Ожидание…"
+
+msgid "m3utolocal"
+msgstr "m3utolocal"
+
+msgid "orphan temporary file"
+msgstr "осиротял временен файл"
+
+msgid "stale partial download"
+msgstr "остаряло частично изтегляне"
+
+msgid "zero-byte file"
+msgstr "нулев байтов файл"
+
+msgid "{percent:.0f}% · {rate} · {eta}"
+msgstr "{percent:.0f}% · {rate} · {eta}"
+
+msgid "{n} file"
+msgid_plural "{n} files"
+msgstr[0] "{n} file"
+msgstr[1] "{n} files"
+
+msgid "{n} item"
+msgid_plural "{n} items"
+msgstr[0] "{n} item"
+msgstr[1] "{n} items"

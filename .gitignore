@@ -1,5 +1,41 @@
+# Downloads / media
 /downloads/
 *.mkv
 *.avi
 *.mp4
+*.ts
+*.m4v
+*.webm
+*.part
+*.mp4.part
+*.mkv.part
+
+# M3U playlists (often huge; may contain stream credentials — never commit)
 *.m3u
+*.m3u8
+chans.m3u
+**/chans.m3u
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Local secrets / env
+.env
+.env.*
+
+# IDE local-only (run configs are shared; workspace is not)
+.idea/workspace.xml
+.idea/shelf/
+.idea/httpRequests/
+.idea/dataSources/
+.idea/dataSources.local.xml

@@ -8,38 +8,50 @@ msgstr ""
 "Language: he\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "הכל"
+
 msgid "All downloads completed under {path}"
-msgstr "כל ההורדות הושלמו תחת{path}"
+msgstr "כל ההורדות הושלמו תחת {path}"
 
 msgid "Apply"
 msgstr "החל"
 
 msgid "Apply cleanup"
-msgstr "החל ניקוי"
+msgstr "בצע ניקוי"
 
 msgid "Back"
 msgstr "חזרה"
 
+msgid "Back or Quit"
+msgstr "חזרה או יציאה"
+
 msgid "Cancel"
 msgstr "ביטול"
+
+msgid "Choose"
+msgstr "בחר"
 
 msgid "Cleanup"
 msgstr "ניקוי"
 
 msgid "Cleanup library"
-msgstr "ספריית ניקוי"
+msgstr "נקה ספרייה"
 
 msgid "Cleanup preview"
-msgstr "תצוגה מקדימה של ניקוי"
+msgstr "תצוגה מקדימה לניקוי"
 
 msgid "Close"
 msgstr "סגור"
 
 msgid "Complete"
-msgstr "לְהַשְׁלִים"
+msgstr "הושלם"
 
 msgid "Confirm"
 msgstr "אישור"
+
+msgid "Current file"
+msgstr "קובץ נוכחי"
 
 msgid "Done"
 msgstr "בוצע"
@@ -48,10 +60,10 @@ msgid "Download selected"
 msgstr "הורד נבחרים"
 
 msgid "Download {n} files ({size})?"
-msgstr "הורד{n}קבצים ({size})?"
+msgstr "להוריד {n} קבצים ({size})?"
 
 msgid "Downloading {name}…"
-msgstr "מוריד{name}…"
+msgstr "מוריד את {name}…"
 
 msgid "Downloading…"
 msgstr "מוריד…"
@@ -59,8 +71,11 @@ msgstr "מוריד…"
 msgid "Downloads"
 msgstr "הורדות"
 
+msgid "Downloads Queue"
+msgstr "תור הורדות"
+
 msgid "ETA"
-msgstr "זמן הגעה"
+msgstr "ETA"
 
 msgid "Error"
 msgstr "שגיאה"
@@ -72,55 +87,100 @@ msgid "File"
 msgstr "קובץ"
 
 msgid "Finished with {n} failure(s)."
-msgstr "סיים עם{n}כשל(ים)."
+msgstr "הסתיים עם {n} כשל(ים)."
+
+msgid "Found 0 matches · 0 selected"
+msgstr "0 תוצאות · 0 נבחרו"
 
 msgid "Found {n} matches · {sel} selected"
-msgstr "נמצא{n}התאמות ·{sel}נִבחָר"
+msgstr "{n} תוצאות · {sel} נבחרו"
+
+msgid "General Keys"
+msgstr "מקשים כלליים"
 
 msgid "Help"
 msgstr "עזרה"
 
+msgid "Help & Keyboard Shortcuts"
+msgstr "עזרה וקיצורי מקלדת"
+
+msgid "HomeScreen Keys"
+msgstr "מקשי מסך הבית"
+
 msgid "Invalid threads/retries"
-msgstr "שרשורים/נסיונות חוזרים לא חוקיים"
+msgstr "חוטים/ניסיונות חוזרים לא חוקיים"
+
+msgid "Invert"
+msgstr "הפוך"
+
+msgid "Invert selection"
+msgstr "הפוך בחירה"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "פריט #{num}: {name} ({size}) | {badge}\nURL: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "מקשים: j/k או חצים זזים · הזן בחר · החלפת רווח · a הכל · n אין · d הורדה · c ניקוי · L שפה · הגדרות · ? עזרה · q/Esc חזרה או צא"
+msgstr "מקשים: j/k או חיצים · Enter בחירה · רווח החלפה · a הכל · n כלום · d הורדה · c ניקוי · L שפה · s הגדרות · ? עזרה · q/Esc חזרה או יציאה"
 
 msgid "Language"
 msgstr "שפה"
 
 msgid "Language…"
-msgstr "שָׂפָה…"
+msgstr "שפה…"
+
+msgid "Library Output"
+msgstr "פלט ספרייה"
 
 msgid "Library: {path}"
-msgstr "סִפְרִיָה:{path}"
+msgstr "ספרייה: {path}"
+
+msgid "M3U Playlist"
+msgstr "רשימת M3U"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "חיפוש רשימות M3U והורדת מדיה"
 
 msgid "M3U not found: {path}"
-msgstr "M3U לא נמצא:{path}"
+msgstr "M3U לא נמצא: {path}"
 
 msgid "M3U path"
 msgstr "נתיב M3U"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U:{path}· lang:{lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
-msgstr "שֵׁם"
+msgstr "שם"
+
+msgid "Navigate items"
+msgstr "ניווט בפריטים"
+
+msgid "No"
+msgstr "לא"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "אין הורדות פעילות. חפש ערוצים כדי להתחיל."
+
+msgid "None"
+msgstr "כלום"
 
 msgid "Nothing to clean."
 msgstr "אין מה לנקות."
 
 msgid "Output directory (empty = XDG library)"
-msgstr "ספריית פלט (ריקה = ספריית XDG)"
+msgstr "תיקיית פלט (ריק = ספריית XDG)"
 
 msgid "Output: {path}"
-msgstr "תְפוּקָה:{path}"
+msgstr "פלט: {path}"
 
 msgid "Overall progress"
 msgstr "התקדמות כוללת"
 
+msgid "Plan"
+msgstr "תוכנית"
+
 msgid "Plan: {n} items ({size})"
-msgstr "לְתַכְנֵן:{n}פריטים ({size})"
+msgstr "תוכנית: {n} פריטים ({size})"
 
 msgid "Preparing…"
 msgstr "מכין…"
@@ -129,49 +189,67 @@ msgid "Preview"
 msgstr "תצוגה מקדימה"
 
 msgid "Progress"
-msgstr "הִתקַדְמוּת"
+msgstr "התקדמות"
 
 msgid "Queued"
 msgstr "בתור"
+
+msgid "Quick Navigation"
+msgstr "ניווט מהיר"
 
 msgid "Quit"
 msgstr "יציאה"
 
 msgid "Rate"
-msgstr "קֶצֶב"
+msgstr "קצב"
 
 msgid "Removed {n} items."
-msgstr "הוסר{n}פריטים."
+msgstr "הוסרו {n} פריטים."
 
 msgid "Retries"
-msgstr "מנסה שוב"
+msgstr "ניסיונות חוזרים"
 
 msgid "Save"
 msgstr "שמור"
 
 msgid "Saved {path}"
-msgstr "נשמר{path}"
+msgstr "נשמר {path}"
 
 msgid "Search"
 msgstr "חיפוש"
 
 msgid "Search playlist"
-msgstr "חפש ברשימת השמעה"
+msgstr "חפש ברשימה"
 
 msgid "Search tvg-id / tvg-name…"
-msgstr "חפש tvg-id / tvg-name..."
+msgstr "חפש tvg-id / tvg-name…"
+
+msgid "SearchScreen Keys"
+msgstr "מקשי מסך חיפוש"
+
+msgid "Searching…"
+msgstr "מחפש…"
+
+msgid "Select All"
+msgstr "בחר הכל"
+
+msgid "Select None"
+msgstr "בטל בחירה"
+
+msgid "Select an item to view details"
+msgstr "בחר פריט לצפייה בפרטים"
 
 msgid "Select at least one item."
-msgstr "בחר פריט אחד לפחות."
+msgstr "בחר לפחות פריט אחד."
 
 msgid "Settings"
 msgstr "הגדרות"
 
 msgid "Size"
-msgstr "גוֹדֶל"
+msgstr "גודל"
 
 msgid "Skipped"
-msgstr "דילג"
+msgstr "דולג"
 
 msgid "Status"
 msgstr "מצב"
@@ -179,8 +257,59 @@ msgstr "מצב"
 msgid "Threads"
 msgstr "חוטים"
 
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "חוטים: {threads} · ניסיונות: {retries}"
+
+msgid "Toggle"
+msgstr "החלף"
+
+msgid "Toggle & Down"
+msgstr "החלף ולמטה"
+
+msgid "Toggle / Add selection"
+msgstr "החלף / הוסף בחירה"
+
+msgid "Toggle item"
+msgstr "החלף פריט"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "לא ידוע"
+
+msgid "Unknown total size"
+msgstr "גודל כולל לא ידוע"
+
 msgid "Waiting…"
-msgstr "הַמתָנָה…"
+msgstr "ממתין…"
+
+msgid "Yes"
+msgstr "כן"
+
+msgid "[  UNSELECTED]"
+msgstr "[  לא נבחר]"
+
+msgid "[1] Search playlist"
+msgstr "[1] חפש ברשימה"
+
+msgid "[2] Cleanup library"
+msgstr "[2] נקה ספרייה"
+
+msgid "[3] Settings"
+msgstr "[3] הגדרות"
+
+msgid "[4] Language"
+msgstr "[4] שפה"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] תור הורדות"
+
+msgid "[6] Quit"
+msgstr "[6] יציאה"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ נבחר]"
 
 msgid "m3utolocal"
 msgstr "m3utolocal"
@@ -189,7 +318,7 @@ msgid "orphan temporary file"
 msgstr "קובץ זמני יתום"
 
 msgid "stale partial download"
-msgstr "הורדה חלקית מעופשת"
+msgstr "הורדה חלקית ישנה"
 
 msgid "zero-byte file"
 msgstr "קובץ אפס בתים"
@@ -199,10 +328,10 @@ msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "קובץ {n}"
+msgstr[1] "{n} קבצים"
 
 msgid "{n} item"
 msgid_plural "{n} items"
-msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[0] "פריט {n}"
+msgstr[1] "{n} פריטים"

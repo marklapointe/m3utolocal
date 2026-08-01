@@ -8,38 +8,50 @@ msgstr ""
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "Összes"
+
 msgid "All downloads completed under {path}"
-msgstr "Alle Downloads unter {path} abgeschlossen"
+msgstr "Minden letöltés kész itt: {path}"
 
 msgid "Apply"
 msgstr "Alkalmaz"
 
 msgid "Apply cleanup"
-msgstr "Bereinigung anwenden"
+msgstr "Tisztítás alkalmazása"
 
 msgid "Back"
 msgstr "Vissza"
 
+msgid "Back or Quit"
+msgstr "Vissza vagy kilépés"
+
 msgid "Cancel"
 msgstr "Mégse"
+
+msgid "Choose"
+msgstr "Választ"
 
 msgid "Cleanup"
 msgstr "Tisztítás"
 
 msgid "Cleanup library"
-msgstr "Bibliothek bereinigen"
+msgstr "Könyvtár tisztítása"
 
 msgid "Cleanup preview"
-msgstr "Bereinigungsvorschau"
+msgstr "Tisztítás előnézete"
 
 msgid "Close"
 msgstr "Bezárás"
 
 msgid "Complete"
-msgstr "Abgeschlossen"
+msgstr "Kész"
 
 msgid "Confirm"
 msgstr "Megerősítés"
+
+msgid "Current file"
+msgstr "Aktuális fájl"
 
 msgid "Done"
 msgstr "Kész"
@@ -48,10 +60,10 @@ msgid "Download selected"
 msgstr "Kijelöltek letöltése"
 
 msgid "Download {n} files ({size})?"
-msgstr "{n} Dateien herunterladen ({size})?"
+msgstr "{n} fájl letöltése ({size})?"
 
 msgid "Downloading {name}…"
-msgstr "Lade {name}…"
+msgstr "{name} letöltése…"
 
 msgid "Downloading…"
 msgstr "Letöltés…"
@@ -59,11 +71,14 @@ msgstr "Letöltés…"
 msgid "Downloads"
 msgstr "Letöltések"
 
+msgid "Downloads Queue"
+msgstr "Letöltési sor"
+
 msgid "ETA"
 msgstr "ETA"
 
 msgid "Error"
-msgstr "Fehler"
+msgstr "Hiba"
 
 msgid "Failed"
 msgstr "Sikertelen"
@@ -72,137 +87,251 @@ msgid "File"
 msgstr "Fájl"
 
 msgid "Finished with {n} failure(s)."
-msgstr "Beendet mit {n} Fehler(n)."
+msgstr "{n} hibával befejezve."
+
+msgid "Found 0 matches · 0 selected"
+msgstr "0 találat · 0 kijelölve"
 
 msgid "Found {n} matches · {sel} selected"
-msgstr "{n} Treffer · {sel} ausgewählt"
+msgstr "{n} találat · {sel} kijelölve"
+
+msgid "General Keys"
+msgstr "Általános billentyűk"
 
 msgid "Help"
 msgstr "Súgó"
 
+msgid "Help & Keyboard Shortcuts"
+msgstr "Súgó és billentyűparancsok"
+
+msgid "HomeScreen Keys"
+msgstr "Kezdőképernyő billentyűi"
+
 msgid "Invalid threads/retries"
-msgstr "Ungültige Threads/Wiederholungen"
+msgstr "Érvénytelen szálak/újrapróbálkozások"
+
+msgid "Invert"
+msgstr "Megfordítás"
+
+msgid "Invert selection"
+msgstr "Kijelölés megfordítása"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "Elem #{num}: {name} ({size}) | {badge}\nURL: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "Tasten: j/k oder Pfeile · Enter wählen · Leertaste umschalten · a alle · n keine · d laden · c bereinigen · L Sprache · s Einstellungen · ? Hilfe · q/Esc zurück oder beenden"
+msgstr "Billentyűk: j/k vagy nyilak · Enter kijelöl · Szóköz vált · a mind · n semmi · d letölt · c tisztít · L nyelv · s beállítások · ? súgó · q/Esc vissza vagy kilépés"
 
 msgid "Language"
 msgstr "Nyelv"
 
 msgid "Language…"
-msgstr "Sprache…"
+msgstr "Nyelv…"
+
+msgid "Library Output"
+msgstr "Könyvtár kimenet"
 
 msgid "Library: {path}"
-msgstr "Bibliothek: {path}"
+msgstr "Könyvtár: {path}"
+
+msgid "M3U Playlist"
+msgstr "M3U lejátszási lista"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "M3U lejátszási lista keresés és média letöltő"
 
 msgid "M3U not found: {path}"
-msgstr "M3U nicht gefunden: {path}"
+msgstr "M3U nem található: {path}"
 
 msgid "M3U path"
-msgstr "M3U-Pfad"
+msgstr "M3U útvonal"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U: {path} · Sprache: {lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
-msgstr "Nombre"
+msgstr "Név"
+
+msgid "Navigate items"
+msgstr "Elemek böngészése"
+
+msgid "No"
+msgstr "Nem"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "Nincs aktív letöltés. Keressen csatornákat a kezdéshez."
+
+msgid "None"
+msgstr "Semmi"
 
 msgid "Nothing to clean."
-msgstr "Nichts zu bereinigen."
+msgstr "Nincs mit tisztítani."
 
 msgid "Output directory (empty = XDG library)"
-msgstr "Ausgabeverzeichnis (leer = XDG-Bibliothek)"
+msgstr "Kimeneti mappa (üres = XDG könyvtár)"
 
 msgid "Output: {path}"
-msgstr "Ausgabe: {path}"
+msgstr "Kimenet: {path}"
 
 msgid "Overall progress"
 msgstr "Összesített folyamat"
 
+msgid "Plan"
+msgstr "Terv"
+
 msgid "Plan: {n} items ({size})"
-msgstr "Plan: {n} Einträge ({size})"
+msgstr "Terv: {n} elem ({size})"
 
 msgid "Preparing…"
 msgstr "Előkészítés…"
 
 msgid "Preview"
-msgstr "Vorschau"
+msgstr "Előnézet"
 
 msgid "Progress"
-msgstr "Fortschritt"
+msgstr "Folyamat"
 
 msgid "Queued"
-msgstr "Várakozik"
+msgstr "Sorban"
+
+msgid "Quick Navigation"
+msgstr "Gyors navigáció"
 
 msgid "Quit"
 msgstr "Kilépés"
 
 msgid "Rate"
-msgstr "Velocidad"
+msgstr "Sebesség"
 
 msgid "Removed {n} items."
-msgstr "{n} Einträge entfernt."
+msgstr "{n} elem eltávolítva."
 
 msgid "Retries"
-msgstr "Wiederholungen"
+msgstr "Újrapróbálkozások"
 
 msgid "Save"
 msgstr "Mentés"
 
 msgid "Saved {path}"
-msgstr "Gespeichert {path}"
+msgstr "Mentve {path}"
 
 msgid "Search"
 msgstr "Keresés"
 
 msgid "Search playlist"
-msgstr "Playlist durchsuchen"
+msgstr "Lista keresése"
 
 msgid "Search tvg-id / tvg-name…"
-msgstr "tvg-id / tvg-name suchen…"
+msgstr "tvg-id / tvg-name keresése…"
+
+msgid "SearchScreen Keys"
+msgstr "Keresőképernyő billentyűi"
+
+msgid "Searching…"
+msgstr "Keresés…"
+
+msgid "Select All"
+msgstr "Összes kijelölése"
+
+msgid "Select None"
+msgstr "Kijelölés törlése"
+
+msgid "Select an item to view details"
+msgstr "Válasszon elemet a részletekhez"
 
 msgid "Select at least one item."
-msgstr "Mindestens einen Eintrag auswählen."
+msgstr "Legalább egy elemet válasszon ki."
 
 msgid "Settings"
 msgstr "Beállítások"
 
 msgid "Size"
-msgstr "Größe"
+msgstr "Méret"
 
 msgid "Skipped"
-msgstr "Übersprungen"
+msgstr "Kihagyva"
 
 msgid "Status"
 msgstr "Állapot"
 
 msgid "Threads"
-msgstr "Hilos"
+msgstr "Szálak"
+
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "Szálak: {threads} · Újrapróbálkozások: {retries}"
+
+msgid "Toggle"
+msgstr "Váltás"
+
+msgid "Toggle & Down"
+msgstr "Váltás és le"
+
+msgid "Toggle / Add selection"
+msgstr "Váltás / kijelölés hozzáadása"
+
+msgid "Toggle item"
+msgstr "Elem váltása"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "Ismeretlen"
+
+msgid "Unknown total size"
+msgstr "Ismeretlen teljes méret"
 
 msgid "Waiting…"
-msgstr "Warten…"
+msgstr "Várakozás…"
+
+msgid "Yes"
+msgstr "Igen"
+
+msgid "[  UNSELECTED]"
+msgstr "[  NINCS KIJELÖLVE]"
+
+msgid "[1] Search playlist"
+msgstr "[1] Lista keresése"
+
+msgid "[2] Cleanup library"
+msgstr "[2] Könyvtár tisztítása"
+
+msgid "[3] Settings"
+msgstr "[3] Beállítások"
+
+msgid "[4] Language"
+msgstr "[4] Nyelv"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] Letöltési sor"
+
+msgid "[6] Quit"
+msgstr "[6] Kilépés"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ KIJELÖLVE]"
 
 msgid "m3utolocal"
 msgstr "m3utolocal"
 
 msgid "orphan temporary file"
-msgstr "verwaiste temporäre Datei"
+msgstr "árva ideiglenes fájl"
 
 msgid "stale partial download"
-msgstr "veralteter Teildownload"
+msgstr "elavult részleges letöltés"
 
 msgid "zero-byte file"
-msgstr "0-Byte-Datei"
+msgstr "nulla bájtos fájl"
 
 msgid "{percent:.0f}% · {rate} · {eta}"
 msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "{n} fájl"
+msgstr[1] "{n} fájl"
 
 msgid "{n} item"
 msgid_plural "{n} items"
-msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[0] "{n} elem"
+msgstr[1] "{n} elem"

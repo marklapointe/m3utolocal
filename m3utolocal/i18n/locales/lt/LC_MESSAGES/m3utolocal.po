@@ -8,6 +8,9 @@ msgstr ""
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "Visi"
+
 msgid "All downloads completed under {path}"
 msgstr "Visi atsisiuntimai baigti: {path}"
 
@@ -15,19 +18,25 @@ msgid "Apply"
 msgstr "Taikyti"
 
 msgid "Apply cleanup"
-msgstr "Atlikti valymą"
+msgstr "Vykdyti valymą"
 
 msgid "Back"
 msgstr "Atgal"
 
+msgid "Back or Quit"
+msgstr "Atgal arba išeiti"
+
 msgid "Cancel"
 msgstr "Atšaukti"
+
+msgid "Choose"
+msgstr "Pasirinkti"
 
 msgid "Cleanup"
 msgstr "Valymas"
 
 msgid "Cleanup library"
-msgstr "Valyti biblioteką"
+msgstr "Išvalyti biblioteką"
 
 msgid "Cleanup preview"
 msgstr "Valymo peržiūra"
@@ -41,11 +50,14 @@ msgstr "Baigta"
 msgid "Confirm"
 msgstr "Patvirtinti"
 
+msgid "Current file"
+msgstr "Dabartinis failas"
+
 msgid "Done"
 msgstr "Atlikta"
 
 msgid "Download selected"
-msgstr "Atsisiųsti pažymėtus"
+msgstr "Atsisiųsti pasirinktus"
 
 msgid "Download {n} files ({size})?"
 msgstr "Atsisiųsti {n} failus ({size})?"
@@ -58,6 +70,9 @@ msgstr "Atsisiunčiama…"
 
 msgid "Downloads"
 msgstr "Atsisiuntimai"
+
+msgid "Downloads Queue"
+msgstr "Atsisiuntimų eilė"
 
 msgid "ETA"
 msgstr "ETA"
@@ -74,17 +89,38 @@ msgstr "Failas"
 msgid "Finished with {n} failure(s)."
 msgstr "Baigta su {n} klaida(-omis)."
 
+msgid "Found 0 matches · 0 selected"
+msgstr "0 atitikmenų · 0 pasirinkta"
+
 msgid "Found {n} matches · {sel} selected"
-msgstr "Rasta {n} · pasirinkta {sel}"
+msgstr "{n} atitikmenų · {sel} pasirinkta"
+
+msgid "General Keys"
+msgstr "Bendrieji klavišai"
 
 msgid "Help"
 msgstr "Pagalba"
 
+msgid "Help & Keyboard Shortcuts"
+msgstr "Pagalba ir sparčiosios klavišai"
+
+msgid "HomeScreen Keys"
+msgstr "Pradžios ekrano klavišai"
+
 msgid "Invalid threads/retries"
-msgstr "Netinkamos gijos/pakartojimai"
+msgstr "Netinkami srautai/bandymai"
+
+msgid "Invert"
+msgstr "Apversti"
+
+msgid "Invert selection"
+msgstr "Apversti pasirinkimą"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "Elementas #{num}: {name} ({size}) | {badge}\nURL: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "Klavišai: j/k arba rodyklės · Enter pasirinkti · tarpas perjungti · a visi · n nė vienas · d atsisiųsti · c valyti · L kalba · s nustatymai · ? pagalba · q/Esc atgal ar išeiti"
+msgstr "Klavišai: j/k ar rodyklės · Enter pasirinkti · Tarpas perjungti · a visi · n nieko · d atsisiųsti · c valyti · L kalba · s nustatymai · ? pagalba · q/Esc atgal arba išeiti"
 
 msgid "Language"
 msgstr "Kalba"
@@ -92,8 +128,17 @@ msgstr "Kalba"
 msgid "Language…"
 msgstr "Kalba…"
 
+msgid "Library Output"
+msgstr "Bibliotekos išvestis"
+
 msgid "Library: {path}"
 msgstr "Biblioteka: {path}"
+
+msgid "M3U Playlist"
+msgstr "M3U grojaraštis"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "M3U grojaraščių paieška ir medijos atsisiuntimas"
 
 msgid "M3U not found: {path}"
 msgstr "M3U nerastas: {path}"
@@ -101,11 +146,23 @@ msgstr "M3U nerastas: {path}"
 msgid "M3U path"
 msgstr "M3U kelias"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U: {path} · kalba: {lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
 msgstr "Pavadinimas"
+
+msgid "Navigate items"
+msgstr "Naršyti elementus"
+
+msgid "No"
+msgstr "Ne"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "Nėra aktyvių atsisiuntimų. Ieškokite kanalų, kad pradėtumėte."
+
+msgid "None"
+msgstr "Nieko"
 
 msgid "Nothing to clean."
 msgstr "Nėra ką valyti."
@@ -118,6 +175,9 @@ msgstr "Išvestis: {path}"
 
 msgid "Overall progress"
 msgstr "Bendra eiga"
+
+msgid "Plan"
+msgstr "Planas"
 
 msgid "Plan: {n} items ({size})"
 msgstr "Planas: {n} elementai ({size})"
@@ -134,17 +194,20 @@ msgstr "Eiga"
 msgid "Queued"
 msgstr "Eilėje"
 
+msgid "Quick Navigation"
+msgstr "Greita navigacija"
+
 msgid "Quit"
 msgstr "Išeiti"
 
 msgid "Rate"
-msgstr "Sparta"
+msgstr "Greitis"
 
 msgid "Removed {n} items."
-msgstr "Pašalinta elementų: {n}."
+msgstr "Pašalinta {n} elementų."
 
 msgid "Retries"
-msgstr "Pakartojimai"
+msgstr "Bandymai"
 
 msgid "Save"
 msgstr "Išsaugoti"
@@ -160,6 +223,21 @@ msgstr "Ieškoti grojaraštyje"
 
 msgid "Search tvg-id / tvg-name…"
 msgstr "Ieškoti tvg-id / tvg-name…"
+
+msgid "SearchScreen Keys"
+msgstr "Paieškos ekrano klavišai"
+
+msgid "Searching…"
+msgstr "Ieškoma…"
+
+msgid "Select All"
+msgstr "Pasirinkti viską"
+
+msgid "Select None"
+msgstr "Pasirinkti nieko"
+
+msgid "Select an item to view details"
+msgstr "Pasirinkite elementą detalėms"
 
 msgid "Select at least one item."
 msgstr "Pasirinkite bent vieną elementą."
@@ -177,16 +255,67 @@ msgid "Status"
 msgstr "Būsena"
 
 msgid "Threads"
-msgstr "Gijos"
+msgstr "Srautai"
+
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "Srautai: {threads} · Bandymai: {retries}"
+
+msgid "Toggle"
+msgstr "Perjungti"
+
+msgid "Toggle & Down"
+msgstr "Perjungti ir žemyn"
+
+msgid "Toggle / Add selection"
+msgstr "Perjungti / pridėti pasirinkimą"
+
+msgid "Toggle item"
+msgstr "Perjungti elementą"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "Nežinoma"
+
+msgid "Unknown total size"
+msgstr "Nežinomas bendras dydis"
 
 msgid "Waiting…"
 msgstr "Laukiama…"
+
+msgid "Yes"
+msgstr "Taip"
+
+msgid "[  UNSELECTED]"
+msgstr "[  NEPASIRINKTA]"
+
+msgid "[1] Search playlist"
+msgstr "[1] Ieškoti grojaraštyje"
+
+msgid "[2] Cleanup library"
+msgstr "[2] Išvalyti biblioteką"
+
+msgid "[3] Settings"
+msgstr "[3] Nustatymai"
+
+msgid "[4] Language"
+msgstr "[4] Kalba"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] Atsisiuntimų eilė"
+
+msgid "[6] Quit"
+msgstr "[6] Išeiti"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ PASIRINKTA]"
 
 msgid "m3utolocal"
 msgstr "m3utolocal"
 
 msgid "orphan temporary file"
-msgstr "našlaitis laikinas failas"
+msgstr "našlaitis laikinasis failas"
 
 msgid "stale partial download"
 msgstr "pasenęs dalinis atsisiuntimas"
@@ -199,10 +328,10 @@ msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "{n} failas"
+msgstr[1] "{n} failai"
 
 msgid "{n} item"
 msgid_plural "{n} items"
-msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[0] "{n} elementas"
+msgstr[1] "{n} elementai"

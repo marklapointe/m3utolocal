@@ -3,6 +3,9 @@ msgstr ""
 "Project-Id-Version: m3utolocal 1.1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
+msgid "All"
+msgstr ""
+
 msgid "All downloads completed under {path}"
 msgstr ""
 
@@ -15,7 +18,13 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
+msgid "Back or Quit"
+msgstr ""
+
 msgid "Cancel"
+msgstr ""
+
+msgid "Choose"
 msgstr ""
 
 msgid "Cleanup"
@@ -36,6 +45,9 @@ msgstr ""
 msgid "Confirm"
 msgstr ""
 
+msgid "Current file"
+msgstr ""
+
 msgid "Done"
 msgstr ""
 
@@ -54,6 +66,9 @@ msgstr ""
 msgid "Downloads"
 msgstr ""
 
+msgid "Downloads Queue"
+msgstr ""
+
 msgid "ETA"
 msgstr ""
 
@@ -69,13 +84,34 @@ msgstr ""
 msgid "Finished with {n} failure(s)."
 msgstr ""
 
+msgid "Found 0 matches · 0 selected"
+msgstr ""
+
 msgid "Found {n} matches · {sel} selected"
+msgstr ""
+
+msgid "General Keys"
 msgstr ""
 
 msgid "Help"
 msgstr ""
 
+msgid "Help & Keyboard Shortcuts"
+msgstr ""
+
+msgid "HomeScreen Keys"
+msgstr ""
+
 msgid "Invalid threads/retries"
+msgstr ""
+
+msgid "Invert"
+msgstr ""
+
+msgid "Invert selection"
+msgstr ""
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
 msgstr ""
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
@@ -87,7 +123,16 @@ msgstr ""
 msgid "Language…"
 msgstr ""
 
+msgid "Library Output"
+msgstr ""
+
 msgid "Library: {path}"
+msgstr ""
+
+msgid "M3U Playlist"
+msgstr ""
+
+msgid "M3U Playlist Search & Media Downloader"
 msgstr ""
 
 msgid "M3U not found: {path}"
@@ -96,10 +141,22 @@ msgstr ""
 msgid "M3U path"
 msgstr ""
 
-msgid "M3U: {path} · lang: {lang}"
+msgid "M3U: {path}"
 msgstr ""
 
 msgid "Name"
+msgstr ""
+
+msgid "Navigate items"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr ""
+
+msgid "None"
 msgstr ""
 
 msgid "Nothing to clean."
@@ -112,6 +169,9 @@ msgid "Output: {path}"
 msgstr ""
 
 msgid "Overall progress"
+msgstr ""
+
+msgid "Plan"
 msgstr ""
 
 msgid "Plan: {n} items ({size})"
@@ -127,6 +187,9 @@ msgid "Progress"
 msgstr ""
 
 msgid "Queued"
+msgstr ""
+
+msgid "Quick Navigation"
 msgstr ""
 
 msgid "Quit"
@@ -156,6 +219,21 @@ msgstr ""
 msgid "Search tvg-id / tvg-name…"
 msgstr ""
 
+msgid "SearchScreen Keys"
+msgstr ""
+
+msgid "Searching…"
+msgstr ""
+
+msgid "Select All"
+msgstr ""
+
+msgid "Select None"
+msgstr ""
+
+msgid "Select an item to view details"
+msgstr ""
+
 msgid "Select at least one item."
 msgstr ""
 
@@ -174,7 +252,58 @@ msgstr ""
 msgid "Threads"
 msgstr ""
 
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr ""
+
+msgid "Toggle"
+msgstr ""
+
+msgid "Toggle & Down"
+msgstr ""
+
+msgid "Toggle / Add selection"
+msgstr ""
+
+msgid "Toggle item"
+msgstr ""
+
+msgid "URL"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Unknown total size"
+msgstr ""
+
 msgid "Waiting…"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "[  UNSELECTED]"
+msgstr ""
+
+msgid "[1] Search playlist"
+msgstr ""
+
+msgid "[2] Cleanup library"
+msgstr ""
+
+msgid "[3] Settings"
+msgstr ""
+
+msgid "[4] Language"
+msgstr ""
+
+msgid "[5] Downloads Queue"
+msgstr ""
+
+msgid "[6] Quit"
+msgstr ""
+
+msgid "[✓ SELECTED]"
 msgstr ""
 
 msgid "m3utolocal"

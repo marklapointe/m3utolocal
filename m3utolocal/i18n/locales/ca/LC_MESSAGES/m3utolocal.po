@@ -8,8 +8,11 @@ msgstr ""
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "Todos"
+
 msgid "All downloads completed under {path}"
-msgstr "Descargas completadas en {path}"
+msgstr "Baixades completades a {path}"
 
 msgid "Apply"
 msgstr "Aplicar"
@@ -18,22 +21,28 @@ msgid "Apply cleanup"
 msgstr "Aplicar limpieza"
 
 msgid "Back"
-msgstr "Atrás"
+msgstr "Enrere"
+
+msgid "Back or Quit"
+msgstr "Atrás o salir"
 
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Cancel·lar"
+
+msgid "Choose"
+msgstr "Elegir"
 
 msgid "Cleanup"
 msgstr "Limpieza"
 
 msgid "Cleanup library"
-msgstr "Limpiar biblioteca"
+msgstr "Netejar biblioteca"
 
 msgid "Cleanup preview"
 msgstr "Vista previa de limpieza"
 
 msgid "Close"
-msgstr "Cerrar"
+msgstr "Tancar"
 
 msgid "Complete"
 msgstr "Completo"
@@ -41,29 +50,35 @@ msgstr "Completo"
 msgid "Confirm"
 msgstr "Confirmar"
 
+msgid "Current file"
+msgstr "Archivo actual"
+
 msgid "Done"
 msgstr "Hecho"
 
 msgid "Download selected"
-msgstr "Descargar selección"
+msgstr "Baixar selecció"
 
 msgid "Download {n} files ({size})?"
 msgstr "¿Descargar {n} archivos ({size})?"
 
 msgid "Downloading {name}…"
-msgstr "Descargando {name}…"
+msgstr "Baixant {name}…"
 
 msgid "Downloading…"
-msgstr "Descargando…"
+msgstr "Baixant…"
 
 msgid "Downloads"
-msgstr "Descargas"
+msgstr "Baixades"
+
+msgid "Downloads Queue"
+msgstr "Cua de baixades"
 
 msgid "ETA"
 msgstr "ETA"
 
 msgid "Error"
-msgstr "Error"
+msgstr "Errada"
 
 msgid "Failed"
 msgstr "Fallido"
@@ -74,26 +89,56 @@ msgstr "Archivo"
 msgid "Finished with {n} failure(s)."
 msgstr "Finalizado con {n} error(es)."
 
+msgid "Found 0 matches · 0 selected"
+msgstr "0 resultados · 0 seleccionados"
+
 msgid "Found {n} matches · {sel} selected"
 msgstr "Encontrados {n} · {sel} seleccionados"
 
+msgid "General Keys"
+msgstr "Teclas generales"
+
 msgid "Help"
-msgstr "Ayuda"
+msgstr "Ajuda"
+
+msgid "Help & Keyboard Shortcuts"
+msgstr "Ayuda y atajos de teclado"
+
+msgid "HomeScreen Keys"
+msgstr "Teclas de inicio"
 
 msgid "Invalid threads/retries"
 msgstr "Hilos/reintentos no válidos"
+
+msgid "Invert"
+msgstr "Invertir"
+
+msgid "Invert selection"
+msgstr "Invertir selección"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "Elemento #{num}: {name} ({size}) | {badge}\nURL: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
 msgstr "Teclas: j/k o flechas · Enter seleccionar · Espacio alternar · a todo · n nada · d descargar · c limpiar · L idioma · s ajustes · ? ayuda · q/Esc atrás o salir"
 
 msgid "Language"
-msgstr "Idioma"
+msgstr "Llengua"
 
 msgid "Language…"
-msgstr "Idioma…"
+msgstr "Llengua…"
+
+msgid "Library Output"
+msgstr "Sortida de biblioteca"
 
 msgid "Library: {path}"
 msgstr "Biblioteca: {path}"
+
+msgid "M3U Playlist"
+msgstr "Llista M3U"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "Cerca de llistes M3U i baixada de mitjans"
 
 msgid "M3U not found: {path}"
 msgstr "M3U no encontrado: {path}"
@@ -101,11 +146,23 @@ msgstr "M3U no encontrado: {path}"
 msgid "M3U path"
 msgstr "Ruta M3U"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U: {path} · idioma: {lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
 msgstr "Nombre"
+
+msgid "Navigate items"
+msgstr "Navegar elementos"
+
+msgid "No"
+msgstr "No"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "No hay descargas activas. Busque canales para empezar."
+
+msgid "None"
+msgstr "Ninguno"
 
 msgid "Nothing to clean."
 msgstr "Nada que limpiar."
@@ -114,10 +171,13 @@ msgid "Output directory (empty = XDG library)"
 msgstr "Directorio de salida (vacío = biblioteca XDG)"
 
 msgid "Output: {path}"
-msgstr "Salida: {path}"
+msgstr "Sortida: {path}"
 
 msgid "Overall progress"
 msgstr "Progreso total"
+
+msgid "Plan"
+msgstr "Planificació"
 
 msgid "Plan: {n} items ({size})"
 msgstr "Plan: {n} elementos ({size})"
@@ -134,8 +194,11 @@ msgstr "Progreso"
 msgid "Queued"
 msgstr "En cola"
 
+msgid "Quick Navigation"
+msgstr "Navegació ràpida"
+
 msgid "Quit"
-msgstr "Salir"
+msgstr "Sortir"
 
 msgid "Rate"
 msgstr "Velocidad"
@@ -144,28 +207,43 @@ msgid "Removed {n} items."
 msgstr "Eliminados {n} elementos."
 
 msgid "Retries"
-msgstr "Reintentos"
+msgstr "Reintents"
 
 msgid "Save"
-msgstr "Guardar"
+msgstr "Desar"
 
 msgid "Saved {path}"
 msgstr "Guardado {path}"
 
 msgid "Search"
-msgstr "Buscar"
+msgstr "Cercar"
 
 msgid "Search playlist"
-msgstr "Buscar en la lista"
+msgstr "Cercar a la llista"
 
 msgid "Search tvg-id / tvg-name…"
 msgstr "Buscar tvg-id / tvg-name…"
+
+msgid "SearchScreen Keys"
+msgstr "Teclas de búsqueda"
+
+msgid "Searching…"
+msgstr "Buscando…"
+
+msgid "Select All"
+msgstr "Seleccionar todo"
+
+msgid "Select None"
+msgstr "Seleccionar nada"
+
+msgid "Select an item to view details"
+msgstr "Seleccione un elemento para ver detalles"
 
 msgid "Select at least one item."
 msgstr "Seleccione al menos un elemento."
 
 msgid "Settings"
-msgstr "Ajustes"
+msgstr "Configuració"
 
 msgid "Size"
 msgstr "Tamaño"
@@ -177,10 +255,61 @@ msgid "Status"
 msgstr "Estado"
 
 msgid "Threads"
-msgstr "Hilos"
+msgstr "Fils"
+
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "Fils: {threads} · Reintents: {retries}"
+
+msgid "Toggle"
+msgstr "Alternar"
+
+msgid "Toggle & Down"
+msgstr "Alternar y bajar"
+
+msgid "Toggle / Add selection"
+msgstr "Alternar / añadir selección"
+
+msgid "Toggle item"
+msgstr "Alternar elemento"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "Desconocido"
+
+msgid "Unknown total size"
+msgstr "Tamaño total desconocido"
 
 msgid "Waiting…"
 msgstr "Esperando…"
+
+msgid "Yes"
+msgstr "Sí"
+
+msgid "[  UNSELECTED]"
+msgstr "[  NO SELECCIONADO]"
+
+msgid "[1] Search playlist"
+msgstr "[1] Cercar a la llista"
+
+msgid "[2] Cleanup library"
+msgstr "[2] Netejar biblioteca"
+
+msgid "[3] Settings"
+msgstr "[3] Configuració"
+
+msgid "[4] Language"
+msgstr "[4] Llengua"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] Cua de baixades"
+
+msgid "[6] Quit"
+msgstr "[6] Sortir"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ SELECCIONADO]"
 
 msgid "m3utolocal"
 msgstr "m3utolocal"
@@ -199,10 +328,10 @@ msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "{n} archivo"
+msgstr[1] "{n} archivos"
 
 msgid "{n} item"
 msgid_plural "{n} items"
-msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[0] "{n} elemento"
+msgstr[1] "{n} elementos"

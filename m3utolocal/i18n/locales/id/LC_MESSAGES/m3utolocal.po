@@ -8,50 +8,62 @@ msgstr ""
 "Language: id\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "Semua"
+
 msgid "All downloads completed under {path}"
-msgstr "Descargas completadas en {path}"
+msgstr "Semua unduhan selesai di {path}"
 
 msgid "Apply"
 msgstr "Terapkan"
 
 msgid "Apply cleanup"
-msgstr "Aplicar limpieza"
+msgstr "Terapkan pembersihan"
 
 msgid "Back"
 msgstr "Kembali"
 
+msgid "Back or Quit"
+msgstr "Kembali atau keluar"
+
 msgid "Cancel"
 msgstr "Batal"
+
+msgid "Choose"
+msgstr "Pilih"
 
 msgid "Cleanup"
 msgstr "Bersihkan"
 
 msgid "Cleanup library"
-msgstr "Limpiar biblioteca"
+msgstr "Bersihkan pustaka"
 
 msgid "Cleanup preview"
-msgstr "Vista previa de limpieza"
+msgstr "Pratinjau pembersihan"
 
 msgid "Close"
 msgstr "Tutup"
 
 msgid "Complete"
-msgstr "Completo"
+msgstr "Selesai"
 
 msgid "Confirm"
 msgstr "Konfirmasi"
+
+msgid "Current file"
+msgstr "File saat ini"
 
 msgid "Done"
 msgstr "Selesai"
 
 msgid "Download selected"
-msgstr "Unduh pilihan"
+msgstr "Unduh yang dipilih"
 
 msgid "Download {n} files ({size})?"
-msgstr "¿Descargar {n} archivos ({size})?"
+msgstr "Unduh {n} file ({size})?"
 
 msgid "Downloading {name}…"
-msgstr "Descargando {name}…"
+msgstr "Mengunduh {name}…"
 
 msgid "Downloading…"
 msgstr "Mengunduh…"
@@ -59,11 +71,14 @@ msgstr "Mengunduh…"
 msgid "Downloads"
 msgstr "Unduhan"
 
+msgid "Downloads Queue"
+msgstr "Antrian unduhan"
+
 msgid "ETA"
 msgstr "ETA"
 
 msgid "Error"
-msgstr "Error"
+msgstr "Kesalahan"
 
 msgid "Failed"
 msgstr "Gagal"
@@ -72,127 +87,241 @@ msgid "File"
 msgstr "Berkas"
 
 msgid "Finished with {n} failure(s)."
-msgstr "Finalizado con {n} error(es)."
+msgstr "Selesai dengan {n} kegagalan."
+
+msgid "Found 0 matches · 0 selected"
+msgstr "0 cocok · 0 dipilih"
 
 msgid "Found {n} matches · {sel} selected"
-msgstr "Encontrados {n} · {sel} seleccionados"
+msgstr "{n} cocok · {sel} dipilih"
+
+msgid "General Keys"
+msgstr "Tombol umum"
 
 msgid "Help"
 msgstr "Bantuan"
 
+msgid "Help & Keyboard Shortcuts"
+msgstr "Bantuan & pintasan keyboard"
+
+msgid "HomeScreen Keys"
+msgstr "Tombol layar beranda"
+
 msgid "Invalid threads/retries"
-msgstr "Hilos/reintentos no válidos"
+msgstr "Thread/percobaan tidak valid"
+
+msgid "Invert"
+msgstr "Balik"
+
+msgid "Invert selection"
+msgstr "Balik pilihan"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "Butir #{num}: {name} ({size}) | {badge}\nURL: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "Teclas: j/k o flechas · Enter seleccionar · Espacio alternar · a todo · n nada · d descargar · c limpiar · L idioma · s ajustes · ? ayuda · q/Esc atrás o salir"
+msgstr "Tombol: j/k atau panah · Enter pilih · Spasi alihkan · a semua · n tidak ada · d unduh · c bersihkan · L bahasa · s pengaturan · ? bantuan · q/Esc kembali atau keluar"
 
 msgid "Language"
 msgstr "Bahasa"
 
 msgid "Language…"
-msgstr "Idioma…"
+msgstr "Bahasa…"
+
+msgid "Library Output"
+msgstr "Keluaran pustaka"
 
 msgid "Library: {path}"
-msgstr "Biblioteca: {path}"
+msgstr "Pustaka: {path}"
+
+msgid "M3U Playlist"
+msgstr "Daftar putar M3U"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "Pencarian daftar putar M3U & pengunduh media"
 
 msgid "M3U not found: {path}"
-msgstr "M3U no encontrado: {path}"
+msgstr "M3U tidak ditemukan: {path}"
 
 msgid "M3U path"
-msgstr "Ruta M3U"
+msgstr "Jalur M3U"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U: {path} · idioma: {lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
-msgstr "Nombre"
+msgstr "Nama"
+
+msgid "Navigate items"
+msgstr "Navigasi item"
+
+msgid "No"
+msgstr "Tidak"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "Tidak ada unduhan aktif. Cari saluran untuk memulai."
+
+msgid "None"
+msgstr "Tidak ada"
 
 msgid "Nothing to clean."
-msgstr "Nada que limpiar."
+msgstr "Tidak ada yang dibersihkan."
 
 msgid "Output directory (empty = XDG library)"
-msgstr "Directorio de salida (vacío = biblioteca XDG)"
+msgstr "Direktori keluaran (kosong = pustaka XDG)"
 
 msgid "Output: {path}"
-msgstr "Salida: {path}"
+msgstr "Keluaran: {path}"
 
 msgid "Overall progress"
-msgstr "Progres keseluruhan"
+msgstr "Kemajuan keseluruhan"
+
+msgid "Plan"
+msgstr "Rencana aksi"
 
 msgid "Plan: {n} items ({size})"
-msgstr "Plan: {n} elementos ({size})"
+msgstr "Rencana: {n} item ({size})"
 
 msgid "Preparing…"
 msgstr "Menyiapkan…"
 
 msgid "Preview"
-msgstr "Vista previa"
+msgstr "Pratinjau"
 
 msgid "Progress"
-msgstr "Progreso"
+msgstr "Kemajuan"
 
 msgid "Queued"
 msgstr "Antri"
+
+msgid "Quick Navigation"
+msgstr "Navigasi cepat"
 
 msgid "Quit"
 msgstr "Keluar"
 
 msgid "Rate"
-msgstr "Velocidad"
+msgstr "Kecepatan"
 
 msgid "Removed {n} items."
-msgstr "Eliminados {n} elementos."
+msgstr "{n} item dihapus."
 
 msgid "Retries"
-msgstr "Reintentos"
+msgstr "Percobaan ulang"
 
 msgid "Save"
 msgstr "Simpan"
 
 msgid "Saved {path}"
-msgstr "Guardado {path}"
+msgstr "Disimpan {path}"
 
 msgid "Search"
 msgstr "Cari"
 
 msgid "Search playlist"
-msgstr "Buscar en la lista"
+msgstr "Cari daftar putar"
 
 msgid "Search tvg-id / tvg-name…"
-msgstr "Buscar tvg-id / tvg-name…"
+msgstr "Cari tvg-id / tvg-name…"
+
+msgid "SearchScreen Keys"
+msgstr "Tombol layar pencarian"
+
+msgid "Searching…"
+msgstr "Mencari…"
+
+msgid "Select All"
+msgstr "Pilih semua"
+
+msgid "Select None"
+msgstr "Pilih tidak ada"
+
+msgid "Select an item to view details"
+msgstr "Pilih item untuk melihat detail"
 
 msgid "Select at least one item."
-msgstr "Seleccione al menos un elemento."
+msgstr "Pilih setidaknya satu item."
 
 msgid "Settings"
 msgstr "Pengaturan"
 
 msgid "Size"
-msgstr "Tamaño"
+msgstr "Ukuran"
 
 msgid "Skipped"
-msgstr "Omitido"
+msgstr "Dilewati"
 
 msgid "Status"
-msgstr "Estado"
+msgstr "Keadaan"
 
 msgid "Threads"
-msgstr "Hilos"
+msgstr "Thread"
+
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "Thread: {threads} · Percobaan: {retries}"
+
+msgid "Toggle"
+msgstr "Alihkan"
+
+msgid "Toggle & Down"
+msgstr "Alihkan & turun"
+
+msgid "Toggle / Add selection"
+msgstr "Alihkan / tambah pilihan"
+
+msgid "Toggle item"
+msgstr "Alihkan item"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "Tidak diketahui"
+
+msgid "Unknown total size"
+msgstr "Ukuran total tidak diketahui"
 
 msgid "Waiting…"
-msgstr "Esperando…"
+msgstr "Menunggu…"
+
+msgid "Yes"
+msgstr "Ya"
+
+msgid "[  UNSELECTED]"
+msgstr "[  TIDAK DIPILIH]"
+
+msgid "[1] Search playlist"
+msgstr "[1] Cari daftar putar"
+
+msgid "[2] Cleanup library"
+msgstr "[2] Bersihkan pustaka"
+
+msgid "[3] Settings"
+msgstr "[3] Pengaturan"
+
+msgid "[4] Language"
+msgstr "[4] Bahasa"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] Antrian unduhan"
+
+msgid "[6] Quit"
+msgstr "[6] Keluar"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ DIPILIH]"
 
 msgid "m3utolocal"
 msgstr "m3utolocal"
 
 msgid "orphan temporary file"
-msgstr "archivo temporal huérfano"
+msgstr "file sementara yatim"
 
 msgid "stale partial download"
-msgstr "descarga parcial antigua"
+msgstr "unduhan sebagian usang"
 
 msgid "zero-byte file"
-msgstr "archivo de cero bytes"
+msgstr "file nol byte"
 
 msgid "{percent:.0f}% · {rate} · {eta}"
 msgstr "{percent:.0f}% · {rate} · {eta}"
@@ -200,9 +329,9 @@ msgstr "{percent:.0f}% · {rate} · {eta}"
 msgid "{n} file"
 msgid_plural "{n} files"
 msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[1] "{n} file"
 
 msgid "{n} item"
 msgid_plural "{n} items"
 msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[1] "{n} item"

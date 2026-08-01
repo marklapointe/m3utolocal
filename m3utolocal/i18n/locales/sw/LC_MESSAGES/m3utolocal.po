@@ -8,20 +8,29 @@ msgstr ""
 "Language: sw\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "Zote"
+
 msgid "All downloads completed under {path}"
-msgstr "Vipakuliwa vyote vimekamilika katika {path}"
+msgstr "Vipakuzi vyote vimekamilika chini ya {path}"
 
 msgid "Apply"
 msgstr "Tumia"
 
 msgid "Apply cleanup"
-msgstr "Tekeleza usafishaji"
+msgstr "Tumia usafishaji"
 
 msgid "Back"
 msgstr "Rudi"
 
+msgid "Back or Quit"
+msgstr "Rudi au tok"
+
 msgid "Cancel"
 msgstr "Ghairi"
+
+msgid "Choose"
+msgstr "Chagua"
 
 msgid "Cleanup"
 msgstr "Safisha"
@@ -41,11 +50,14 @@ msgstr "Kamili"
 msgid "Confirm"
 msgstr "Thibitisha"
 
+msgid "Current file"
+msgstr "Faili ya sasa"
+
 msgid "Done"
 msgstr "Imekamilika"
 
 msgid "Download selected"
-msgstr "Pakua vilivyochaguliwa"
+msgstr "Pakua zilizochaguliwa"
 
 msgid "Download {n} files ({size})?"
 msgstr "Pakua faili {n} ({size})?"
@@ -57,7 +69,10 @@ msgid "Downloading…"
 msgstr "Inapakua…"
 
 msgid "Downloads"
-msgstr "Vipakuliwa"
+msgstr "Vipakuzi"
+
+msgid "Downloads Queue"
+msgstr "Foleni ya vipakuzi"
 
 msgid "ETA"
 msgstr "ETA"
@@ -66,7 +81,7 @@ msgid "Error"
 msgstr "Hitilafu"
 
 msgid "Failed"
-msgstr "Imeshindikana"
+msgstr "Imeshindwa"
 
 msgid "File"
 msgstr "Faili"
@@ -74,17 +89,38 @@ msgstr "Faili"
 msgid "Finished with {n} failure(s)."
 msgstr "Imekamilika na kushindwa {n}."
 
+msgid "Found 0 matches · 0 selected"
+msgstr "0 mechi · 0 zimechaguliwa"
+
 msgid "Found {n} matches · {sel} selected"
-msgstr "Imepatikana {n} · {sel} zimechaguliwa"
+msgstr "Mechi {n} · {sel} zimechaguliwa"
+
+msgid "General Keys"
+msgstr "Vifunguo vya jumla"
 
 msgid "Help"
 msgstr "Msaada"
 
+msgid "Help & Keyboard Shortcuts"
+msgstr "Msaada na njia za mkato"
+
+msgid "HomeScreen Keys"
+msgstr "Vifunguo vya skrini ya nyumbani"
+
 msgid "Invalid threads/retries"
-msgstr "Nyuzi/majaribio batili"
+msgstr "Thread/majaribio batili"
+
+msgid "Invert"
+msgstr "Geuza"
+
+msgid "Invert selection"
+msgstr "Geuza uteuzi"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "Kipengee #{num}: {name} ({size}) | {badge}\nURL: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "Vitufe: j/k au mishale · Enter chagua · Space geuza · a zote · n hakuna · d pakua · c safisha · L lugha · s mipangilio · ? msaada · q/Esc rudi au toka"
+msgstr "Vifunguo: j/k au mishale · Enter chagua · Space badilisha · a zote · n hakuna · d pakua · c safisha · L lugha · s mipangilio · ? msaada · q/Esc rudi au tok"
 
 msgid "Language"
 msgstr "Lugha"
@@ -92,8 +128,17 @@ msgstr "Lugha"
 msgid "Language…"
 msgstr "Lugha…"
 
+msgid "Library Output"
+msgstr "Matokeo ya maktaba"
+
 msgid "Library: {path}"
 msgstr "Maktaba: {path}"
+
+msgid "M3U Playlist"
+msgstr "Orodha ya M3U"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "Utafutaji wa orodha za M3U na kipakuzi cha midia"
 
 msgid "M3U not found: {path}"
 msgstr "M3U haipatikani: {path}"
@@ -101,26 +146,41 @@ msgstr "M3U haipatikani: {path}"
 msgid "M3U path"
 msgstr "Njia ya M3U"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U: {path} · lugha: {lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
 msgstr "Jina"
+
+msgid "Navigate items"
+msgstr "Sogeza vipengee"
+
+msgid "No"
+msgstr "Hapana"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "Hakuna vipakuzi hai. Tafuta chaneli kuanza."
+
+msgid "None"
+msgstr "Hakuna"
 
 msgid "Nothing to clean."
 msgstr "Hakuna cha kusafisha."
 
 msgid "Output directory (empty = XDG library)"
-msgstr "Folda ya kutoa (tupu = maktaba ya XDG)"
+msgstr "Folda ya matokeo (tupu = maktaba ya XDG)"
 
 msgid "Output: {path}"
-msgstr "Sehemu: {path}"
+msgstr "Matokeo: {path}"
 
 msgid "Overall progress"
 msgstr "Maendeleo ya jumla"
 
+msgid "Plan"
+msgstr "Mpango"
+
 msgid "Plan: {n} items ({size})"
-msgstr "Mpango: vipengele {n} ({size})"
+msgstr "Mpango: vipengee {n} ({size})"
 
 msgid "Preparing…"
 msgstr "Inaandaa…"
@@ -134,6 +194,9 @@ msgstr "Maendeleo"
 msgid "Queued"
 msgstr "Kwenye foleni"
 
+msgid "Quick Navigation"
+msgstr "Urambazaji wa haraka"
+
 msgid "Quit"
 msgstr "Toka"
 
@@ -141,10 +204,10 @@ msgid "Rate"
 msgstr "Kasi"
 
 msgid "Removed {n} items."
-msgstr "Imeondoa vipengele {n}."
+msgstr "Imeondoa vipengee {n}."
 
 msgid "Retries"
-msgstr "Majaribio tena"
+msgstr "Majaribio"
 
 msgid "Save"
 msgstr "Hifadhi"
@@ -161,8 +224,23 @@ msgstr "Tafuta orodha"
 msgid "Search tvg-id / tvg-name…"
 msgstr "Tafuta tvg-id / tvg-name…"
 
+msgid "SearchScreen Keys"
+msgstr "Vifunguo vya skrini ya utafutaji"
+
+msgid "Searching…"
+msgstr "Inatafuta…"
+
+msgid "Select All"
+msgstr "Chagua zote"
+
+msgid "Select None"
+msgstr "Usichague yoyote"
+
+msgid "Select an item to view details"
+msgstr "Chagua kipengee kuona maelezo"
+
 msgid "Select at least one item."
-msgstr "Chagua angalau kipengele kimoja."
+msgstr "Chagua angalau kipengee kimoja."
 
 msgid "Settings"
 msgstr "Mipangilio"
@@ -179,30 +257,81 @@ msgstr "Hali"
 msgid "Threads"
 msgstr "Nyuzi"
 
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "Nyuzi: {threads} · Majaribio: {retries}"
+
+msgid "Toggle"
+msgstr "Badilisha"
+
+msgid "Toggle & Down"
+msgstr "Badilisha na chini"
+
+msgid "Toggle / Add selection"
+msgstr "Badilisha / ongeza uteuzi"
+
+msgid "Toggle item"
+msgstr "Badilisha kipengee"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "Haijulikani"
+
+msgid "Unknown total size"
+msgstr "Ukubwa wa jumla haujulikani"
+
 msgid "Waiting…"
 msgstr "Inasubiri…"
+
+msgid "Yes"
+msgstr "Ndiyo"
+
+msgid "[  UNSELECTED]"
+msgstr "[  HAIJACHAGULIWA]"
+
+msgid "[1] Search playlist"
+msgstr "[1] Tafuta orodha"
+
+msgid "[2] Cleanup library"
+msgstr "[2] Safisha maktaba"
+
+msgid "[3] Settings"
+msgstr "[3] Mipangilio"
+
+msgid "[4] Language"
+msgstr "[4] Lugha"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] Foleni ya vipakuzi"
+
+msgid "[6] Quit"
+msgstr "[6] Toka"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ IMECHAGULIWA]"
 
 msgid "m3utolocal"
 msgstr "m3utolocal"
 
 msgid "orphan temporary file"
-msgstr "faili la muda yatima"
+msgstr "faili ya muda yatima"
 
 msgid "stale partial download"
-msgstr "upakuaji wa sehemu uliozeeka"
+msgstr "kipakuzi cha sehemu kilichopitwa"
 
 msgid "zero-byte file"
-msgstr "faili la byte sifuri"
+msgstr "faili ya baiti sifuri"
 
 msgid "{percent:.0f}% · {rate} · {eta}"
 msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "faili {n}"
+msgstr[1] "faili {n}"
 
 msgid "{n} item"
 msgid_plural "{n} items"
-msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[0] "kipengee {n}"
+msgstr[1] "vipengee {n}"

@@ -8,6 +8,9 @@ msgstr ""
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "Visi"
+
 msgid "All downloads completed under {path}"
 msgstr "Visas lejupielādes pabeigtas: {path}"
 
@@ -20,8 +23,14 @@ msgstr "Veikt tīrīšanu"
 msgid "Back"
 msgstr "Atpakaļ"
 
+msgid "Back or Quit"
+msgstr "Atpakaļ vai iziet"
+
 msgid "Cancel"
 msgstr "Atcelt"
+
+msgid "Choose"
+msgstr "Izvēlēties"
 
 msgid "Cleanup"
 msgstr "Tīrīšana"
@@ -41,6 +50,9 @@ msgstr "Pabeigts"
 msgid "Confirm"
 msgstr "Apstiprināt"
 
+msgid "Current file"
+msgstr "Pašreizējais fails"
+
 msgid "Done"
 msgstr "Gatavs"
 
@@ -59,6 +71,9 @@ msgstr "Lejupielādē…"
 msgid "Downloads"
 msgstr "Lejupielādes"
 
+msgid "Downloads Queue"
+msgstr "Lejupielāžu rinda"
+
 msgid "ETA"
 msgstr "ETA"
 
@@ -74,17 +89,38 @@ msgstr "Fails"
 msgid "Finished with {n} failure(s)."
 msgstr "Pabeigts ar {n} kļūdu(-ām)."
 
+msgid "Found 0 matches · 0 selected"
+msgstr "0 rezultāti · 0 atlasīti"
+
 msgid "Found {n} matches · {sel} selected"
-msgstr "Atrasti {n} · atlasīti {sel}"
+msgstr "{n} rezultāti · {sel} atlasīti"
+
+msgid "General Keys"
+msgstr "Vispārīgie taustiņi"
 
 msgid "Help"
 msgstr "Palīdzība"
 
+msgid "Help & Keyboard Shortcuts"
+msgstr "Palīdzība un īsceļi"
+
+msgid "HomeScreen Keys"
+msgstr "Sākuma ekrāna taustiņi"
+
 msgid "Invalid threads/retries"
 msgstr "Nederīgi pavedieni/mēģinājumi"
 
+msgid "Invert"
+msgstr "Apvērst"
+
+msgid "Invert selection"
+msgstr "Apvērst atlasi"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "Vienums #{num}: {name} ({size}) | {badge}\nURL: {url}"
+
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "Taustiņi: j/k vai bultiņas · Enter atlasīt · atstarpe pārslēgt · a visi · n neviens · d lejupielādēt · c tīrīt · L valoda · s iestatījumi · ? palīdzība · q/Esc atpakaļ vai iziet"
+msgstr "Taustiņi: j/k vai bultas · Enter atlasīt · Atstarpe pārslēgt · a visi · n neviens · d lejupielādēt · c tīrīt · L valoda · s iestatījumi · ? palīdzība · q/Esc atpakaļ vai iziet"
 
 msgid "Language"
 msgstr "Valoda"
@@ -92,8 +128,17 @@ msgstr "Valoda"
 msgid "Language…"
 msgstr "Valoda…"
 
+msgid "Library Output"
+msgstr "Bibliotēkas izvade"
+
 msgid "Library: {path}"
 msgstr "Bibliotēka: {path}"
+
+msgid "M3U Playlist"
+msgstr "M3U atskaņošanas saraksts"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "M3U sarakstu meklēšana un multivides lejupielāde"
 
 msgid "M3U not found: {path}"
 msgstr "M3U nav atrasts: {path}"
@@ -101,11 +146,23 @@ msgstr "M3U nav atrasts: {path}"
 msgid "M3U path"
 msgstr "M3U ceļš"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U: {path} · valoda: {lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
 msgstr "Nosaukums"
+
+msgid "Navigate items"
+msgstr "Pārvietoties vienumos"
+
+msgid "No"
+msgstr "Nē"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "Nav aktīvu lejupielāžu. Meklējiet kanālus, lai sāktu."
+
+msgid "None"
+msgstr "Neviens"
 
 msgid "Nothing to clean."
 msgstr "Nav ko tīrīt."
@@ -119,6 +176,9 @@ msgstr "Izvade: {path}"
 msgid "Overall progress"
 msgstr "Kopējais progress"
 
+msgid "Plan"
+msgstr "Plāns"
+
 msgid "Plan: {n} items ({size})"
 msgstr "Plāns: {n} vienumi ({size})"
 
@@ -129,10 +189,13 @@ msgid "Preview"
 msgstr "Priekšskatījums"
 
 msgid "Progress"
-msgstr "Fortschritt"
+msgstr "Norise"
 
 msgid "Queued"
 msgstr "Rindā"
+
+msgid "Quick Navigation"
+msgstr "Ātrā navigācija"
 
 msgid "Quit"
 msgstr "Iziet"
@@ -161,6 +224,21 @@ msgstr "Meklēt sarakstā"
 msgid "Search tvg-id / tvg-name…"
 msgstr "Meklēt tvg-id / tvg-name…"
 
+msgid "SearchScreen Keys"
+msgstr "Meklēšanas ekrāna taustiņi"
+
+msgid "Searching…"
+msgstr "Meklē…"
+
+msgid "Select All"
+msgstr "Atlasīt visus"
+
+msgid "Select None"
+msgstr "Neatlasīt nevienu"
+
+msgid "Select an item to view details"
+msgstr "Atlasiet vienumu, lai skatītu detaļas"
+
 msgid "Select at least one item."
 msgstr "Atlasiet vismaz vienu vienumu."
 
@@ -174,35 +252,86 @@ msgid "Skipped"
 msgstr "Izlaists"
 
 msgid "Status"
-msgstr "Statuss"
+msgstr "Stāvoklis"
 
 msgid "Threads"
 msgstr "Pavedieni"
 
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "Pavedieni: {threads} · Mēģinājumi: {retries}"
+
+msgid "Toggle"
+msgstr "Pārslēgt"
+
+msgid "Toggle & Down"
+msgstr "Pārslēgt un lejup"
+
+msgid "Toggle / Add selection"
+msgstr "Pārslēgt / pievienot atlasi"
+
+msgid "Toggle item"
+msgstr "Pārslēgt vienumu"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "Nezināms"
+
+msgid "Unknown total size"
+msgstr "Nezināms kopējais izmērs"
+
 msgid "Waiting…"
 msgstr "Gaida…"
+
+msgid "Yes"
+msgstr "Jā"
+
+msgid "[  UNSELECTED]"
+msgstr "[  NEATLASĪTS]"
+
+msgid "[1] Search playlist"
+msgstr "[1] Meklēt sarakstā"
+
+msgid "[2] Cleanup library"
+msgstr "[2] Tīrīt bibliotēku"
+
+msgid "[3] Settings"
+msgstr "[3] Iestatījumi"
+
+msgid "[4] Language"
+msgstr "[4] Valoda"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] Lejupielāžu rinda"
+
+msgid "[6] Quit"
+msgstr "[6] Iziet"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ ATLASĪTS]"
 
 msgid "m3utolocal"
 msgstr "m3utolocal"
 
 msgid "orphan temporary file"
-msgstr "bāreņa pagaidu fails"
+msgstr "bāreņu pagaidu fails"
 
 msgid "stale partial download"
 msgstr "novecojusi daļēja lejupielāde"
 
 msgid "zero-byte file"
-msgstr "nulle baitu fails"
+msgstr "nulles baitu fails"
 
 msgid "{percent:.0f}% · {rate} · {eta}"
 msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "{n} fails"
+msgstr[1] "{n} faili"
 
 msgid "{n} item"
 msgid_plural "{n} items"
-msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[0] "{n} vienums"
+msgstr[1] "{n} vienumi"

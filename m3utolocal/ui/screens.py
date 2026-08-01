@@ -76,15 +76,16 @@ class HomeScreen(Screen):
                 with Vertical(classes="stat-card", id="stat-m3u"):
                     yield Label(_("M3U Playlist"), classes="stat-title")
                     yield Label(
-                        _("M3U: {path} · lang: {lang}").format(
-                            path=self.app.settings.m3u_path, lang=get_language()
-                        ),
+                        _("M3U: {path}").format(path=self.app.settings.m3u_path),
                         classes="stat-val",
                     )
                 with Vertical(classes="stat-card", id="stat-cfg"):
                     yield Label(_("Settings"), classes="stat-title")
                     yield Label(
-                        f"Threads: {self.app.settings.threads} · Retries: {self.app.settings.retries}",
+                        _("Threads: {threads} · Retries: {retries}").format(
+                            threads=self.app.settings.threads,
+                            retries=self.app.settings.retries,
+                        ),
                         classes="stat-val",
                     )
             yield Static(_("Quick Navigation"), id="home-menu-title")
@@ -632,7 +633,7 @@ class SettingsScreen(Screen):
             with Vertical(classes="form-card"):
                 yield Label(_("M3U path"), classes="form-label")
                 yield Input(value=s.m3u_path, id="in-m3u", classes="form-input")
-                yield Label(_("Output directory (empty = current directory)"), classes="form-label")
+                yield Label(_("Output directory (empty = XDG library)"), classes="form-label")
                 yield Input(value=s.output_dir, id="in-out", classes="form-input")
                 yield Label(_("Threads"), classes="form-label")
                 yield Input(value=str(s.threads), id="in-threads", classes="form-input")

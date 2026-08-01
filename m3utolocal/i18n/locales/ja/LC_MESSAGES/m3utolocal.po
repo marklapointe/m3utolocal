@@ -8,29 +8,38 @@ msgstr ""
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "すべて"
+
 msgid "All downloads completed under {path}"
-msgstr "すべてのダウンロードは次の手順で完了しました{path}"
+msgstr "すべてのダウンロードが {path} に完了しました"
 
 msgid "Apply"
 msgstr "適用"
 
 msgid "Apply cleanup"
-msgstr "クリーンアップを適用する"
+msgstr "クリーンアップを実行"
 
 msgid "Back"
 msgstr "戻る"
 
+msgid "Back or Quit"
+msgstr "戻るまたは終了"
+
 msgid "Cancel"
 msgstr "キャンセル"
+
+msgid "Choose"
+msgstr "選択"
 
 msgid "Cleanup"
 msgstr "クリーンアップ"
 
 msgid "Cleanup library"
-msgstr "ライブラリのクリーンアップ"
+msgstr "ライブラリをクリーンアップ"
 
 msgid "Cleanup preview"
-msgstr "クリーンアップのプレビュー"
+msgstr "クリーンアッププレビュー"
 
 msgid "Close"
 msgstr "閉じる"
@@ -41,6 +50,9 @@ msgstr "完了"
 msgid "Confirm"
 msgstr "確認"
 
+msgid "Current file"
+msgstr "現在のファイル"
+
 msgid "Done"
 msgstr "完了"
 
@@ -48,10 +60,10 @@ msgid "Download selected"
 msgstr "選択をダウンロード"
 
 msgid "Download {n} files ({size})?"
-msgstr "ダウンロード{n}ファイル ({size}）？"
+msgstr "{n} ファイルをダウンロードしますか（{size}）？"
 
 msgid "Downloading {name}…"
-msgstr "ダウンロード中{name}…"
+msgstr "{name} をダウンロード中…"
 
 msgid "Downloading…"
 msgstr "ダウンロード中…"
@@ -59,8 +71,11 @@ msgstr "ダウンロード中…"
 msgid "Downloads"
 msgstr "ダウンロード"
 
+msgid "Downloads Queue"
+msgstr "ダウンロードキュー"
+
 msgid "ETA"
-msgstr "到着予定時刻"
+msgstr "ETA"
 
 msgid "Error"
 msgstr "エラー"
@@ -72,19 +87,40 @@ msgid "File"
 msgstr "ファイル"
 
 msgid "Finished with {n} failure(s)."
-msgstr "で終了{n}失敗。"
+msgstr "{n} 件の失敗で終了しました。"
+
+msgid "Found 0 matches · 0 selected"
+msgstr "0 件 · 0 選択"
 
 msgid "Found {n} matches · {sel} selected"
-msgstr "見つかった{n}マッチ ·{sel}選択された"
+msgstr "{n} 件 · {sel} 選択"
+
+msgid "General Keys"
+msgstr "一般キー"
 
 msgid "Help"
 msgstr "ヘルプ"
 
+msgid "Help & Keyboard Shortcuts"
+msgstr "ヘルプとキーボードショートカット"
+
+msgid "HomeScreen Keys"
+msgstr "ホーム画面キー"
+
 msgid "Invalid threads/retries"
-msgstr "無効なスレッド/再試行"
+msgstr "無効なスレッド/リトライ"
+
+msgid "Invert"
+msgstr "反転"
+
+msgid "Invert selection"
+msgstr "選択を反転"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "項目 #{num}: {name} ({size}) | {badge}\nURL: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "キー: j/k または矢印 移動 · Enter 選択 · スペース切り替え · a すべて · n なし · d ダウンロード · c クリーンアップ · L 言語 · s 設定 · ?ヘルプ · q/Esc で戻るか終了する"
+msgstr "キー: j/k または矢印 · Enter 選択 · Space 切替 · a すべて · n なし · d ダウンロード · c クリーンアップ · L 言語 · s 設定 · ? ヘルプ · q/Esc 戻るまたは終了"
 
 msgid "Language"
 msgstr "言語"
@@ -92,35 +128,59 @@ msgstr "言語"
 msgid "Language…"
 msgstr "言語…"
 
+msgid "Library Output"
+msgstr "ライブラリアウトプット"
+
 msgid "Library: {path}"
-msgstr "図書館：{path}"
+msgstr "ライブラリ: {path}"
+
+msgid "M3U Playlist"
+msgstr "M3U プレイリスト"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "M3U プレイリスト検索とメディアダウンローダー"
 
 msgid "M3U not found: {path}"
-msgstr "M3U が見つかりません:{path}"
+msgstr "M3U が見つかりません: {path}"
 
 msgid "M3U path"
-msgstr "M3Uパス"
+msgstr "M3U パス"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U:{path}·言語:{lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
 msgstr "名前"
 
+msgid "Navigate items"
+msgstr "項目を移動"
+
+msgid "No"
+msgstr "いいえ"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "アクティブなダウンロードはありません。チャンネルを検索して開始してください。"
+
+msgid "None"
+msgstr "なし"
+
 msgid "Nothing to clean."
-msgstr "掃除するものは何もありません。"
+msgstr "クリーンアップするものがありません。"
 
 msgid "Output directory (empty = XDG library)"
-msgstr "出力ディレクトリ (空 = XDG ライブラリ)"
+msgstr "出力ディレクトリ（空 = XDG ライブラリ）"
 
 msgid "Output: {path}"
-msgstr "出力：{path}"
+msgstr "出力: {path}"
 
 msgid "Overall progress"
 msgstr "全体の進捗"
 
+msgid "Plan"
+msgstr "計画"
+
 msgid "Plan: {n} items ({size})"
-msgstr "プラン：{n}アイテム ({size})"
+msgstr "計画: {n} 項目 ({size})"
 
 msgid "Preparing…"
 msgstr "準備中…"
@@ -134,23 +194,26 @@ msgstr "進捗"
 msgid "Queued"
 msgstr "待機中"
 
+msgid "Quick Navigation"
+msgstr "クイックナビゲーション"
+
 msgid "Quit"
 msgstr "終了"
 
 msgid "Rate"
-msgstr "レート"
+msgstr "速度"
 
 msgid "Removed {n} items."
-msgstr "削除されました{n}アイテム。"
+msgstr "{n} 項目を削除しました。"
 
 msgid "Retries"
-msgstr "再試行"
+msgstr "リトライ"
 
 msgid "Save"
 msgstr "保存"
 
 msgid "Saved {path}"
-msgstr "保存されました{path}"
+msgstr "保存しました {path}"
 
 msgid "Search"
 msgstr "検索"
@@ -161,8 +224,23 @@ msgstr "プレイリストを検索"
 msgid "Search tvg-id / tvg-name…"
 msgstr "tvg-id / tvg-name を検索…"
 
+msgid "SearchScreen Keys"
+msgstr "検索画面キー"
+
+msgid "Searching…"
+msgstr "検索中…"
+
+msgid "Select All"
+msgstr "すべて選択"
+
+msgid "Select None"
+msgstr "選択解除"
+
+msgid "Select an item to view details"
+msgstr "詳細を表示する項目を選択"
+
 msgid "Select at least one item."
-msgstr "少なくとも 1 つの項目を選択してください。"
+msgstr "少なくとも1つ選択してください。"
 
 msgid "Settings"
 msgstr "設定"
@@ -171,7 +249,7 @@ msgid "Size"
 msgstr "サイズ"
 
 msgid "Skipped"
-msgstr "スキップされました"
+msgstr "スキップ"
 
 msgid "Status"
 msgstr "状態"
@@ -179,30 +257,81 @@ msgstr "状態"
 msgid "Threads"
 msgstr "スレッド"
 
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "スレッド: {threads} · リトライ: {retries}"
+
+msgid "Toggle"
+msgstr "切替"
+
+msgid "Toggle & Down"
+msgstr "切替して下へ"
+
+msgid "Toggle / Add selection"
+msgstr "切替 / 選択を追加"
+
+msgid "Toggle item"
+msgstr "項目を切替"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "不明"
+
+msgid "Unknown total size"
+msgstr "合計サイズ不明"
+
 msgid "Waiting…"
-msgstr "待っている…"
+msgstr "待機中…"
+
+msgid "Yes"
+msgstr "はい"
+
+msgid "[  UNSELECTED]"
+msgstr "[  未選択]"
+
+msgid "[1] Search playlist"
+msgstr "[1] プレイリストを検索"
+
+msgid "[2] Cleanup library"
+msgstr "[2] ライブラリをクリーンアップ"
+
+msgid "[3] Settings"
+msgstr "[3] 設定"
+
+msgid "[4] Language"
+msgstr "[4] 言語"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] ダウンロードキュー"
+
+msgid "[6] Quit"
+msgstr "[6] 終了"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ 選択済み]"
 
 msgid "m3utolocal"
-msgstr "m3autolocal"
+msgstr "m3utolocal"
 
 msgid "orphan temporary file"
 msgstr "孤立した一時ファイル"
 
 msgid "stale partial download"
-msgstr "部分的に古いダウンロード"
+msgstr "古い部分ダウンロード"
 
 msgid "zero-byte file"
-msgstr "ゼロバイトのファイル"
+msgstr "0バイトファイル"
 
 msgid "{percent:.0f}% · {rate} · {eta}"
-msgstr "{percent:.0f}%・{rate} · {eta}"
+msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "{n} ファイル"
+msgstr[1] "{n} ファイル"
 
 msgid "{n} item"
 msgid_plural "{n} items"
-msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[0] "{n} 項目"
+msgstr[1] "{n} 項目"

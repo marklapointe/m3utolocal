@@ -7,7 +7,7 @@ from typing import Any
 
 from textual.app import App
 
-from m3utolocal.i18n import LocaleService, get_language, set_language, is_rtl
+from m3utolocal.i18n import LocaleService, set_language, is_rtl
 from m3utolocal.services.config import Settings, load_settings, save_settings
 from m3utolocal.services.download_manager import DownloadManager
 from m3utolocal.ui.screens import HomeScreen, SearchScreen
@@ -68,7 +68,8 @@ class M3UToLocalApp(App[None]):
             save_settings(self.settings)
         except OSError:
             pass
-        self.sub_title = f"lang={get_language()}"
+        # Keep header clean — language is visible in Settings / Language UI only.
+        self.sub_title = ""
 
 
 def run_tui(

@@ -33,6 +33,12 @@ def T(**kwargs: str) -> dict[str, str]:
 TRANSLATIONS: dict[str, dict[str, str]] = {
     "en": _base_map(),
     "es": T(**{
+        "M3U Playlist Search & Media Downloader": "Búsqueda de listas M3U y descarga de medios",
+        "Library Output": "Salida de biblioteca",
+        "M3U Playlist": "Lista M3U",
+        "Threads: {threads} · Retries: {retries}": "Hilos: {threads} · Reintentos: {retries}",
+        "Quick Navigation": "Navegación rápida",
+        "Downloads Queue": "Cola de descargas",
         "Confirm": "Confirmar",
         "Cancel": "Cancelar",
         "Close": "Cerrar",
@@ -44,7 +50,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "Nothing to clean.": "Nada que limpiar.",
         "Apply cleanup": "Aplicar limpieza",
         "Output: {path}": "Salida: {path}",
-        "M3U: {path} · lang: {lang}": "M3U: {path} · idioma: {lang}",
+        "M3U: {path}": "M3U: {path}",
         "Search playlist": "Buscar en la lista",
         "Cleanup library": "Limpiar biblioteca",
         "Settings": "Ajustes",
@@ -103,6 +109,12 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "orphan temporary file": "archivo temporal huérfano",
     }),
     "fr": T(**{
+        "M3U Playlist Search & Media Downloader": "Recherche de listes M3U et téléchargement média",
+        "Library Output": "Bibliothèque de sortie",
+        "M3U Playlist": "Liste M3U",
+        "Threads: {threads} · Retries: {retries}": "Threads : {threads} · Tentatives : {retries}",
+        "Quick Navigation": "Navigation rapide",
+        "Downloads Queue": "File de téléchargements",
         "Confirm": "Confirmer",
         "Cancel": "Annuler",
         "Close": "Fermer",
@@ -114,7 +126,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "Nothing to clean.": "Rien à nettoyer.",
         "Apply cleanup": "Appliquer le nettoyage",
         "Output: {path}": "Sortie : {path}",
-        "M3U: {path} · lang: {lang}": "M3U : {path} · langue : {lang}",
+        "M3U: {path}": "M3U : {path}",
         "Search playlist": "Rechercher dans la liste",
         "Cleanup library": "Nettoyer la bibliothèque",
         "Settings": "Paramètres",
@@ -172,6 +184,12 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "orphan temporary file": "fichier temporaire orphelin",
     }),
     "de": T(**{
+        "M3U Playlist Search & Media Downloader": "M3U-Playlist-Suche und Medien-Downloader",
+        "Library Output": "Bibliotheksausgabe",
+        "M3U Playlist": "M3U-Playlist",
+        "Threads: {threads} · Retries: {retries}": "Threads: {threads} · Wiederholungen: {retries}",
+        "Quick Navigation": "Schnellnavigation",
+        "Downloads Queue": "Download-Warteschlange",
         "Confirm": "Bestätigen",
         "Cancel": "Abbrechen",
         "Close": "Schließen",
@@ -183,7 +201,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "Nothing to clean.": "Nichts zu bereinigen.",
         "Apply cleanup": "Bereinigung anwenden",
         "Output: {path}": "Ausgabe: {path}",
-        "M3U: {path} · lang: {lang}": "M3U: {path} · Sprache: {lang}",
+        "M3U: {path}": "M3U: {path}",
         "Search playlist": "Playlist durchsuchen",
         "Cleanup library": "Bibliothek bereinigen",
         "Settings": "Einstellungen",
@@ -227,6 +245,13 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "ETA": "ETA",
         "File": "Datei",
         "Status": "Status",
+        "All": "Alle",
+        "None": "Keine",
+        "Invert": "Umkehren",
+        "Select an item to view details": "Eintrag auswählen für Details",
+        "Found 0 matches · 0 selected": "0 Treffer · 0 ausgewählt",
+        "Current file": "Aktuelle Datei",
+        "Plan": "Plan",
         "Keys: j/k or arrows move · Enter select · Space toggle · "
         "a all · n none · d download · c cleanup · L language · "
         "s settings · ? help · q/Esc back or quit": (
@@ -252,7 +277,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "Nothing to clean.": "Nada a limpar.",
         "Apply cleanup": "Aplicar limpeza",
         "Output: {path}": "Saída: {path}",
-        "M3U: {path} · lang: {lang}": "M3U: {path} · idioma: {lang}",
+        "M3U: {path}": "M3U: {path}",
         "Search playlist": "Pesquisar playlist",
         "Cleanup library": "Limpar biblioteca",
         "Settings": "Configurações",
@@ -314,7 +339,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "Nothing to clean.": "Nada a limpar.",
         "Apply cleanup": "Aplicar limpeza",
         "Output: {path}": "Saída: {path}",
-        "M3U: {path} · lang: {lang}": "M3U: {path} · idioma: {lang}",
+        "M3U: {path}": "M3U: {path}",
         "Search playlist": "Pesquisar lista",
         "Cleanup library": "Limpar biblioteca",
         "Settings": "Definições",
@@ -913,7 +938,18 @@ _FALLBACK_CHAIN: dict[str, str] = {
 
 
 def resolve_translations(code: str) -> dict[str, str]:
+    """Prefer complete_maps.json (full parity with English); fall back to partials."""
     base = _base_map()
+    # Full maps: same key count as English for every language
+    try:
+        from m3utolocal.i18n.complete_maps import map_for
+
+        complete = map_for(code)
+        merged = dict(base)
+        merged.update(complete)
+        return merged
+    except Exception:
+        pass
     if code in TRANSLATIONS:
         merged = dict(base)
         merged.update(TRANSLATIONS[code])
@@ -950,7 +986,11 @@ def write_po(code: str, translations: dict[str, str]) -> Path:
         '"MIME-Version: 1.0\\n"',
         "",
     ]
+    # Plural forms are written separately as msgid/msgid_plural — exclude them here.
+    plural_ids = {s for s, p in PLURALS} | {p for s, p in PLURALS}
     for msgid, msgstr in sorted(translations.items(), key=lambda x: x[0]):
+        if msgid in plural_ids:
+            continue
         lines.append(f'msgid "{escape_po(msgid)}"')
         lines.append(f'msgstr "{escape_po(msgstr)}"')
         lines.append("")
@@ -1005,9 +1045,18 @@ def main() -> int:
             tr.setdefault(k, v)
         po = write_po(code, tr)
         mo = compile_mo(po)
-        missing = [k for k, v in tr.items() if k in MESSAGES and v == MESSAGES[k] and code != "en"]
-        print(f"  {code}: {po.name} + {mo.name} ({len(tr)} strings"
-              f"{f', {len(missing)} still English' if missing and code != 'en' else ''})")
+        try:
+            from m3utolocal.i18n.complete_maps import IDENTITY_OK
+        except Exception:
+            IDENTITY_OK = frozenset({"m3utolocal", "ETA", "URL", "M3U: {path}",
+                                     "{percent:.0f}% · {rate} · {eta}"})
+        missing = [
+            k for k, v in tr.items()
+            if k in MESSAGES and v == MESSAGES[k] and code != "en" and k not in IDENTITY_OK
+        ]
+        n_msg = sum(1 for k in tr if k in MESSAGES)
+        print(f"  {code}: {po.name} + {mo.name} ({n_msg}/{len(MESSAGES)} MESSAGES"
+              f"{f', {len(missing)} still English' if missing else ''})")
     print(f"Built {len(codes)} locales under {LOCALE_DIR}")
     return 0
 

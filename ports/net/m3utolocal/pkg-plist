@@ -11,6 +11,8 @@ bin/m3utolocal
 %%PYTHON_SITELIBDIR%%/m3utolocal/domain/models.py
 %%PYTHON_SITELIBDIR%%/m3utolocal/i18n/__init__.py
 %%PYTHON_SITELIBDIR%%/m3utolocal/i18n/catalog.py
+%%PYTHON_SITELIBDIR%%/m3utolocal/i18n/complete_maps.json
+%%PYTHON_SITELIBDIR%%/m3utolocal/i18n/complete_maps.py
 %%PYTHON_SITELIBDIR%%/m3utolocal/i18n/languages.py
 %%PYTHON_SITELIBDIR%%/m3utolocal/i18n/locales/ar/LC_MESSAGES/m3utolocal.mo
 %%PYTHON_SITELIBDIR%%/m3utolocal/i18n/locales/ar/LC_MESSAGES/m3utolocal.po

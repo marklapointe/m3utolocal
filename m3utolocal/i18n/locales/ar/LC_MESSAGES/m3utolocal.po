@@ -8,8 +8,11 @@ msgstr ""
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "الكل"
+
 msgid "All downloads completed under {path}"
-msgstr "تم الانتهاء من جميع التنزيلات تحت{path}"
+msgstr "اكتملت جميع التنزيلات في {path}"
 
 msgid "Apply"
 msgstr "تطبيق"
@@ -20,14 +23,20 @@ msgstr "تطبيق التنظيف"
 msgid "Back"
 msgstr "رجوع"
 
+msgid "Back or Quit"
+msgstr "رجوع أو خروج"
+
 msgid "Cancel"
 msgstr "إلغاء"
+
+msgid "Choose"
+msgstr "اختر"
 
 msgid "Cleanup"
 msgstr "تنظيف"
 
 msgid "Cleanup library"
-msgstr "مكتبة التنظيف"
+msgstr "تنظيف المكتبة"
 
 msgid "Cleanup preview"
 msgstr "معاينة التنظيف"
@@ -41,6 +50,9 @@ msgstr "مكتمل"
 msgid "Confirm"
 msgstr "تأكيد"
 
+msgid "Current file"
+msgstr "الملف الحالي"
+
 msgid "Done"
 msgstr "تم"
 
@@ -48,10 +60,10 @@ msgid "Download selected"
 msgstr "تنزيل المحدد"
 
 msgid "Download {n} files ({size})?"
-msgstr "تحميل{n}ملفات ({size})؟"
+msgstr "تنزيل {n} ملفًا ({size})؟"
 
 msgid "Downloading {name}…"
-msgstr "جارٍ التنزيل{name}…"
+msgstr "جارٍ تنزيل {name}…"
 
 msgid "Downloading…"
 msgstr "جارٍ التنزيل…"
@@ -59,8 +71,11 @@ msgstr "جارٍ التنزيل…"
 msgid "Downloads"
 msgstr "التنزيلات"
 
+msgid "Downloads Queue"
+msgstr "قائمة انتظار التنزيل"
+
 msgid "ETA"
-msgstr "الوقت المتوقع للوصول"
+msgstr "ETA"
 
 msgid "Error"
 msgstr "خطأ"
@@ -72,55 +87,100 @@ msgid "File"
 msgstr "ملف"
 
 msgid "Finished with {n} failure(s)."
-msgstr "انتهى ب{n}الفشل (الفشل)."
+msgstr "انتهى مع {n} فشل/إخفاقات."
+
+msgid "Found 0 matches · 0 selected"
+msgstr "0 نتيجة · 0 محدد"
 
 msgid "Found {n} matches · {sel} selected"
-msgstr "وجد{n}المباريات ·{sel}مختارة"
+msgstr "{n} نتيجة · {sel} محدد"
+
+msgid "General Keys"
+msgstr "مفاتيح عامة"
 
 msgid "Help"
 msgstr "مساعدة"
 
+msgid "Help & Keyboard Shortcuts"
+msgstr "المساعدة واختصارات لوحة المفاتيح"
+
+msgid "HomeScreen Keys"
+msgstr "مفاتيح الشاشة الرئيسية"
+
 msgid "Invalid threads/retries"
-msgstr "المواضيع/إعادة المحاولة غير صالحة"
+msgstr "خيوط/إعادة محاولة غير صالحة"
+
+msgid "Invert"
+msgstr "عكس"
+
+msgid "Invert selection"
+msgstr "عكس التحديد"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "عنصر #{num}: {name} ({size}) | {badge}\nURL: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "المفاتيح: تحرك j/k أو الأسهم · أدخل حدد · تبديل المسافة · الكل · لا شيء · تنزيل d · تنظيف c · لغة L · إعدادات s · ؟ مساعدة · س/الخروج أو العودة"
+msgstr "المفاتيح: j/k أو الأسهم · Enter اختيار · Space تبديل · a الكل · n لا شيء · d تنزيل · c تنظيف · L لغة · s إعدادات · ? مساعدة · q/Esc رجوع أو خروج"
 
 msgid "Language"
 msgstr "اللغة"
 
 msgid "Language…"
-msgstr "لغة…"
+msgstr "اللغة…"
+
+msgid "Library Output"
+msgstr "مخرجات المكتبة"
 
 msgid "Library: {path}"
-msgstr "مكتبة:{path}"
+msgstr "المكتبة: {path}"
+
+msgid "M3U Playlist"
+msgstr "قائمة M3U"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "بحث قوائم M3U وتنزيل الوسائط"
 
 msgid "M3U not found: {path}"
-msgstr "لم يتم العثور على M3U:{path}"
+msgstr "لم يتم العثور على M3U: {path}"
 
 msgid "M3U path"
 msgstr "مسار M3U"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U:{path}· اللغة:{lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
-msgstr "اسم"
+msgstr "الاسم"
+
+msgid "Navigate items"
+msgstr "التنقل بين العناصر"
+
+msgid "No"
+msgstr "لا"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "لا توجد تنزيلات نشطة. ابحث عن قنوات للبدء."
+
+msgid "None"
+msgstr "لا شيء"
 
 msgid "Nothing to clean."
-msgstr "لا شيء لتنظيف."
+msgstr "لا يوجد ما يُنظَّف."
 
 msgid "Output directory (empty = XDG library)"
-msgstr "دليل الإخراج (فارغ = مكتبة XDG)"
+msgstr "مجلد الإخراج (فارغ = مكتبة XDG)"
 
 msgid "Output: {path}"
-msgstr "الإخراج:{path}"
+msgstr "الإخراج: {path}"
 
 msgid "Overall progress"
 msgstr "التقدم الإجمالي"
 
+msgid "Plan"
+msgstr "الخطة"
+
 msgid "Plan: {n} items ({size})"
-msgstr "يخطط:{n}أغراض ({size})"
+msgstr "الخطة: {n} عنصر ({size})"
 
 msgid "Preparing…"
 msgstr "جارٍ التحضير…"
@@ -129,19 +189,22 @@ msgid "Preview"
 msgstr "معاينة"
 
 msgid "Progress"
-msgstr "تقدم"
+msgstr "التقدم"
 
 msgid "Queued"
 msgstr "في الانتظار"
+
+msgid "Quick Navigation"
+msgstr "تنقل سريع"
 
 msgid "Quit"
 msgstr "خروج"
 
 msgid "Rate"
-msgstr "معدل"
+msgstr "السرعة"
 
 msgid "Removed {n} items."
-msgstr "تمت الإزالة{n}أغراض."
+msgstr "تمت إزالة {n} عنصر."
 
 msgid "Retries"
 msgstr "إعادة المحاولة"
@@ -150,16 +213,31 @@ msgid "Save"
 msgstr "حفظ"
 
 msgid "Saved {path}"
-msgstr "أنقذ{path}"
+msgstr "تم الحفظ {path}"
 
 msgid "Search"
 msgstr "بحث"
 
 msgid "Search playlist"
-msgstr "بحث في قائمة التشغيل"
+msgstr "البحث في القائمة"
 
 msgid "Search tvg-id / tvg-name…"
-msgstr "ابحث عن معرف tvg / اسم tvg..."
+msgstr "بحث tvg-id / tvg-name…"
+
+msgid "SearchScreen Keys"
+msgstr "مفاتيح شاشة البحث"
+
+msgid "Searching…"
+msgstr "جارٍ البحث…"
+
+msgid "Select All"
+msgstr "تحديد الكل"
+
+msgid "Select None"
+msgstr "إلغاء التحديد"
+
+msgid "Select an item to view details"
+msgstr "حدد عنصرًا لعرض التفاصيل"
 
 msgid "Select at least one item."
 msgstr "حدد عنصرًا واحدًا على الأقل."
@@ -168,19 +246,70 @@ msgid "Settings"
 msgstr "الإعدادات"
 
 msgid "Size"
-msgstr "مقاس"
+msgstr "الحجم"
 
 msgid "Skipped"
-msgstr "تم تخطيه"
+msgstr "تم التخطي"
 
 msgid "Status"
 msgstr "الحالة"
 
 msgid "Threads"
-msgstr "المواضيع"
+msgstr "الخيوط"
+
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "الخيوط: {threads} · إعادة المحاولة: {retries}"
+
+msgid "Toggle"
+msgstr "تبديل"
+
+msgid "Toggle & Down"
+msgstr "تبديل والأسفل"
+
+msgid "Toggle / Add selection"
+msgstr "تبديل / إضافة تحديد"
+
+msgid "Toggle item"
+msgstr "تبديل العنصر"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "غير معروف"
+
+msgid "Unknown total size"
+msgstr "حجم إجمالي غير معروف"
 
 msgid "Waiting…"
-msgstr "منتظر…"
+msgstr "جارٍ الانتظار…"
+
+msgid "Yes"
+msgstr "نعم"
+
+msgid "[  UNSELECTED]"
+msgstr "[  غير محدد]"
+
+msgid "[1] Search playlist"
+msgstr "[1] البحث في القائمة"
+
+msgid "[2] Cleanup library"
+msgstr "[2] تنظيف المكتبة"
+
+msgid "[3] Settings"
+msgstr "[3] الإعدادات"
+
+msgid "[4] Language"
+msgstr "[4] اللغة"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] قائمة انتظار التنزيل"
+
+msgid "[6] Quit"
+msgstr "[6] خروج"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ محدد]"
 
 msgid "m3utolocal"
 msgstr "m3utolocal"
@@ -189,20 +318,20 @@ msgid "orphan temporary file"
 msgstr "ملف مؤقت يتيم"
 
 msgid "stale partial download"
-msgstr "تحميل جزئي قديم"
+msgstr "تنزيل جزئي قديم"
 
 msgid "zero-byte file"
-msgstr "ملف صفر بايت"
+msgstr "ملف بحجم صفر"
 
 msgid "{percent:.0f}% · {rate} · {eta}"
 msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "ملف {n}"
+msgstr[1] "{n} ملفات"
 
 msgid "{n} item"
 msgid_plural "{n} items"
-msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[0] "عنصر {n}"
+msgstr[1] "{n} عناصر"

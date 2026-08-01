@@ -46,15 +46,17 @@ do-extract:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/main.py ${STAGEDIR}${PREFIX}/bin/m3utolocal
 	@${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}
-	cd ${WRKSRC} && ${COPYTREE_SHARE} m3utolocal \
-		${STAGEDIR}${PYTHON_SITELIBDIR} \
-		"! -name __pycache__ ! -name *.pyc ! -path */__pycache__/*"
+	# Copy package tree, then strip bytecode (FreeBSD find rejects unquoted *.pyc
+	# in COPYTREE_SHARE prune expressions when __pycache__ already exists in WRKSRC).
+	cd ${WRKSRC} && ${COPYTREE_SHARE} m3utolocal ${STAGEDIR}${PYTHON_SITELIBDIR}
+	@${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR}/m3utolocal -type d -name '__pycache__' \
+		-print0 2>/dev/null | ${XARGS} -0 ${RM} -rf
+	@${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR}/m3utolocal -type f \( -name '*.pyc' -o -name '*.pyo' \) \
+		-delete 2>/dev/null || ${TRUE}
 	${INSTALL_DATA} ${WRKSRC}/utils.py ${STAGEDIR}${PYTHON_SITELIBDIR}/
 	${INSTALL_DATA} ${WRKSRC}/tui.py ${STAGEDIR}${PYTHON_SITELIBDIR}/
 	${INSTALL_DATA} ${WRKSRC}/download_manager.py ${STAGEDIR}${PYTHON_SITELIBDIR}/
 	${INSTALL_DATA} ${WRKSRC}/downloader.py ${STAGEDIR}${PYTHON_SITELIBDIR}/
 	${INSTALL_MAN} ${WRKSRC}/man/m3utolocal.1 ${STAGEDIR}${PREFIX}/share/man/man1
-	@${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR}/m3utolocal -type d -name __pycache__ \
-		-exec ${RM} -rf {} + 2>/dev/null || ${TRUE}
 
 .include <bsd.port.mk>

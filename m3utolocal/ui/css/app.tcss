@@ -349,13 +349,23 @@ ModalScreen {
     margin-left: 2;
 }
 
-/* Right to Left (RTL) Layout Adjustments */
-.rtl Label, .rtl Static, .rtl Input {
+/* RTL: right-align titles/labels only. Values (paths, stats) stay LTR-aligned
+   so hard bidi isolates (RLI/LRI per run) are not fought by text-align.
+   Never mirror the whole screen layout. */
+.rtl .stat-title,
+.rtl .inspector-title,
+.rtl .form-label,
+.rtl #home-title,
+.rtl #home-subtitle,
+.rtl #home-menu-title {
     text-align: right;
 }
 
-.rtl .stat-title, .rtl .stat-val, .rtl .inspector-title {
-    text-align: right;
+/* Paths / mixed LTR+RTL values: keep visual LTR reading order */
+.rtl .stat-val,
+.rtl Input,
+.rtl DataTable {
+    text-align: left;
 }
 
 .rtl .action-bar, .rtl #home-actions {

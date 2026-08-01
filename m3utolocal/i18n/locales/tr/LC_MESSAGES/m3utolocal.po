@@ -8,38 +8,50 @@ msgstr ""
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "Tümü"
+
 msgid "All downloads completed under {path}"
-msgstr "Tüm indirmeler şu şekilde tamamlandı:{path}"
+msgstr "Tüm indirmeler {path} altında tamamlandı"
 
 msgid "Apply"
 msgstr "Uygula"
 
 msgid "Apply cleanup"
-msgstr "Temizlemeyi uygula"
+msgstr "Temizliği uygula"
 
 msgid "Back"
 msgstr "Geri"
 
+msgid "Back or Quit"
+msgstr "Geri veya çık"
+
 msgid "Cancel"
 msgstr "İptal"
+
+msgid "Choose"
+msgstr "Seç"
 
 msgid "Cleanup"
 msgstr "Temizlik"
 
 msgid "Cleanup library"
-msgstr "Temizleme kitaplığı"
+msgstr "Kitaplığı temizle"
 
 msgid "Cleanup preview"
-msgstr "Temizleme önizlemesi"
+msgstr "Temizlik önizlemesi"
 
 msgid "Close"
 msgstr "Kapat"
 
 msgid "Complete"
-msgstr "Tamamlamak"
+msgstr "Tamam"
 
 msgid "Confirm"
 msgstr "Onayla"
+
+msgid "Current file"
+msgstr "Geçerli dosya"
 
 msgid "Done"
 msgstr "Bitti"
@@ -48,16 +60,19 @@ msgid "Download selected"
 msgstr "Seçilenleri indir"
 
 msgid "Download {n} files ({size})?"
-msgstr "İndirmek{n}dosyalar ({size})?"
+msgstr "{n} dosya indirilsin mi ({size})?"
 
 msgid "Downloading {name}…"
-msgstr "İndiriliyor{name}…"
+msgstr "{name} indiriliyor…"
 
 msgid "Downloading…"
 msgstr "İndiriliyor…"
 
 msgid "Downloads"
 msgstr "İndirmeler"
+
+msgid "Downloads Queue"
+msgstr "İndirme kuyruğu"
 
 msgid "ETA"
 msgstr "ETA"
@@ -72,19 +87,40 @@ msgid "File"
 msgstr "Dosya"
 
 msgid "Finished with {n} failure(s)."
-msgstr "ile bitti{n}başarısızlık(lar)."
+msgstr "{n} hata ile bitti."
+
+msgid "Found 0 matches · 0 selected"
+msgstr "0 sonuç · 0 seçili"
 
 msgid "Found {n} matches · {sel} selected"
-msgstr "Kurmak{n}maçlar ·{sel}seçilmiş"
+msgstr "{n} sonuç · {sel} seçili"
+
+msgid "General Keys"
+msgstr "Genel tuşlar"
 
 msgid "Help"
 msgstr "Yardım"
 
+msgid "Help & Keyboard Shortcuts"
+msgstr "Yardım ve klavye kısayolları"
+
+msgid "HomeScreen Keys"
+msgstr "Ana ekran tuşları"
+
 msgid "Invalid threads/retries"
-msgstr "Geçersiz ileti dizileri/yeniden denemeler"
+msgstr "Geçersiz iş parçacığı/yeniden deneme"
+
+msgid "Invert"
+msgstr "Tersine çevir"
+
+msgid "Invert selection"
+msgstr "Seçimi tersine çevir"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "Öğe #{num}: {name} ({size}) | {badge}\nURL: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "Tuşlar: j/k veya oklar hareket · Giriş seç · Boşluk geçişi · a tümü · n hiçbiri · d indir · c temizleme · L dili · s ayarları · ? yardım · q/Esc geri dön veya çık"
+msgstr "Tuşlar: j/k veya oklar · Enter seç · Boşluk değiştir · a tümü · n hiç · d indir · c temizle · L dil · s ayarlar · ? yardım · q/Esc geri veya çık"
 
 msgid "Language"
 msgstr "Dil"
@@ -92,35 +128,59 @@ msgstr "Dil"
 msgid "Language…"
 msgstr "Dil…"
 
+msgid "Library Output"
+msgstr "Kitaplık çıktısı"
+
 msgid "Library: {path}"
-msgstr "Kütüphane:{path}"
+msgstr "Kitaplık: {path}"
+
+msgid "M3U Playlist"
+msgstr "M3U oynatma listesi"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "M3U oynatma listesi arama ve medya indirici"
 
 msgid "M3U not found: {path}"
-msgstr "M3U bulunamadı:{path}"
+msgstr "M3U bulunamadı: {path}"
 
 msgid "M3U path"
 msgstr "M3U yolu"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U:{path}· dil:{lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
-msgstr "İsim"
+msgstr "Ad"
+
+msgid "Navigate items"
+msgstr "Öğelerde gezin"
+
+msgid "No"
+msgstr "Hayır"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "Aktif indirme yok. Başlamak için kanal arayın."
+
+msgid "None"
+msgstr "Hiçbiri"
 
 msgid "Nothing to clean."
 msgstr "Temizlenecek bir şey yok."
 
 msgid "Output directory (empty = XDG library)"
-msgstr "Çıkış dizini (boş = XDG kütüphanesi)"
+msgstr "Çıktı dizini (boş = XDG kitaplığı)"
 
 msgid "Output: {path}"
-msgstr "Çıkış:{path}"
+msgstr "Çıktı: {path}"
 
 msgid "Overall progress"
 msgstr "Genel ilerleme"
 
+msgid "Plan"
+msgstr "Taslak"
+
 msgid "Plan: {n} items ({size})"
-msgstr "Planı:{n}öğeler ({size})"
+msgstr "Plan: {n} öğe ({size})"
 
 msgid "Preparing…"
 msgstr "Hazırlanıyor…"
@@ -129,37 +189,55 @@ msgid "Preview"
 msgstr "Önizleme"
 
 msgid "Progress"
-msgstr "İlerlemek"
+msgstr "İlerleme"
 
 msgid "Queued"
 msgstr "Sırada"
+
+msgid "Quick Navigation"
+msgstr "Hızlı gezinme"
 
 msgid "Quit"
 msgstr "Çıkış"
 
 msgid "Rate"
-msgstr "Oran"
+msgstr "Hız"
 
 msgid "Removed {n} items."
-msgstr "Kaldırıldı{n}öğeler."
+msgstr "{n} öğe kaldırıldı."
 
 msgid "Retries"
-msgstr "Yeniden denemeler"
+msgstr "Yeniden deneme"
 
 msgid "Save"
 msgstr "Kaydet"
 
 msgid "Saved {path}"
-msgstr "Kaydedildi{path}"
+msgstr "Kaydedildi {path}"
 
 msgid "Search"
 msgstr "Ara"
 
 msgid "Search playlist"
-msgstr "Çalma listesini ara"
+msgstr "Oynatma listesinde ara"
 
 msgid "Search tvg-id / tvg-name…"
-msgstr "tvg-id / tvg-name'yi arayın…"
+msgstr "tvg-id / tvg-name ara…"
+
+msgid "SearchScreen Keys"
+msgstr "Arama ekranı tuşları"
+
+msgid "Searching…"
+msgstr "Aranıyor…"
+
+msgid "Select All"
+msgstr "Tümünü seç"
+
+msgid "Select None"
+msgstr "Hiçbirini seçme"
+
+msgid "Select an item to view details"
+msgstr "Ayrıntılar için bir öğe seçin"
 
 msgid "Select at least one item."
 msgstr "En az bir öğe seçin."
@@ -177,32 +255,83 @@ msgid "Status"
 msgstr "Durum"
 
 msgid "Threads"
-msgstr "Konular"
+msgstr "İş parçacığı"
+
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "İş parçacığı: {threads} · Yeniden deneme: {retries}"
+
+msgid "Toggle"
+msgstr "Değiştir"
+
+msgid "Toggle & Down"
+msgstr "Değiştir ve aşağı"
+
+msgid "Toggle / Add selection"
+msgstr "Değiştir / seçime ekle"
+
+msgid "Toggle item"
+msgstr "Öğeyi değiştir"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "Bilinmiyor"
+
+msgid "Unknown total size"
+msgstr "Bilinmeyen toplam boyut"
 
 msgid "Waiting…"
-msgstr "Beklemek…"
+msgstr "Bekleniyor…"
+
+msgid "Yes"
+msgstr "Evet"
+
+msgid "[  UNSELECTED]"
+msgstr "[  SEÇİLİ DEĞİL]"
+
+msgid "[1] Search playlist"
+msgstr "[1] Oynatma listesinde ara"
+
+msgid "[2] Cleanup library"
+msgstr "[2] Kitaplığı temizle"
+
+msgid "[3] Settings"
+msgstr "[3] Ayarlar"
+
+msgid "[4] Language"
+msgstr "[4] Dil"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] İndirme kuyruğu"
+
+msgid "[6] Quit"
+msgstr "[6] Çıkış"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ SEÇİLİ]"
 
 msgid "m3utolocal"
 msgstr "m3utolocal"
 
 msgid "orphan temporary file"
-msgstr "yetim geçici dosyası"
+msgstr "sahipsiz geçici dosya"
 
 msgid "stale partial download"
 msgstr "eski kısmi indirme"
 
 msgid "zero-byte file"
-msgstr "sıfır baytlık dosya"
+msgstr "sıfır bayt dosya"
 
 msgid "{percent:.0f}% · {rate} · {eta}"
 msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "{n} dosya"
+msgstr[1] "{n} dosya"
 
 msgid "{n} item"
 msgid_plural "{n} items"
-msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[0] "{n} öğe"
+msgstr[1] "{n} öğe"

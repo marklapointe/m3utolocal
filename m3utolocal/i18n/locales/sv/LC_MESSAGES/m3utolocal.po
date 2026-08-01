@@ -8,38 +8,50 @@ msgstr ""
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "Alla"
+
 msgid "All downloads completed under {path}"
-msgstr "Alla nedladdningar slutförda under{path}"
+msgstr "Alla nedladdningar klara under {path}"
 
 msgid "Apply"
 msgstr "Verkställ"
 
 msgid "Apply cleanup"
-msgstr "Tillämpa rengöring"
+msgstr "Utför rensning"
 
 msgid "Back"
 msgstr "Tillbaka"
 
+msgid "Back or Quit"
+msgstr "Tillbaka eller avsluta"
+
 msgid "Cancel"
 msgstr "Avbryt"
+
+msgid "Choose"
+msgstr "Välj"
 
 msgid "Cleanup"
 msgstr "Rensning"
 
 msgid "Cleanup library"
-msgstr "Rensningsbibliotek"
+msgstr "Rensa bibliotek"
 
 msgid "Cleanup preview"
-msgstr "Förhandsgranskning av rengöring"
+msgstr "Förhandsgranska rensning"
 
 msgid "Close"
 msgstr "Stäng"
 
 msgid "Complete"
-msgstr "Komplett"
+msgstr "Klar"
 
 msgid "Confirm"
 msgstr "Bekräfta"
+
+msgid "Current file"
+msgstr "Aktuell fil"
 
 msgid "Done"
 msgstr "Klar"
@@ -48,16 +60,19 @@ msgid "Download selected"
 msgstr "Ladda ner valda"
 
 msgid "Download {n} files ({size})?"
-msgstr "Ladda ner{n}filer ({size})?"
+msgstr "Ladda ner {n} filer ({size})?"
 
 msgid "Downloading {name}…"
-msgstr "Laddar ner{name}…"
+msgstr "Laddar ner {name}…"
 
 msgid "Downloading…"
 msgstr "Laddar ner…"
 
 msgid "Downloads"
 msgstr "Nedladdningar"
+
+msgid "Downloads Queue"
+msgstr "Nedladdningskö"
 
 msgid "ETA"
 msgstr "ETA"
@@ -72,19 +87,40 @@ msgid "File"
 msgstr "Fil"
 
 msgid "Finished with {n} failure(s)."
-msgstr "Avslutade med{n}misslyckanden."
+msgstr "Avslutad med {n} fel."
+
+msgid "Found 0 matches · 0 selected"
+msgstr "0 träffar · 0 valda"
 
 msgid "Found {n} matches · {sel} selected"
-msgstr "Hittade{n}matcher ·{sel}vald"
+msgstr "{n} träffar · {sel} valda"
+
+msgid "General Keys"
+msgstr "Allmänna tangenter"
 
 msgid "Help"
 msgstr "Hjälp"
 
+msgid "Help & Keyboard Shortcuts"
+msgstr "Hjälp och kortkommandon"
+
+msgid "HomeScreen Keys"
+msgstr "Startskärmstangenter"
+
 msgid "Invalid threads/retries"
-msgstr "Ogiltiga trådar/försök igen"
+msgstr "Ogiltiga trådar/försök"
+
+msgid "Invert"
+msgstr "Invertera"
+
+msgid "Invert selection"
+msgstr "Invertera urval"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "Objekt #{num}: {name} ({size}) | {badge}\nURL: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "Tangenter: j/k eller pilar flyttas · Enter välj · Mellanslag växla · a alla · n inga · d ladda ner · c rensning · L språk · s inställningar · ? hjälp · q/Esc tillbaka eller avsluta"
+msgstr "Tangenter: j/k eller pilar · Enter välj · Mellanslag växla · a alla · n ingen · d ladda ner · c rensa · L språk · s inställningar · ? hjälp · q/Esc tillbaka eller avsluta"
 
 msgid "Language"
 msgstr "Språk"
@@ -92,47 +128,74 @@ msgstr "Språk"
 msgid "Language…"
 msgstr "Språk…"
 
+msgid "Library Output"
+msgstr "Biblioteksutdata"
+
 msgid "Library: {path}"
-msgstr "Bibliotek:{path}"
+msgstr "Bibliotek: {path}"
+
+msgid "M3U Playlist"
+msgstr "M3U-spellista"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "M3U-spellistesökning och medianerladdning"
 
 msgid "M3U not found: {path}"
-msgstr "M3U hittades inte:{path}"
+msgstr "M3U hittades inte: {path}"
 
 msgid "M3U path"
-msgstr "M3U-väg"
+msgstr "M3U-sökväg"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U:{path}· lång:{lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
 msgstr "Namn"
 
+msgid "Navigate items"
+msgstr "Navigera objekt"
+
+msgid "No"
+msgstr "Nej"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "Inga aktiva nedladdningar. Sök kanaler för att börja."
+
+msgid "None"
+msgstr "Ingen"
+
 msgid "Nothing to clean."
-msgstr "Inget att rengöra."
+msgstr "Inget att rensa."
 
 msgid "Output directory (empty = XDG library)"
 msgstr "Utdatakatalog (tom = XDG-bibliotek)"
 
 msgid "Output: {path}"
-msgstr "Produktion:{path}"
+msgstr "Utdata: {path}"
 
 msgid "Overall progress"
 msgstr "Total framsteg"
 
+msgid "Plan"
+msgstr "Schema"
+
 msgid "Plan: {n} items ({size})"
-msgstr "Planera:{n}föremål ({size})"
+msgstr "Plan: {n} objekt ({size})"
 
 msgid "Preparing…"
 msgstr "Förbereder…"
 
 msgid "Preview"
-msgstr "Förhandsvisning"
+msgstr "Förhandsgranska"
 
 msgid "Progress"
 msgstr "Framsteg"
 
 msgid "Queued"
 msgstr "Köad"
+
+msgid "Quick Navigation"
+msgstr "Snabbnavigering"
 
 msgid "Quit"
 msgstr "Avsluta"
@@ -141,25 +204,40 @@ msgid "Rate"
 msgstr "Hastighet"
 
 msgid "Removed {n} items."
-msgstr "Borttagen{n}föremål."
+msgstr "Tog bort {n} objekt."
 
 msgid "Retries"
-msgstr "Försöker igen"
+msgstr "Försök"
 
 msgid "Save"
 msgstr "Spara"
 
 msgid "Saved {path}"
-msgstr "Sparad{path}"
+msgstr "Sparad {path}"
 
 msgid "Search"
 msgstr "Sök"
 
 msgid "Search playlist"
-msgstr "Sök spellista"
+msgstr "Sök i spellista"
 
 msgid "Search tvg-id / tvg-name…"
-msgstr "Sök tvg-id / tvg-namn..."
+msgstr "Sök tvg-id / tvg-name…"
+
+msgid "SearchScreen Keys"
+msgstr "Sökskärmstangenter"
+
+msgid "Searching…"
+msgstr "Söker…"
+
+msgid "Select All"
+msgstr "Markera alla"
+
+msgid "Select None"
+msgstr "Markera ingen"
+
+msgid "Select an item to view details"
+msgstr "Välj ett objekt för detaljer"
 
 msgid "Select at least one item."
 msgstr "Välj minst ett objekt."
@@ -171,38 +249,89 @@ msgid "Size"
 msgstr "Storlek"
 
 msgid "Skipped"
-msgstr "Hoppade över"
+msgstr "Hoppad över"
 
 msgid "Status"
-msgstr "Status"
+msgstr "Läge"
 
 msgid "Threads"
 msgstr "Trådar"
 
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "Trådar: {threads} · Försök: {retries}"
+
+msgid "Toggle"
+msgstr "Växla"
+
+msgid "Toggle & Down"
+msgstr "Växla och ner"
+
+msgid "Toggle / Add selection"
+msgstr "Växla / lägg till urval"
+
+msgid "Toggle item"
+msgstr "Växla objekt"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "Okänd"
+
+msgid "Unknown total size"
+msgstr "Okänd total storlek"
+
 msgid "Waiting…"
-msgstr "Väntan…"
+msgstr "Väntar…"
+
+msgid "Yes"
+msgstr "Ja"
+
+msgid "[  UNSELECTED]"
+msgstr "[  EJ MARKERAD]"
+
+msgid "[1] Search playlist"
+msgstr "[1] Sök i spellista"
+
+msgid "[2] Cleanup library"
+msgstr "[2] Rensa bibliotek"
+
+msgid "[3] Settings"
+msgstr "[3] Inställningar"
+
+msgid "[4] Language"
+msgstr "[4] Språk"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] Nedladdningskö"
+
+msgid "[6] Quit"
+msgstr "[6] Avsluta"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ MARKERAD]"
 
 msgid "m3utolocal"
 msgstr "m3utolocal"
 
 msgid "orphan temporary file"
-msgstr "föräldralös temporär fil"
+msgstr "föräldralös temporärfil"
 
 msgid "stale partial download"
-msgstr "inaktuell partiell nedladdning"
+msgstr "gammal delvis nedladdning"
 
 msgid "zero-byte file"
-msgstr "noll-byte-fil"
+msgstr "nollbytesfil"
 
 msgid "{percent:.0f}% · {rate} · {eta}"
 msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "{n} fil"
+msgstr[1] "{n} filer"
 
 msgid "{n} item"
 msgid_plural "{n} items"
-msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[0] "{n} objekt"
+msgstr[1] "{n} objekt"

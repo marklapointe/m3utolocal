@@ -8,20 +8,29 @@ msgstr ""
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "Kaikki"
+
 msgid "All downloads completed under {path}"
-msgstr "Kaikki lataukset suoritettu alla{path}"
+msgstr "Kaikki lataukset valmiit kohteessa {path}"
 
 msgid "Apply"
 msgstr "Käytä"
 
 msgid "Apply cleanup"
-msgstr "Käytä puhdistusta"
+msgstr "Suorita siivous"
 
 msgid "Back"
 msgstr "Takaisin"
 
+msgid "Back or Quit"
+msgstr "Takaisin tai lopeta"
+
 msgid "Cancel"
 msgstr "Peruuta"
+
+msgid "Choose"
+msgstr "Valitse"
 
 msgid "Cleanup"
 msgstr "Siivous"
@@ -30,16 +39,19 @@ msgid "Cleanup library"
 msgstr "Siivoa kirjasto"
 
 msgid "Cleanup preview"
-msgstr "Puhdistuksen esikatselu"
+msgstr "Siivouksen esikatselu"
 
 msgid "Close"
 msgstr "Sulje"
 
 msgid "Complete"
-msgstr "Täydellinen"
+msgstr "Valmis"
 
 msgid "Confirm"
 msgstr "Vahvista"
+
+msgid "Current file"
+msgstr "Nykyinen tiedosto"
 
 msgid "Done"
 msgstr "Valmis"
@@ -48,16 +60,19 @@ msgid "Download selected"
 msgstr "Lataa valitut"
 
 msgid "Download {n} files ({size})?"
-msgstr "Lataa{n}tiedostot ({size})?"
+msgstr "Ladataanko {n} tiedostoa ({size})?"
 
 msgid "Downloading {name}…"
-msgstr "Ladataan{name}…"
+msgstr "Ladataan {name}…"
 
 msgid "Downloading…"
 msgstr "Ladataan…"
 
 msgid "Downloads"
 msgstr "Lataukset"
+
+msgid "Downloads Queue"
+msgstr "Latausjono"
 
 msgid "ETA"
 msgstr "ETA"
@@ -72,19 +87,40 @@ msgid "File"
 msgstr "Tiedosto"
 
 msgid "Finished with {n} failure(s)."
-msgstr "Viimeistelty kanssa{n}vika(t)."
+msgstr "Päättyi {n} virheeseen."
+
+msgid "Found 0 matches · 0 selected"
+msgstr "0 osumaa · 0 valittu"
 
 msgid "Found {n} matches · {sel} selected"
-msgstr "Löytyi{n}ottelut ·{sel}valittu"
+msgstr "{n} osumaa · {sel} valittu"
+
+msgid "General Keys"
+msgstr "Yleiset näppäimet"
 
 msgid "Help"
 msgstr "Ohje"
 
+msgid "Help & Keyboard Shortcuts"
+msgstr "Ohje ja pikanäppäimet"
+
+msgid "HomeScreen Keys"
+msgstr "Kotinäytön näppäimet"
+
 msgid "Invalid threads/retries"
-msgstr "Virheelliset säikeet/uudelleenyritykset"
+msgstr "Virheelliset säikeet/yritykset"
+
+msgid "Invert"
+msgstr "Käännä"
+
+msgid "Invert selection"
+msgstr "Käännä valinta"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "Kohta #{num}: {name} ({size}) | {badge}\nURL: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "Näppäimet: j/k tai nuolet siirrä · Syötä valinta · Välilyönti vaihto · a kaikki · n ei mitään · d lataus · c puhdistus · L kieli · s asetukset · ? ohje · q/Esc takaisin tai lopeta"
+msgstr "Näppäimet: j/k tai nuolet · Enter valitse · Välilyönti vaihda · a kaikki · n ei mitään · d lataa · c siivoa · L kieli · s asetukset · ? ohje · q/Esc takaisin tai lopeta"
 
 msgid "Language"
 msgstr "Kieli"
@@ -92,35 +128,59 @@ msgstr "Kieli"
 msgid "Language…"
 msgstr "Kieli…"
 
+msgid "Library Output"
+msgstr "Kirjaston tuloste"
+
 msgid "Library: {path}"
-msgstr "Kirjasto:{path}"
+msgstr "Kirjasto: {path}"
+
+msgid "M3U Playlist"
+msgstr "M3U-soittolista"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "M3U-soittolistahaku ja medialataaja"
 
 msgid "M3U not found: {path}"
-msgstr "M3U:ta ei löydy:{path}"
+msgstr "M3U:ta ei löydy: {path}"
 
 msgid "M3U path"
-msgstr "M3U polku"
+msgstr "M3U-polku"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U:{path}· kieli:{lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
 msgstr "Nimi"
 
+msgid "Navigate items"
+msgstr "Selaa kohteita"
+
+msgid "No"
+msgstr "Ei"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "Ei aktiivisia latauksia. Hae kanavia aloittaaksesi."
+
+msgid "None"
+msgstr "Ei mitään"
+
 msgid "Nothing to clean."
-msgstr "Ei mitään siivottavaa."
+msgstr "Ei siivottavaa."
 
 msgid "Output directory (empty = XDG library)"
-msgstr "Tuloshakemisto (tyhjä = XDG-kirjasto)"
+msgstr "Tulostehakemisto (tyhjä = XDG-kirjasto)"
 
 msgid "Output: {path}"
-msgstr "Lähtö:{path}"
+msgstr "Tuloste: {path}"
 
 msgid "Overall progress"
 msgstr "Kokonaisedistyminen"
 
+msgid "Plan"
+msgstr "Suunnitelma"
+
 msgid "Plan: {n} items ({size})"
-msgstr "Suunnitelma:{n}tuotteet ({size})"
+msgstr "Suunnitelma: {n} kohdetta ({size})"
 
 msgid "Preparing…"
 msgstr "Valmistellaan…"
@@ -134,32 +194,50 @@ msgstr "Edistyminen"
 msgid "Queued"
 msgstr "Jonossa"
 
+msgid "Quick Navigation"
+msgstr "Pikanavigointi"
+
 msgid "Quit"
 msgstr "Lopeta"
 
 msgid "Rate"
-msgstr "Rate"
+msgstr "Nopeus"
 
 msgid "Removed {n} items."
-msgstr "Poistettu{n}kohteita."
+msgstr "Poistettu {n} kohdetta."
 
 msgid "Retries"
-msgstr "Uudelleenyritykset"
+msgstr "Yritykset"
 
 msgid "Save"
 msgstr "Tallenna"
 
 msgid "Saved {path}"
-msgstr "Tallennettu{path}"
+msgstr "Tallennettu {path}"
 
 msgid "Search"
 msgstr "Haku"
 
 msgid "Search playlist"
-msgstr "Hae soittolistaa"
+msgstr "Hae soittolistasta"
 
 msgid "Search tvg-id / tvg-name…"
 msgstr "Hae tvg-id / tvg-name…"
+
+msgid "SearchScreen Keys"
+msgstr "Hakuikkunan näppäimet"
+
+msgid "Searching…"
+msgstr "Haetaan…"
+
+msgid "Select All"
+msgstr "Valitse kaikki"
+
+msgid "Select None"
+msgstr "Älä valitse mitään"
+
+msgid "Select an item to view details"
+msgstr "Valitse kohde nähdäksesi tiedot"
 
 msgid "Select at least one item."
 msgstr "Valitse vähintään yksi kohde."
@@ -177,32 +255,83 @@ msgid "Status"
 msgstr "Tila"
 
 msgid "Threads"
-msgstr "Kierteet"
+msgstr "Säikeet"
+
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "Säikeet: {threads} · Yritykset: {retries}"
+
+msgid "Toggle"
+msgstr "Vaihda"
+
+msgid "Toggle & Down"
+msgstr "Vaihda ja alas"
+
+msgid "Toggle / Add selection"
+msgstr "Vaihda / lisää valinta"
+
+msgid "Toggle item"
+msgstr "Vaihda kohde"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "Tuntematon"
+
+msgid "Unknown total size"
+msgstr "Tuntematon kokonaiskoko"
 
 msgid "Waiting…"
 msgstr "Odotetaan…"
+
+msgid "Yes"
+msgstr "Kyllä"
+
+msgid "[  UNSELECTED]"
+msgstr "[  EI VALITTU]"
+
+msgid "[1] Search playlist"
+msgstr "[1] Hae soittolistasta"
+
+msgid "[2] Cleanup library"
+msgstr "[2] Siivoa kirjasto"
+
+msgid "[3] Settings"
+msgstr "[3] Asetukset"
+
+msgid "[4] Language"
+msgstr "[4] Kieli"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] Latausjono"
+
+msgid "[6] Quit"
+msgstr "[6] Lopeta"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ VALITTU]"
 
 msgid "m3utolocal"
 msgstr "m3utolocal"
 
 msgid "orphan temporary file"
-msgstr "orpo väliaikainen tiedosto"
+msgstr "orpo tilapäistiedosto"
 
 msgid "stale partial download"
 msgstr "vanhentunut osittainen lataus"
 
 msgid "zero-byte file"
-msgstr "nollatavuinen tiedosto"
+msgstr "nollatavutiedosto"
 
 msgid "{percent:.0f}% · {rate} · {eta}"
 msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "{n} tiedosto"
+msgstr[1] "{n} tiedostoa"
 
 msgid "{n} item"
 msgid_plural "{n} items"
-msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[0] "{n} kohde"
+msgstr[1] "{n} kohdetta"

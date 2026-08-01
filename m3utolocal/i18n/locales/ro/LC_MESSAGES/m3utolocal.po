@@ -8,38 +8,50 @@ msgstr ""
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "Toate"
+
 msgid "All downloads completed under {path}"
-msgstr "Téléchargements terminés dans {path}"
+msgstr "Toate descărcările finalizate în {path}"
 
 msgid "Apply"
 msgstr "Aplică"
 
 msgid "Apply cleanup"
-msgstr "Appliquer le nettoyage"
+msgstr "Aplică curățarea"
 
 msgid "Back"
 msgstr "Înapoi"
 
+msgid "Back or Quit"
+msgstr "Înapoi sau ieșire"
+
 msgid "Cancel"
 msgstr "Anulează"
+
+msgid "Choose"
+msgstr "Alege"
 
 msgid "Cleanup"
 msgstr "Curățare"
 
 msgid "Cleanup library"
-msgstr "Nettoyer la bibliothèque"
+msgstr "Curăță biblioteca"
 
 msgid "Cleanup preview"
-msgstr "Aperçu du nettoyage"
+msgstr "Previzualizare curățare"
 
 msgid "Close"
 msgstr "Închide"
 
 msgid "Complete"
-msgstr "Terminé"
+msgstr "Complet"
 
 msgid "Confirm"
 msgstr "Confirmă"
+
+msgid "Current file"
+msgstr "Fișier curent"
 
 msgid "Done"
 msgstr "Gata"
@@ -48,10 +60,10 @@ msgid "Download selected"
 msgstr "Descarcă selecția"
 
 msgid "Download {n} files ({size})?"
-msgstr "Télécharger {n} fichiers ({size}) ?"
+msgstr "Descărcați {n} fișiere ({size})?"
 
 msgid "Downloading {name}…"
-msgstr "Téléchargement de {name}…"
+msgstr "Se descarcă {name}…"
 
 msgid "Downloading…"
 msgstr "Se descarcă…"
@@ -59,11 +71,14 @@ msgstr "Se descarcă…"
 msgid "Downloads"
 msgstr "Descărcări"
 
+msgid "Downloads Queue"
+msgstr "Coadă descărcări"
+
 msgid "ETA"
 msgstr "ETA"
 
 msgid "Error"
-msgstr "Erreur"
+msgstr "Eroare"
 
 msgid "Failed"
 msgstr "Eșuat"
@@ -72,137 +87,251 @@ msgid "File"
 msgstr "Fișier"
 
 msgid "Finished with {n} failure(s)."
-msgstr "Terminé avec {n} échec(s)."
+msgstr "Finalizat cu {n} eșec(uri)."
+
+msgid "Found 0 matches · 0 selected"
+msgstr "0 rezultate · 0 selectate"
 
 msgid "Found {n} matches · {sel} selected"
-msgstr "{n} résultat(s) · {sel} sélectionné(s)"
+msgstr "{n} rezultate · {sel} selectate"
+
+msgid "General Keys"
+msgstr "Taste generale"
 
 msgid "Help"
 msgstr "Ajutor"
 
+msgid "Help & Keyboard Shortcuts"
+msgstr "Ajutor și comenzi rapide"
+
+msgid "HomeScreen Keys"
+msgstr "Taste ecran principal"
+
 msgid "Invalid threads/retries"
-msgstr "Threads/tentatives invalides"
+msgstr "Fire/reîncercări invalide"
+
+msgid "Invert"
+msgstr "Inversează"
+
+msgid "Invert selection"
+msgstr "Inversează selecția"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "Element #{num}: {name} ({size}) | {badge}\nURL: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "Touches : j/k ou flèches · Entrée sélection · Espace bascule · a tout · n aucun · d télécharger · c nettoyer · L langue · s paramètres · ? aide · q/Échap retour ou quitter"
+msgstr "Taste: j/k sau săgeți · Enter selectează · Spațiu comută · a toate · n niciunul · d descarcă · c curăță · L limbă · s setări · ? ajutor · q/Esc înapoi sau ieșire"
 
 msgid "Language"
 msgstr "Limbă"
 
 msgid "Language…"
-msgstr "Langue…"
+msgstr "Limbă…"
+
+msgid "Library Output"
+msgstr "Ieșire bibliotecă"
 
 msgid "Library: {path}"
-msgstr "Bibliothèque : {path}"
+msgstr "Bibliotecă: {path}"
+
+msgid "M3U Playlist"
+msgstr "Listă M3U"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "Căutare liste M3U și descărcare media"
 
 msgid "M3U not found: {path}"
-msgstr "M3U introuvable : {path}"
+msgstr "M3U negăsit: {path}"
 
 msgid "M3U path"
-msgstr "Chemin M3U"
+msgstr "Cale M3U"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U : {path} · langue : {lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
-msgstr "Nom"
+msgstr "Nume"
+
+msgid "Navigate items"
+msgstr "Navigare elemente"
+
+msgid "No"
+msgstr "Nu"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "Nicio descărcare activă. Căutați canale pentru a începe."
+
+msgid "None"
+msgstr "Niciunul"
 
 msgid "Nothing to clean."
-msgstr "Rien à nettoyer."
+msgstr "Nimic de curățat."
 
 msgid "Output directory (empty = XDG library)"
-msgstr "Répertoire de sortie (vide = bibliothèque XDG)"
+msgstr "Director de ieșire (gol = bibliotecă XDG)"
 
 msgid "Output: {path}"
-msgstr "Sortie : {path}"
+msgstr "Ieșire: {path}"
 
 msgid "Overall progress"
 msgstr "Progres general"
 
+msgid "Plan"
+msgstr "Schema"
+
 msgid "Plan: {n} items ({size})"
-msgstr "Plan : {n} éléments ({size})"
+msgstr "Plan: {n} elemente ({size})"
 
 msgid "Preparing…"
-msgstr "Se pregătește…"
+msgstr "Pregătire…"
 
 msgid "Preview"
-msgstr "Aperçu"
+msgstr "Previzualizare"
 
 msgid "Progress"
-msgstr "Progression"
+msgstr "Progres"
 
 msgid "Queued"
 msgstr "În coadă"
+
+msgid "Quick Navigation"
+msgstr "Navigare rapidă"
 
 msgid "Quit"
 msgstr "Ieșire"
 
 msgid "Rate"
-msgstr "Débit"
+msgstr "Rată"
 
 msgid "Removed {n} items."
-msgstr "{n} élément(s) supprimé(s)."
+msgstr "Eliminate {n} elemente."
 
 msgid "Retries"
-msgstr "Tentatives"
+msgstr "Reîncercări"
 
 msgid "Save"
 msgstr "Salvează"
 
 msgid "Saved {path}"
-msgstr "Enregistré {path}"
+msgstr "Salvat {path}"
 
 msgid "Search"
 msgstr "Caută"
 
 msgid "Search playlist"
-msgstr "Rechercher dans la liste"
+msgstr "Caută în listă"
 
 msgid "Search tvg-id / tvg-name…"
-msgstr "Rechercher tvg-id / tvg-name…"
+msgstr "Caută tvg-id / tvg-name…"
+
+msgid "SearchScreen Keys"
+msgstr "Taste ecran căutare"
+
+msgid "Searching…"
+msgstr "Se caută…"
+
+msgid "Select All"
+msgstr "Selectează tot"
+
+msgid "Select None"
+msgstr "Selectează nimic"
+
+msgid "Select an item to view details"
+msgstr "Selectați un element pentru detalii"
 
 msgid "Select at least one item."
-msgstr "Sélectionnez au moins un élément."
+msgstr "Selectați cel puțin un element."
 
 msgid "Settings"
 msgstr "Setări"
 
 msgid "Size"
-msgstr "Taille"
+msgstr "Dimensiune"
 
 msgid "Skipped"
-msgstr "Ignoré"
+msgstr "Omis"
 
 msgid "Status"
 msgstr "Stare"
 
 msgid "Threads"
-msgstr "Hilos"
+msgstr "Fire"
+
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "Fire: {threads} · Reîncercări: {retries}"
+
+msgid "Toggle"
+msgstr "Comută"
+
+msgid "Toggle & Down"
+msgstr "Comută și jos"
+
+msgid "Toggle / Add selection"
+msgstr "Comută / adaugă selecție"
+
+msgid "Toggle item"
+msgstr "Comută element"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "Necunoscut"
+
+msgid "Unknown total size"
+msgstr "Dimensiune totală necunoscută"
 
 msgid "Waiting…"
-msgstr "En attente…"
+msgstr "Așteptare…"
+
+msgid "Yes"
+msgstr "Da"
+
+msgid "[  UNSELECTED]"
+msgstr "[  NESELECTAT]"
+
+msgid "[1] Search playlist"
+msgstr "[1] Caută în listă"
+
+msgid "[2] Cleanup library"
+msgstr "[2] Curăță biblioteca"
+
+msgid "[3] Settings"
+msgstr "[3] Setări"
+
+msgid "[4] Language"
+msgstr "[4] Limbă"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] Coadă descărcări"
+
+msgid "[6] Quit"
+msgstr "[6] Ieșire"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ SELECTAT]"
 
 msgid "m3utolocal"
 msgstr "m3utolocal"
 
 msgid "orphan temporary file"
-msgstr "fichier temporaire orphelin"
+msgstr "fișier temporar orfan"
 
 msgid "stale partial download"
-msgstr "téléchargement partiel obsolète"
+msgstr "descărcare parțială învechită"
 
 msgid "zero-byte file"
-msgstr "fichier de zéro octet"
+msgstr "fișier de zero octeți"
 
 msgid "{percent:.0f}% · {rate} · {eta}"
 msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "{n} fișier"
+msgstr[1] "{n} fișiere"
 
 msgid "{n} item"
 msgid_plural "{n} items"
-msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[0] "{n} element"
+msgstr[1] "{n} elemente"

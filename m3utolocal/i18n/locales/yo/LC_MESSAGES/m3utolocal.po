@@ -8,201 +8,330 @@ msgstr ""
 "Language: yo\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "Gbogbo"
+
 msgid "All downloads completed under {path}"
-msgstr "Gbogbo awọn igbasilẹ ti pari labẹ{path}"
+msgstr "Gbogbo ìgbàsílẹ̀ ti parí ní {path}"
 
 msgid "Apply"
-msgstr "Waye"
+msgstr "Lo"
 
 msgid "Apply cleanup"
-msgstr "Waye afọmọ"
+msgstr "Lo ìmọ́toto"
 
 msgid "Back"
-msgstr "Pada"
+msgstr "Padà"
+
+msgid "Back or Quit"
+msgstr "Padà tàbí jáde"
 
 msgid "Cancel"
-msgstr "Fagilee"
+msgstr "Fagilé"
+
+msgid "Choose"
+msgstr "Yan"
 
 msgid "Cleanup"
-msgstr "Nu kuro"
+msgstr "Mọtoto"
 
 msgid "Cleanup library"
-msgstr "Iwe ikawe afọmọ"
+msgstr "Mọtoto ibi ìkópa"
 
 msgid "Cleanup preview"
-msgstr "Awotẹlẹ afọmọ"
+msgstr "Àkọ́yẹ̀wò ìmọ́toto"
 
 msgid "Close"
-msgstr "Sunmọ"
+msgstr "Tì"
 
 msgid "Complete"
-msgstr "Pari"
+msgstr "Parí"
 
 msgid "Confirm"
-msgstr "Jẹrisi"
+msgstr "Jẹ́rìísí"
+
+msgid "Current file"
+msgstr "Fáìlì lọ́wọ́lọ́wọ́"
 
 msgid "Done"
 msgstr "Ti ṣe"
 
 msgid "Download selected"
-msgstr "Gbigba lati ayelujara ti yan"
+msgstr "Ṣe ìgbàsílẹ̀ àwọn tí a yàn"
 
 msgid "Download {n} files ({size})?"
-msgstr "Gba lati ayelujara{n}awọn faili ({size})?"
+msgstr "Ṣe ìgbàsílẹ̀ fáìlì {n} ({size})?"
 
 msgid "Downloading {name}…"
-msgstr "Gbigba lati ayelujara{name}…"
+msgstr "Ń ṣe ìgbàsílẹ̀ {name}…"
 
 msgid "Downloading…"
-msgstr "Ngbasile…"
+msgstr "Ń ṣe ìgbàsílẹ̀…"
 
 msgid "Downloads"
-msgstr "Awọn igbasilẹ"
+msgstr "Àwọn ìgbàsílẹ̀"
+
+msgid "Downloads Queue"
+msgstr "Ìlà ìgbàsílẹ̀"
 
 msgid "ETA"
 msgstr "ETA"
 
 msgid "Error"
-msgstr "Asise"
+msgstr "Àṣìṣe"
 
 msgid "Failed"
-msgstr "O kuna"
+msgstr "Kùnà"
 
 msgid "File"
-msgstr "Faili"
+msgstr "Fáìlì"
 
 msgid "Finished with {n} failure(s)."
-msgstr "Ti pari pẹlu{n}ikuna (awọn)."
+msgstr "Parí pẹ̀lú àìṣeéṣe {n}."
+
+msgid "Found 0 matches · 0 selected"
+msgstr "0 bàámu · 0 yàn"
 
 msgid "Found {n} matches · {sel} selected"
-msgstr "ri{n}ibaamu ·{sel}yan"
+msgstr "{n} bàámu · {sel} yàn"
+
+msgid "General Keys"
+msgstr "Àwọn bọtìnì gbogbogbò"
 
 msgid "Help"
-msgstr "Egba Mi O"
+msgstr "Ìrànlọ́wọ́"
+
+msgid "Help & Keyboard Shortcuts"
+msgstr "Ìrànlọ́wọ́ àti àwọn ọ̀nà kííbọ̀ọ̀dù"
+
+msgid "HomeScreen Keys"
+msgstr "Àwọn bọtìnì ojú-ìwé ilé"
 
 msgid "Invalid threads/retries"
-msgstr "Awọn okun ti ko tọ / igbiyanju"
+msgstr "Àwọn thread/ìgbìyànjú tí kò tọ́"
+
+msgid "Invert"
+msgstr "Yípadà"
+
+msgid "Invert selection"
+msgstr "Yí àṣàyàn padà"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "Nǹkan #{num}: {name} ({size}) | {badge}\nURL: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "Awọn bọtini: j/k tabi awọn itọka gbe · Tẹ sii yan · Yipo aaye · a gbogbo · n kò · d download · c cleanup · L ede · s settings ·? iranlọwọ · q/Esc pada tabi jáwọ"
+msgstr "Bọtìnì: j/k tàbí ọfà · Enter yan · Space yí · a gbogbo · n kòsí · d ìgbàsílẹ̀ · c mọtoto · L èdè · s ètò · ? ìrànlọ́wọ́ · q/Esc padà tàbí jáde"
 
 msgid "Language"
-msgstr "Ede"
+msgstr "Èdè"
 
 msgid "Language…"
-msgstr "Ede…"
+msgstr "Èdè…"
+
+msgid "Library Output"
+msgstr "Àbájáde ibi ìkópa"
 
 msgid "Library: {path}"
-msgstr "Ile-ikawe:{path}"
+msgstr "Ibi ìkópa: {path}"
+
+msgid "M3U Playlist"
+msgstr "Àkójọ orin M3U"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "Wíwá àkójọ M3U àti ìgbàsílẹ̀ mídíà"
 
 msgid "M3U not found: {path}"
-msgstr "A ko ri M3U:{path}"
+msgstr "A kò rí M3U: {path}"
 
 msgid "M3U path"
-msgstr "M3U ọna"
+msgstr "Ọ̀nà M3U"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U:{path}· lang:{lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
-msgstr "Oruko"
+msgstr "Orúkọ"
+
+msgid "Navigate items"
+msgstr "Lọ́ kiri nǹkan"
+
+msgid "No"
+msgstr "Rárá"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "Kò sí ìgbàsílẹ̀ tó ń ṣiṣẹ́. Wá àwọn ikanni láti bẹ̀rẹ̀."
+
+msgid "None"
+msgstr "Kòsí"
 
 msgid "Nothing to clean."
-msgstr "Ko si nkankan lati nu."
+msgstr "Kò sí ohun tí a ó mọtoto."
 
 msgid "Output directory (empty = XDG library)"
-msgstr "Ilana iwejade (ofo = ile-ikawe XDG)"
+msgstr "Àpótí àbájáde (òfo = ibi ìkópa XDG)"
 
 msgid "Output: {path}"
-msgstr "Abajade:{path}"
+msgstr "Àbájáde: {path}"
 
 msgid "Overall progress"
-msgstr "Ilọsiwaju gbogbogbo"
+msgstr "Ìtẹ̀síwájú gbogbo"
+
+msgid "Plan"
+msgstr "Ètò"
 
 msgid "Plan: {n} items ({size})"
-msgstr "Ètò:{n}awọn nkan ({size})"
+msgstr "Ètò: nǹkan {n} ({size})"
 
 msgid "Preparing…"
-msgstr "Ngbaradi…"
+msgstr "Ń múra…"
 
 msgid "Preview"
-msgstr "Awotẹlẹ"
+msgstr "Àkọ́yẹ̀wò"
 
 msgid "Progress"
-msgstr "Ilọsiwaju"
+msgstr "Ìtẹ̀síwájú"
 
 msgid "Queued"
-msgstr "Ti o wa ni ila"
+msgstr "Ní ìlà"
+
+msgid "Quick Navigation"
+msgstr "Lílọ́ kiri kíákíá"
 
 msgid "Quit"
-msgstr "Jade"
+msgstr "Jáde"
 
 msgid "Rate"
-msgstr "Oṣuwọn"
+msgstr "Ìyára"
 
 msgid "Removed {n} items."
-msgstr "Yiyọ kuro{n}awọn nkan."
+msgstr "Ti yọ nǹkan {n} kúrò."
 
 msgid "Retries"
-msgstr "Tun gbiyanju"
+msgstr "Ìgbìyànjú tún"
 
 msgid "Save"
-msgstr "Fipamọ"
+msgstr "Fi pamọ́"
 
 msgid "Saved {path}"
-msgstr "Ti fipamọ{path}"
+msgstr "Ti fi pamọ́ {path}"
 
 msgid "Search"
-msgstr "Wa"
+msgstr "Wá"
 
 msgid "Search playlist"
-msgstr "Wa akojọ orin"
+msgstr "Wá nínú àkójọ"
 
 msgid "Search tvg-id / tvg-name…"
-msgstr "Wa tvg-id/orukọ tvg…"
+msgstr "Wá tvg-id / tvg-name…"
+
+msgid "SearchScreen Keys"
+msgstr "Àwọn bọtìnì ojú-ìwé wíwá"
+
+msgid "Searching…"
+msgstr "Ń wá…"
+
+msgid "Select All"
+msgstr "Yan gbogbo"
+
+msgid "Select None"
+msgstr "Má yan èyíkéyìí"
+
+msgid "Select an item to view details"
+msgstr "Yan nǹkan kan láti rí àlàyé"
 
 msgid "Select at least one item."
-msgstr "Yan o kere ju ohun kan."
+msgstr "Yan ó kéré tán nǹkan kan."
 
 msgid "Settings"
-msgstr "Eto"
+msgstr "Àwọn ètò"
 
 msgid "Size"
-msgstr "Iwọn"
+msgstr "Ìwọ̀n"
 
 msgid "Skipped"
 msgstr "Ti fo"
 
 msgid "Status"
-msgstr "Ipo"
+msgstr "Ipò"
 
 msgid "Threads"
-msgstr "Awọn ila"
+msgstr "Àwọn thread"
+
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "Threads: {threads} · Ìgbìyànjú: {retries}"
+
+msgid "Toggle"
+msgstr "Yí"
+
+msgid "Toggle & Down"
+msgstr "Yí kí o sì sọ̀kalẹ̀"
+
+msgid "Toggle / Add selection"
+msgstr "Yí / fi kun àṣàyàn"
+
+msgid "Toggle item"
+msgstr "Yí nǹkan"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "Aìmọ̀"
+
+msgid "Unknown total size"
+msgstr "Àpapọ̀ ìwọ̀n aìmọ̀"
 
 msgid "Waiting…"
-msgstr "Nduro…"
+msgstr "Ń dúró…"
+
+msgid "Yes"
+msgstr "Bẹ́ẹ̀ni"
+
+msgid "[  UNSELECTED]"
+msgstr "[  A KÒ YAN]"
+
+msgid "[1] Search playlist"
+msgstr "[1] Wá nínú àkójọ"
+
+msgid "[2] Cleanup library"
+msgstr "[2] Mọtoto ibi ìkópa"
+
+msgid "[3] Settings"
+msgstr "[3] Àwọn ètò"
+
+msgid "[4] Language"
+msgstr "[4] Èdè"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] Ìlà ìgbàsílẹ̀"
+
+msgid "[6] Quit"
+msgstr "[6] Jáde"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ TI YAN]"
 
 msgid "m3utolocal"
-msgstr "m3 agbegbe"
+msgstr "m3utolocal"
 
 msgid "orphan temporary file"
-msgstr "orukan ibùgbé faili"
+msgstr "fáìlì àìpé aláìní òbí"
 
 msgid "stale partial download"
-msgstr "stale apa kan download"
+msgstr "ìgbàsílẹ̀ apá kan tí ó ti gbó"
 
 msgid "zero-byte file"
-msgstr "odo-baiti faili"
+msgstr "fáìlì báìtì òdo"
 
 msgid "{percent:.0f}% · {rate} · {eta}"
 msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "fáìlì {n}"
+msgstr[1] "àwọn fáìlì {n}"
 
 msgid "{n} item"
 msgid_plural "{n} items"
-msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[0] "nǹkan {n}"
+msgstr[1] "àwọn nǹkan {n}"

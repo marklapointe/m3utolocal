@@ -8,38 +8,50 @@ msgstr ""
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "Alles"
+
 msgid "All downloads completed under {path}"
-msgstr "Alle Downloads unter {path} abgeschlossen"
+msgstr "Downloads voltooid onder {path}"
 
 msgid "Apply"
 msgstr "Toepassen"
 
 msgid "Apply cleanup"
-msgstr "Bereinigung anwenden"
+msgstr "Opruimen toepassen"
 
 msgid "Back"
 msgstr "Terug"
 
+msgid "Back or Quit"
+msgstr "Terug of afsluiten"
+
 msgid "Cancel"
 msgstr "Annuleren"
+
+msgid "Choose"
+msgstr "Kiezen"
 
 msgid "Cleanup"
 msgstr "Opruimen"
 
 msgid "Cleanup library"
-msgstr "Bibliothek bereinigen"
+msgstr "Bibliotheek opruimen"
 
 msgid "Cleanup preview"
-msgstr "Bereinigungsvorschau"
+msgstr "Opruimvoorbeeld"
 
 msgid "Close"
 msgstr "Sluiten"
 
 msgid "Complete"
-msgstr "Abgeschlossen"
+msgstr "Voltooid"
 
 msgid "Confirm"
 msgstr "Bevestigen"
+
+msgid "Current file"
+msgstr "Huidig bestand"
 
 msgid "Done"
 msgstr "Klaar"
@@ -48,16 +60,19 @@ msgid "Download selected"
 msgstr "Selectie downloaden"
 
 msgid "Download {n} files ({size})?"
-msgstr "{n} Dateien herunterladen ({size})?"
+msgstr "{n} bestanden downloaden ({size})?"
 
 msgid "Downloading {name}…"
-msgstr "Lade {name}…"
+msgstr "{name} downloaden…"
 
 msgid "Downloading…"
 msgstr "Downloaden…"
 
 msgid "Downloads"
-msgstr "Descargas"
+msgstr "Downloaden"
+
+msgid "Downloads Queue"
+msgstr "Downloadwachtrij"
 
 msgid "ETA"
 msgstr "ETA"
@@ -72,135 +87,249 @@ msgid "File"
 msgstr "Bestand"
 
 msgid "Finished with {n} failure(s)."
-msgstr "Beendet mit {n} Fehler(n)."
+msgstr "Voltooid met {n} mislukking(en)."
+
+msgid "Found 0 matches · 0 selected"
+msgstr "0 resultaten · 0 geselecteerd"
 
 msgid "Found {n} matches · {sel} selected"
-msgstr "{n} Treffer · {sel} ausgewählt"
+msgstr "{n} resultaten · {sel} geselecteerd"
+
+msgid "General Keys"
+msgstr "Algemene toetsen"
 
 msgid "Help"
-msgstr "Hilfe"
+msgstr "Hulp"
+
+msgid "Help & Keyboard Shortcuts"
+msgstr "Help en sneltoetsen"
+
+msgid "HomeScreen Keys"
+msgstr "Startschermtoetsen"
 
 msgid "Invalid threads/retries"
-msgstr "Ungültige Threads/Wiederholungen"
+msgstr "Ongeldige threads/pogingen"
+
+msgid "Invert"
+msgstr "Omkeren"
+
+msgid "Invert selection"
+msgstr "Selectie omkeren"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "Item #{num}: {name} ({size}) | {badge}\nKoppeling: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "Tasten: j/k oder Pfeile · Enter wählen · Leertaste umschalten · a alle · n keine · d laden · c bereinigen · L Sprache · s Einstellungen · ? Hilfe · q/Esc zurück oder beenden"
+msgstr "Toetsen: j/k of pijlen · Enter selecteren · Spatie wisselen · a alles · n geen · d downloaden · c opruimen · L taal · s instellingen · ? help · q/Esc terug of afsluiten"
 
 msgid "Language"
 msgstr "Taal"
 
 msgid "Language…"
-msgstr "Sprache…"
+msgstr "Taal…"
+
+msgid "Library Output"
+msgstr "Bibliotheekuitvoer"
 
 msgid "Library: {path}"
-msgstr "Bibliothek: {path}"
+msgstr "Bibliotheek: {path}"
+
+msgid "M3U Playlist"
+msgstr "M3U-afspeellijst"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "M3U-afspeellijst zoeken en media downloaden"
 
 msgid "M3U not found: {path}"
-msgstr "M3U nicht gefunden: {path}"
+msgstr "M3U niet gevonden: {path}"
 
 msgid "M3U path"
-msgstr "M3U-Pfad"
+msgstr "M3U-pad"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U: {path} · Sprache: {lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
-msgstr "Nombre"
+msgstr "Naam"
+
+msgid "Navigate items"
+msgstr "Items navigeren"
+
+msgid "No"
+msgstr "Nee"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "Geen actieve downloads. Zoek kanalen om te starten."
+
+msgid "None"
+msgstr "Geen"
 
 msgid "Nothing to clean."
-msgstr "Nichts zu bereinigen."
+msgstr "Niets op te ruimen."
 
 msgid "Output directory (empty = XDG library)"
-msgstr "Ausgabeverzeichnis (leer = XDG-Bibliothek)"
+msgstr "Uitvoermap (leeg = XDG-bibliotheek)"
 
 msgid "Output: {path}"
-msgstr "Ausgabe: {path}"
+msgstr "Uitvoer: {path}"
 
 msgid "Overall progress"
 msgstr "Totale voortgang"
 
+msgid "Plan"
+msgstr "Schema"
+
 msgid "Plan: {n} items ({size})"
-msgstr "Plan: {n} Einträge ({size})"
+msgstr "Schema: {n} items ({size})"
 
 msgid "Preparing…"
 msgstr "Voorbereiden…"
 
 msgid "Preview"
-msgstr "Vorschau"
+msgstr "Voorbeeld"
 
 msgid "Progress"
-msgstr "Fortschritt"
+msgstr "Voortgang"
 
 msgid "Queued"
 msgstr "In wachtrij"
+
+msgid "Quick Navigation"
+msgstr "Snelle navigatie"
 
 msgid "Quit"
 msgstr "Afsluiten"
 
 msgid "Rate"
-msgstr "Velocidad"
+msgstr "Snelheid"
 
 msgid "Removed {n} items."
-msgstr "{n} Einträge entfernt."
+msgstr "{n} items verwijderd."
 
 msgid "Retries"
-msgstr "Wiederholungen"
+msgstr "Pogingen"
 
 msgid "Save"
 msgstr "Opslaan"
 
 msgid "Saved {path}"
-msgstr "Gespeichert {path}"
+msgstr "Opgeslagen {path}"
 
 msgid "Search"
 msgstr "Zoeken"
 
 msgid "Search playlist"
-msgstr "Playlist durchsuchen"
+msgstr "Afspeellijst doorzoeken"
 
 msgid "Search tvg-id / tvg-name…"
-msgstr "tvg-id / tvg-name suchen…"
+msgstr "tvg-id / tvg-name zoeken…"
+
+msgid "SearchScreen Keys"
+msgstr "Zoekschermtoetsen"
+
+msgid "Searching…"
+msgstr "Zoeken…"
+
+msgid "Select All"
+msgstr "Alles selecteren"
+
+msgid "Select None"
+msgstr "Niets selecteren"
+
+msgid "Select an item to view details"
+msgstr "Selecteer een item voor details"
 
 msgid "Select at least one item."
-msgstr "Mindestens einen Eintrag auswählen."
+msgstr "Selecteer minstens één item."
 
 msgid "Settings"
 msgstr "Instellingen"
 
 msgid "Size"
-msgstr "Größe"
+msgstr "Grootte"
 
 msgid "Skipped"
-msgstr "Übersprungen"
+msgstr "Overgeslagen"
 
 msgid "Status"
-msgstr "Estado"
+msgstr "Toestand"
 
 msgid "Threads"
-msgstr "Hilos"
+msgstr "Werkthreads"
+
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "Threads: {threads} · Pogingen: {retries}"
+
+msgid "Toggle"
+msgstr "Wisselen"
+
+msgid "Toggle & Down"
+msgstr "Wisselen en omlaag"
+
+msgid "Toggle / Add selection"
+msgstr "Wisselen / selectie toevoegen"
+
+msgid "Toggle item"
+msgstr "Item wisselen"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "Onbekend"
+
+msgid "Unknown total size"
+msgstr "Onbekende totale grootte"
 
 msgid "Waiting…"
-msgstr "Warten…"
+msgstr "Wachten…"
+
+msgid "Yes"
+msgstr "Ja"
+
+msgid "[  UNSELECTED]"
+msgstr "[  NIET GESELECTEERD]"
+
+msgid "[1] Search playlist"
+msgstr "[1] Afspeellijst doorzoeken"
+
+msgid "[2] Cleanup library"
+msgstr "[2] Bibliotheek opruimen"
+
+msgid "[3] Settings"
+msgstr "[3] Instellingen"
+
+msgid "[4] Language"
+msgstr "[4] Taal"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] Downloadwachtrij"
+
+msgid "[6] Quit"
+msgstr "[6] Afsluiten"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ GESELECTEERD]"
 
 msgid "m3utolocal"
 msgstr "m3utolocal"
 
 msgid "orphan temporary file"
-msgstr "verwaiste temporäre Datei"
+msgstr "wees tijdelijk bestand"
 
 msgid "stale partial download"
-msgstr "veralteter Teildownload"
+msgstr "verouderde gedeeltelijke download"
 
 msgid "zero-byte file"
-msgstr "0-Byte-Datei"
+msgstr "leeg bestand (0 bytes)"
 
 msgid "{percent:.0f}% · {rate} · {eta}"
 msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "{n} bestand"
+msgstr[1] "{n} bestanden"
 
 msgid "{n} item"
 msgid_plural "{n} items"

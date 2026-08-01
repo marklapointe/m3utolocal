@@ -8,26 +8,35 @@ msgstr ""
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "Vše"
+
 msgid "All downloads completed under {path}"
-msgstr "Všechna stahování dokončena pod{path}"
+msgstr "Stahování dokončeno v {path}"
 
 msgid "Apply"
 msgstr "Použít"
 
 msgid "Apply cleanup"
-msgstr "Aplikujte čištění"
+msgstr "Provést čištění"
 
 msgid "Back"
 msgstr "Zpět"
 
+msgid "Back or Quit"
+msgstr "Zpět nebo konec"
+
 msgid "Cancel"
 msgstr "Zrušit"
 
+msgid "Choose"
+msgstr "Vybrat"
+
 msgid "Cleanup"
-msgstr "Úklid"
+msgstr "Čištění"
 
 msgid "Cleanup library"
-msgstr "Čisticí knihovna"
+msgstr "Vyčistit knihovnu"
 
 msgid "Cleanup preview"
 msgstr "Náhled čištění"
@@ -36,10 +45,13 @@ msgid "Close"
 msgstr "Zavřít"
 
 msgid "Complete"
-msgstr "Kompletní"
+msgstr "Hotovo"
 
 msgid "Confirm"
 msgstr "Potvrdit"
+
+msgid "Current file"
+msgstr "Aktuální soubor"
 
 msgid "Done"
 msgstr "Hotovo"
@@ -48,16 +60,19 @@ msgid "Download selected"
 msgstr "Stáhnout vybrané"
 
 msgid "Download {n} files ({size})?"
-msgstr "Stáhnout{n}soubory ({size})?"
+msgstr "Stáhnout {n} souborů ({size})?"
 
 msgid "Downloading {name}…"
-msgstr "Stahování{name}…"
+msgstr "Stahování {name}…"
 
 msgid "Downloading…"
 msgstr "Stahování…"
 
 msgid "Downloads"
 msgstr "Stahování"
+
+msgid "Downloads Queue"
+msgstr "Fronta stahování"
 
 msgid "ETA"
 msgstr "ETA"
@@ -72,19 +87,40 @@ msgid "File"
 msgstr "Soubor"
 
 msgid "Finished with {n} failure(s)."
-msgstr "Dokončeno s{n}selhání(y)."
+msgstr "Dokončeno s {n} chybou/chybami."
+
+msgid "Found 0 matches · 0 selected"
+msgstr "0 výsledků · 0 vybráno"
 
 msgid "Found {n} matches · {sel} selected"
-msgstr "Nalezeno{n}zápasy ·{sel}vybraný"
+msgstr "{n} výsledků · {sel} vybráno"
+
+msgid "General Keys"
+msgstr "Obecné klávesy"
 
 msgid "Help"
 msgstr "Nápověda"
 
+msgid "Help & Keyboard Shortcuts"
+msgstr "Nápověda a klávesové zkratky"
+
+msgid "HomeScreen Keys"
+msgstr "Klávesy domovské obrazovky"
+
 msgid "Invalid threads/retries"
 msgstr "Neplatná vlákna/opakování"
 
+msgid "Invert"
+msgstr "Invertovat"
+
+msgid "Invert selection"
+msgstr "Invertovat výběr"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "Položka #{num}: {name} ({size}) | {badge}\nURL: {url}"
+
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "Klávesy: pohyb j/k nebo šipky · Enter vybrat · Přepnout mezerník · a vše · n žádné · d stáhnout · c vyčistit · jazyk L · s nastavení · ? pomoc · q/Esc zpět nebo skončit"
+msgstr "Klávesy: j/k nebo šipky · Enter výběr · Mezerník přepnout · a vše · n nic · d stáhnout · c čistit · L jazyk · s nastavení · ? nápověda · q/Esc zpět nebo konec"
 
 msgid "Language"
 msgstr "Jazyk"
@@ -92,20 +128,41 @@ msgstr "Jazyk"
 msgid "Language…"
 msgstr "Jazyk…"
 
+msgid "Library Output"
+msgstr "Výstup knihovny"
+
 msgid "Library: {path}"
-msgstr "Knihovna:{path}"
+msgstr "Knihovna: {path}"
+
+msgid "M3U Playlist"
+msgstr "Playlist M3U"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "Hledání playlistů M3U a stahování médií"
 
 msgid "M3U not found: {path}"
-msgstr "M3U nenalezeno:{path}"
+msgstr "M3U nenalezeno: {path}"
 
 msgid "M3U path"
 msgstr "Cesta M3U"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U:{path}· jazyk:{lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
-msgstr "Jméno"
+msgstr "Název"
+
+msgid "Navigate items"
+msgstr "Navigace položek"
+
+msgid "No"
+msgstr "Ne"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "Žádná aktivní stahování. Vyhledejte kanály pro začátek."
+
+msgid "None"
+msgstr "Nic"
 
 msgid "Nothing to clean."
 msgstr "Není co čistit."
@@ -114,13 +171,16 @@ msgid "Output directory (empty = XDG library)"
 msgstr "Výstupní adresář (prázdný = knihovna XDG)"
 
 msgid "Output: {path}"
-msgstr "výstup:{path}"
+msgstr "Výstup: {path}"
 
 msgid "Overall progress"
-msgstr "Celkový postup"
+msgstr "Celkový průběh"
+
+msgid "Plan"
+msgstr "Plán"
 
 msgid "Plan: {n} items ({size})"
-msgstr "Plán:{n}položky ({size})"
+msgstr "Plán: {n} položek ({size})"
 
 msgid "Preparing…"
 msgstr "Příprava…"
@@ -129,19 +189,22 @@ msgid "Preview"
 msgstr "Náhled"
 
 msgid "Progress"
-msgstr "Pokrok"
+msgstr "Průběh"
 
 msgid "Queued"
 msgstr "Ve frontě"
 
+msgid "Quick Navigation"
+msgstr "Rychlá navigace"
+
 msgid "Quit"
-msgstr "Ukončit"
+msgstr "Konec"
 
 msgid "Rate"
-msgstr "Hodnotit"
+msgstr "Rychlost"
 
 msgid "Removed {n} items."
-msgstr "Odebráno{n}položky."
+msgstr "Odstraněno {n} položek."
 
 msgid "Retries"
 msgstr "Opakování"
@@ -150,16 +213,31 @@ msgid "Save"
 msgstr "Uložit"
 
 msgid "Saved {path}"
-msgstr "Uloženo{path}"
+msgstr "Uloženo {path}"
 
 msgid "Search"
 msgstr "Hledat"
 
 msgid "Search playlist"
-msgstr "Vyhledat seznam skladeb"
+msgstr "Hledat v playlistu"
 
 msgid "Search tvg-id / tvg-name…"
 msgstr "Hledat tvg-id / tvg-name…"
+
+msgid "SearchScreen Keys"
+msgstr "Klávesy vyhledávání"
+
+msgid "Searching…"
+msgstr "Hledání…"
+
+msgid "Select All"
+msgstr "Vybrat vše"
+
+msgid "Select None"
+msgstr "Nevybrat nic"
+
+msgid "Select an item to view details"
+msgstr "Vyberte položku pro podrobnosti"
 
 msgid "Select at least one item."
 msgstr "Vyberte alespoň jednu položku."
@@ -179,8 +257,59 @@ msgstr "Stav"
 msgid "Threads"
 msgstr "Vlákna"
 
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "Vlákna: {threads} · Opakování: {retries}"
+
+msgid "Toggle"
+msgstr "Přepnout"
+
+msgid "Toggle & Down"
+msgstr "Přepnout a dolů"
+
+msgid "Toggle / Add selection"
+msgstr "Přepnout / přidat výběr"
+
+msgid "Toggle item"
+msgstr "Přepnout položku"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "Neznámé"
+
+msgid "Unknown total size"
+msgstr "Neznámá celková velikost"
+
 msgid "Waiting…"
 msgstr "Čekání…"
+
+msgid "Yes"
+msgstr "Ano"
+
+msgid "[  UNSELECTED]"
+msgstr "[  NEVYBRÁNO]"
+
+msgid "[1] Search playlist"
+msgstr "[1] Hledat v playlistu"
+
+msgid "[2] Cleanup library"
+msgstr "[2] Vyčistit knihovnu"
+
+msgid "[3] Settings"
+msgstr "[3] Nastavení"
+
+msgid "[4] Language"
+msgstr "[4] Jazyk"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] Fronta stahování"
+
+msgid "[6] Quit"
+msgstr "[6] Konec"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ VYBRÁNO]"
 
 msgid "m3utolocal"
 msgstr "m3utolocal"
@@ -192,17 +321,17 @@ msgid "stale partial download"
 msgstr "zastaralé částečné stahování"
 
 msgid "zero-byte file"
-msgstr "soubor s nulovým bajtem"
+msgstr "soubor s nulovou velikostí"
 
 msgid "{percent:.0f}% · {rate} · {eta}"
 msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "{n} soubor"
+msgstr[1] "{n} souborů"
 
 msgid "{n} item"
 msgid_plural "{n} items"
-msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[0] "{n} položka"
+msgstr[1] "{n} položek"

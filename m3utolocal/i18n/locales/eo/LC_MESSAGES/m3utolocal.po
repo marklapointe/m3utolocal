@@ -8,38 +8,50 @@ msgstr ""
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "Ĉiuj"
+
 msgid "All downloads completed under {path}"
-msgstr "Descargas completadas en {path}"
+msgstr "Ĉiuj elŝutoj finitaj en {path}"
 
 msgid "Apply"
 msgstr "Apliki"
 
 msgid "Apply cleanup"
-msgstr "Aplicar limpieza"
+msgstr "Apliki purigon"
 
 msgid "Back"
 msgstr "Reen"
 
+msgid "Back or Quit"
+msgstr "Reen aŭ eliri"
+
 msgid "Cancel"
 msgstr "Nuligi"
+
+msgid "Choose"
+msgstr "Elekti"
 
 msgid "Cleanup"
 msgstr "Purigo"
 
 msgid "Cleanup library"
-msgstr "Limpiar biblioteca"
+msgstr "Purigi bibliotekon"
 
 msgid "Cleanup preview"
-msgstr "Vista previa de limpieza"
+msgstr "Antaŭrigardo de purigo"
 
 msgid "Close"
 msgstr "Fermi"
 
 msgid "Complete"
-msgstr "Completo"
+msgstr "Kompleta"
 
 msgid "Confirm"
 msgstr "Konfirmi"
+
+msgid "Current file"
+msgstr "Nuna dosiero"
 
 msgid "Done"
 msgstr "Farita"
@@ -48,22 +60,25 @@ msgid "Download selected"
 msgstr "Elŝuti elektitajn"
 
 msgid "Download {n} files ({size})?"
-msgstr "¿Descargar {n} archivos ({size})?"
+msgstr "Elŝuti {n} dosierojn ({size})?"
 
 msgid "Downloading {name}…"
-msgstr "Descargando {name}…"
+msgstr "Elŝutas {name}…"
 
 msgid "Downloading…"
-msgstr "Elŝutante…"
+msgstr "Elŝutas…"
 
 msgid "Downloads"
 msgstr "Elŝutoj"
+
+msgid "Downloads Queue"
+msgstr "Elŝuta vico"
 
 msgid "ETA"
 msgstr "ETA"
 
 msgid "Error"
-msgstr "Error"
+msgstr "Eraro"
 
 msgid "Failed"
 msgstr "Malsukcesis"
@@ -72,137 +87,251 @@ msgid "File"
 msgstr "Dosiero"
 
 msgid "Finished with {n} failure(s)."
-msgstr "Finalizado con {n} error(es)."
+msgstr "Finita kun {n} malsukceso(j)."
+
+msgid "Found 0 matches · 0 selected"
+msgstr "0 trafoj · 0 elektitaj"
 
 msgid "Found {n} matches · {sel} selected"
-msgstr "Encontrados {n} · {sel} seleccionados"
+msgstr "{n} trafoj · {sel} elektitaj"
+
+msgid "General Keys"
+msgstr "Ĝeneralaj klavoj"
 
 msgid "Help"
 msgstr "Helpo"
 
+msgid "Help & Keyboard Shortcuts"
+msgstr "Helpo kaj klavokombinoj"
+
+msgid "HomeScreen Keys"
+msgstr "Hejmekranaj klavoj"
+
 msgid "Invalid threads/retries"
-msgstr "Hilos/reintentos no válidos"
+msgstr "Nevalidaj fadenoj/reprovoj"
+
+msgid "Invert"
+msgstr "Inversigi"
+
+msgid "Invert selection"
+msgstr "Inversigi elekton"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "Ero #{num}: {name} ({size}) | {badge}\nURL: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "Teclas: j/k o flechas · Enter seleccionar · Espacio alternar · a todo · n nada · d descargar · c limpiar · L idioma · s ajustes · ? ayuda · q/Esc atrás o salir"
+msgstr "Klavoj: j/k aŭ sagoj · Enter elekti · Spaco ŝalti · a ĉiuj · n neniu · d elŝuti · c purigi · L lingvo · s agordoj · ? helpo · q/Esc reen aŭ eliri"
 
 msgid "Language"
 msgstr "Lingvo"
 
 msgid "Language…"
-msgstr "Idioma…"
+msgstr "Lingvo…"
+
+msgid "Library Output"
+msgstr "Biblioteka eligo"
 
 msgid "Library: {path}"
-msgstr "Biblioteca: {path}"
+msgstr "Biblioteko: {path}"
+
+msgid "M3U Playlist"
+msgstr "M3U-ludlisto"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "Serĉo de M3U-ludlistoj kaj aŭdvida elŝutilo"
 
 msgid "M3U not found: {path}"
-msgstr "M3U no encontrado: {path}"
+msgstr "M3U ne trovita: {path}"
 
 msgid "M3U path"
-msgstr "Ruta M3U"
+msgstr "M3U-vojo"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U: {path} · idioma: {lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
-msgstr "Nombre"
+msgstr "Nomo"
+
+msgid "Navigate items"
+msgstr "Navigi erojn"
+
+msgid "No"
+msgstr "Ne"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "Neniuj aktivaj elŝutoj. Serĉu kanalojn por komenci."
+
+msgid "None"
+msgstr "Neniu"
 
 msgid "Nothing to clean."
-msgstr "Nada que limpiar."
+msgstr "Nenio por purigi."
 
 msgid "Output directory (empty = XDG library)"
-msgstr "Directorio de salida (vacío = biblioteca XDG)"
+msgstr "Eligodosierujo (malplena = XDG-biblioteko)"
 
 msgid "Output: {path}"
-msgstr "Salida: {path}"
+msgstr "Eligo: {path}"
 
 msgid "Overall progress"
 msgstr "Ĝenerala progreso"
 
+msgid "Plan"
+msgstr "Plano"
+
 msgid "Plan: {n} items ({size})"
-msgstr "Plan: {n} elementos ({size})"
+msgstr "Plano: {n} eroj ({size})"
 
 msgid "Preparing…"
-msgstr "Preparante…"
+msgstr "Preparas…"
 
 msgid "Preview"
-msgstr "Vista previa"
+msgstr "Antaŭrigardo"
 
 msgid "Progress"
 msgstr "Progreso"
 
 msgid "Queued"
-msgstr "Envicigita"
+msgstr "En vico"
+
+msgid "Quick Navigation"
+msgstr "Rapida navigado"
 
 msgid "Quit"
-msgstr "Foriri"
+msgstr "Eliri"
 
 msgid "Rate"
-msgstr "Velocidad"
+msgstr "Rapido"
 
 msgid "Removed {n} items."
-msgstr "Eliminados {n} elementos."
+msgstr "Forigis {n} erojn."
 
 msgid "Retries"
-msgstr "Reintentos"
+msgstr "Reprovoj"
 
 msgid "Save"
 msgstr "Konservi"
 
 msgid "Saved {path}"
-msgstr "Guardado {path}"
+msgstr "Konservita {path}"
 
 msgid "Search"
 msgstr "Serĉi"
 
 msgid "Search playlist"
-msgstr "Buscar en la lista"
+msgstr "Serĉi ludliston"
 
 msgid "Search tvg-id / tvg-name…"
-msgstr "Buscar tvg-id / tvg-name…"
+msgstr "Serĉi tvg-id / tvg-name…"
+
+msgid "SearchScreen Keys"
+msgstr "Serĉekranaj klavoj"
+
+msgid "Searching…"
+msgstr "Serĉas…"
+
+msgid "Select All"
+msgstr "Elekti ĉiujn"
+
+msgid "Select None"
+msgstr "Elekti neniun"
+
+msgid "Select an item to view details"
+msgstr "Elektu eron por detaloj"
 
 msgid "Select at least one item."
-msgstr "Seleccione al menos un elemento."
+msgstr "Elektu almenaŭ unu eron."
 
 msgid "Settings"
 msgstr "Agordoj"
 
 msgid "Size"
-msgstr "Tamaño"
+msgstr "Grando"
 
 msgid "Skipped"
-msgstr "Omitido"
+msgstr "Preterlasita"
 
 msgid "Status"
 msgstr "Stato"
 
 msgid "Threads"
-msgstr "Hilos"
+msgstr "Fadenoj"
+
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "Fadenoj: {threads} · Reprovoj: {retries}"
+
+msgid "Toggle"
+msgstr "Ŝalti"
+
+msgid "Toggle & Down"
+msgstr "Ŝalti kaj malsupren"
+
+msgid "Toggle / Add selection"
+msgstr "Ŝalti / aldoni elekton"
+
+msgid "Toggle item"
+msgstr "Ŝalti eron"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "Nekonata"
+
+msgid "Unknown total size"
+msgstr "Nekonata totala grando"
 
 msgid "Waiting…"
-msgstr "Esperando…"
+msgstr "Atendas…"
+
+msgid "Yes"
+msgstr "Jes"
+
+msgid "[  UNSELECTED]"
+msgstr "[  NE ELEKTITA]"
+
+msgid "[1] Search playlist"
+msgstr "[1] Serĉi ludliston"
+
+msgid "[2] Cleanup library"
+msgstr "[2] Purigi bibliotekon"
+
+msgid "[3] Settings"
+msgstr "[3] Agordoj"
+
+msgid "[4] Language"
+msgstr "[4] Lingvo"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] Elŝuta vico"
+
+msgid "[6] Quit"
+msgstr "[6] Eliri"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ ELEKTITA]"
 
 msgid "m3utolocal"
 msgstr "m3utolocal"
 
 msgid "orphan temporary file"
-msgstr "archivo temporal huérfano"
+msgstr "orfa provizora dosiero"
 
 msgid "stale partial download"
-msgstr "descarga parcial antigua"
+msgstr "malnova parta elŝuto"
 
 msgid "zero-byte file"
-msgstr "archivo de cero bytes"
+msgstr "nula-bajta dosiero"
 
 msgid "{percent:.0f}% · {rate} · {eta}"
 msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "{n} dosiero"
+msgstr[1] "{n} dosieroj"
 
 msgid "{n} item"
 msgid_plural "{n} items"
-msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[0] "{n} ero"
+msgstr[1] "{n} eroj"

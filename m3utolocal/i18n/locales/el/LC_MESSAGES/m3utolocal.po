@@ -8,50 +8,62 @@ msgstr ""
 "Language: el\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "Όλα"
+
 msgid "All downloads completed under {path}"
-msgstr "Όλες οι λήψεις ολοκληρώθηκαν κάτω από{path}"
+msgstr "Όλες οι λήψεις ολοκληρώθηκαν στο {path}"
 
 msgid "Apply"
-msgstr "Εφαρμόζω"
+msgstr "Εφαρμογή"
 
 msgid "Apply cleanup"
-msgstr "Εφαρμόστε καθαρισμό"
+msgstr "Εφαρμογή καθαρισμού"
 
 msgid "Back"
 msgstr "Πίσω"
 
+msgid "Back or Quit"
+msgstr "Πίσω ή έξοδος"
+
 msgid "Cancel"
-msgstr "Ματαίωση"
+msgstr "Ακύρωση"
+
+msgid "Choose"
+msgstr "Επιλογή"
 
 msgid "Cleanup"
 msgstr "Καθαρισμός"
 
 msgid "Cleanup library"
-msgstr "Εκκαθάριση βιβλιοθήκης"
+msgstr "Καθαρισμός βιβλιοθήκης"
 
 msgid "Cleanup preview"
-msgstr "Προεπισκόπηση εκκαθάρισης"
+msgstr "Προεπισκόπηση καθαρισμού"
 
 msgid "Close"
-msgstr "Κοντά"
+msgstr "Κλείσιμο"
 
 msgid "Complete"
-msgstr "Πλήρης"
+msgstr "Ολοκληρώθηκε"
 
 msgid "Confirm"
-msgstr "Επιβεβαιώνω"
+msgstr "Επιβεβαίωση"
+
+msgid "Current file"
+msgstr "Τρέχον αρχείο"
 
 msgid "Done"
-msgstr "Γινώμενος"
+msgstr "Έτοιμο"
 
 msgid "Download selected"
-msgstr "Επιλέχθηκε η λήψη"
+msgstr "Λήψη επιλεγμένων"
 
 msgid "Download {n} files ({size})?"
-msgstr "Λήψη{n}αρχεία ({size})?"
+msgstr "Λήψη {n} αρχείων ({size});"
 
 msgid "Downloading {name}…"
-msgstr "Λήψη{name}…"
+msgstr "Λήψη {name}…"
 
 msgid "Downloading…"
 msgstr "Λήψη…"
@@ -59,32 +71,56 @@ msgstr "Λήψη…"
 msgid "Downloads"
 msgstr "Λήψεις"
 
+msgid "Downloads Queue"
+msgstr "Ουρά λήψεων"
+
 msgid "ETA"
-msgstr "ΕΤΑ"
+msgstr "ETA"
 
 msgid "Error"
 msgstr "Σφάλμα"
 
 msgid "Failed"
-msgstr "Αποτυχημένος"
+msgstr "Αποτυχία"
 
 msgid "File"
 msgstr "Αρχείο"
 
 msgid "Finished with {n} failure(s)."
-msgstr "Ολοκληρώθηκε με{n}αποτυχία(ες)."
+msgstr "Ολοκληρώθηκε με {n} αποτυχία/ες."
+
+msgid "Found 0 matches · 0 selected"
+msgstr "0 αποτελέσματα · 0 επιλεγμένα"
 
 msgid "Found {n} matches · {sel} selected"
-msgstr "Θεμελιώ{n}αγώνες ·{sel}επιλεγμένο"
+msgstr "{n} αποτελέσματα · {sel} επιλεγμένα"
+
+msgid "General Keys"
+msgstr "Γενικά πλήκτρα"
 
 msgid "Help"
 msgstr "Βοήθεια"
 
+msgid "Help & Keyboard Shortcuts"
+msgstr "Βοήθεια και συντομεύσεις"
+
+msgid "HomeScreen Keys"
+msgstr "Πλήκτρα αρχικής οθόνης"
+
 msgid "Invalid threads/retries"
-msgstr "Μη έγκυρα νήματα/επανάληψη"
+msgstr "Μη έγκυρα νήματα/επαναλήψεις"
+
+msgid "Invert"
+msgstr "Αντιστροφή"
+
+msgid "Invert selection"
+msgstr "Αντιστροφή επιλογής"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "Στοιχείο #{num}: {name} ({size}) | {badge}\nURL: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "Πλήκτρα: j/k ή βέλη μετακίνηση · Εισαγωγή επιλογής · Εναλλαγή διαστήματος · όλα · n κανένα · d λήψη · c εκκαθάριση · L γλώσσα · ρυθμίσεις · ? βοήθεια · q/Esc επιστρέψτε ή σταματήστε"
+msgstr "Πλήκτρα: j/k ή βέλη · Enter επιλογή · Space εναλλαγή · a όλα · n κανένα · d λήψη · c καθαρισμός · L γλώσσα · s ρυθμίσεις · ? βοήθεια · q/Esc πίσω ή έξοδος"
 
 msgid "Language"
 msgstr "Γλώσσα"
@@ -92,41 +128,65 @@ msgstr "Γλώσσα"
 msgid "Language…"
 msgstr "Γλώσσα…"
 
+msgid "Library Output"
+msgstr "Έξοδος βιβλιοθήκης"
+
 msgid "Library: {path}"
-msgstr "Βιβλιοθήκη:{path}"
+msgstr "Βιβλιοθήκη: {path}"
+
+msgid "M3U Playlist"
+msgstr "Λίστα M3U"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "Αναζήτηση λιστών M3U και λήψη πολυμέσων"
 
 msgid "M3U not found: {path}"
-msgstr "Το M3U δεν βρέθηκε:{path}"
+msgstr "Το M3U δεν βρέθηκε: {path}"
 
 msgid "M3U path"
 msgstr "Διαδρομή M3U"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U:{path}· γλώσσα:{lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
-msgstr "Ονομα"
+msgstr "Όνομα"
+
+msgid "Navigate items"
+msgstr "Πλοήγηση στοιχείων"
+
+msgid "No"
+msgstr "Όχι"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "Δεν υπάρχουν ενεργές λήψεις. Αναζητήστε κανάλια για να ξεκινήσετε."
+
+msgid "None"
+msgstr "Κανένα"
 
 msgid "Nothing to clean."
 msgstr "Τίποτα για καθαρισμό."
 
 msgid "Output directory (empty = XDG library)"
-msgstr "Κατάλογος εξόδου (κενός = βιβλιοθήκη XDG)"
+msgstr "Κατάλογος εξόδου (κενό = βιβλιοθήκη XDG)"
 
 msgid "Output: {path}"
-msgstr "Παραγωγή:{path}"
+msgstr "Έξοδος: {path}"
 
 msgid "Overall progress"
 msgstr "Συνολική πρόοδος"
 
+msgid "Plan"
+msgstr "Σχέδιο"
+
 msgid "Plan: {n} items ({size})"
-msgstr "Σχέδιο:{n}αντικείμενα ({size})"
+msgstr "Σχέδιο: {n} στοιχεία ({size})"
 
 msgid "Preparing…"
 msgstr "Προετοιμασία…"
 
 msgid "Preview"
-msgstr "Πρεμιέρα"
+msgstr "Προεπισκόπηση"
 
 msgid "Progress"
 msgstr "Πρόοδος"
@@ -134,32 +194,50 @@ msgstr "Πρόοδος"
 msgid "Queued"
 msgstr "Σε ουρά"
 
+msgid "Quick Navigation"
+msgstr "Γρήγορη πλοήγηση"
+
 msgid "Quit"
-msgstr "Εγκαταλείπω"
+msgstr "Έξοδος"
 
 msgid "Rate"
-msgstr "Τιμή"
+msgstr "Ρυθμός"
 
 msgid "Removed {n} items."
-msgstr "Καταργήθηκε{n}είδη."
+msgstr "Αφαιρέθηκαν {n} στοιχεία."
 
 msgid "Retries"
-msgstr "Επανάληψη"
+msgstr "Επαναλήψεις"
 
 msgid "Save"
-msgstr "Εκτός"
+msgstr "Αποθήκευση"
 
 msgid "Saved {path}"
-msgstr "Αποθηκεύτηκε{path}"
+msgstr "Αποθηκεύτηκε {path}"
 
 msgid "Search"
-msgstr "Ερευνα"
+msgstr "Αναζήτηση"
 
 msgid "Search playlist"
-msgstr "Αναζήτηση λίστας αναπαραγωγής"
+msgstr "Αναζήτηση στη λίστα"
 
 msgid "Search tvg-id / tvg-name…"
 msgstr "Αναζήτηση tvg-id / tvg-name…"
+
+msgid "SearchScreen Keys"
+msgstr "Πλήκτρα οθόνης αναζήτησης"
+
+msgid "Searching…"
+msgstr "Αναζήτηση…"
+
+msgid "Select All"
+msgstr "Επιλογή όλων"
+
+msgid "Select None"
+msgstr "Καμία επιλογή"
+
+msgid "Select an item to view details"
+msgstr "Επιλέξτε στοιχείο για λεπτομέρειες"
 
 msgid "Select at least one item."
 msgstr "Επιλέξτε τουλάχιστον ένα στοιχείο."
@@ -171,7 +249,7 @@ msgid "Size"
 msgstr "Μέγεθος"
 
 msgid "Skipped"
-msgstr "Παράλειψη"
+msgstr "Παραλείφθηκε"
 
 msgid "Status"
 msgstr "Κατάσταση"
@@ -179,8 +257,59 @@ msgstr "Κατάσταση"
 msgid "Threads"
 msgstr "Νήματα"
 
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "Νήματα: {threads} · Επαναλήψεις: {retries}"
+
+msgid "Toggle"
+msgstr "Εναλλαγή"
+
+msgid "Toggle & Down"
+msgstr "Εναλλαγή και κάτω"
+
+msgid "Toggle / Add selection"
+msgstr "Εναλλαγή / προσθήκη επιλογής"
+
+msgid "Toggle item"
+msgstr "Εναλλαγή στοιχείου"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "Άγνωστο"
+
+msgid "Unknown total size"
+msgstr "Άγνωστο συνολικό μέγεθος"
+
 msgid "Waiting…"
 msgstr "Αναμονή…"
+
+msgid "Yes"
+msgstr "Ναι"
+
+msgid "[  UNSELECTED]"
+msgstr "[  ΜΗ ΕΠΙΛΕΓΜΕΝΟ]"
+
+msgid "[1] Search playlist"
+msgstr "[1] Αναζήτηση στη λίστα"
+
+msgid "[2] Cleanup library"
+msgstr "[2] Καθαρισμός βιβλιοθήκης"
+
+msgid "[3] Settings"
+msgstr "[3] Ρυθμίσεις"
+
+msgid "[4] Language"
+msgstr "[4] Γλώσσα"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] Ουρά λήψεων"
+
+msgid "[6] Quit"
+msgstr "[6] Έξοδος"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ ΕΠΙΛΕΓΜΕΝΟ]"
 
 msgid "m3utolocal"
 msgstr "m3utolocal"
@@ -189,20 +318,20 @@ msgid "orphan temporary file"
 msgstr "ορφανό προσωρινό αρχείο"
 
 msgid "stale partial download"
-msgstr "μπαγιάτικη μερική λήψη"
+msgstr "παλιά μερική λήψη"
 
 msgid "zero-byte file"
-msgstr "αρχείο μηδενικού byte"
+msgstr "αρχείο μηδέν byte"
 
 msgid "{percent:.0f}% · {rate} · {eta}"
 msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "{n} αρχείο"
+msgstr[1] "{n} αρχεία"
 
 msgid "{n} item"
 msgid_plural "{n} items"
-msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[0] "{n} στοιχείο"
+msgstr[1] "{n} στοιχεία"

@@ -8,11 +8,14 @@ msgstr ""
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "Све"
+
 msgid "All downloads completed under {path}"
-msgstr "Сва преузимања су завршена под{path}"
+msgstr "Все загрузки завершены в {path}"
 
 msgid "Apply"
-msgstr "Применить"
+msgstr "Примени"
 
 msgid "Apply cleanup"
 msgstr "Выполнить очистку"
@@ -20,26 +23,35 @@ msgstr "Выполнить очистку"
 msgid "Back"
 msgstr "Назад"
 
+msgid "Back or Quit"
+msgstr "Назад или выход"
+
 msgid "Cancel"
-msgstr "Отмена"
+msgstr "Откажи"
+
+msgid "Choose"
+msgstr "Выбрать"
 
 msgid "Cleanup"
 msgstr "Очистка"
 
 msgid "Cleanup library"
-msgstr "Очистить библиотеку"
+msgstr "Очисти библиотеку"
 
 msgid "Cleanup preview"
 msgstr "Предпросмотр очистки"
 
 msgid "Close"
-msgstr "Закрыть"
+msgstr "Затвори"
 
 msgid "Complete"
 msgstr "Завершено"
 
 msgid "Confirm"
-msgstr "Подтвердить"
+msgstr "Потврди"
+
+msgid "Current file"
+msgstr "Текущий файл"
 
 msgid "Done"
 msgstr "Готово"
@@ -48,7 +60,7 @@ msgid "Download selected"
 msgstr "Скачать выбранное"
 
 msgid "Download {n} files ({size})?"
-msgstr "Преузми{n}датотеке ({size})?"
+msgstr "Скачать {n} файл(ов) ({size})?"
 
 msgid "Downloading {name}…"
 msgstr "Загрузка {name}…"
@@ -57,13 +69,16 @@ msgid "Downloading…"
 msgstr "Загрузка…"
 
 msgid "Downloads"
-msgstr "Загрузки"
+msgstr "Преузимања"
+
+msgid "Downloads Queue"
+msgstr "Ред преузимања"
 
 msgid "ETA"
-msgstr "ЕТА"
+msgstr "ETA"
 
 msgid "Error"
-msgstr "Ошибка"
+msgstr "Грешка"
 
 msgid "Failed"
 msgstr "Ошибка"
@@ -72,55 +87,100 @@ msgid "File"
 msgstr "Файл"
 
 msgid "Finished with {n} failure(s)."
-msgstr "Завршено са{n}неуспех(и)."
+msgstr "Завершено с {n} ошибкой(ами)."
+
+msgid "Found 0 matches · 0 selected"
+msgstr "0 совпадений · 0 выбрано"
 
 msgid "Found {n} matches · {sel} selected"
-msgstr "Фоунд{n}утакмице ·{sel}изабрани"
+msgstr "{n} совпадений · {sel} выбрано"
+
+msgid "General Keys"
+msgstr "Общие клавиши"
 
 msgid "Help"
-msgstr "Справка"
+msgstr "Помоћ"
+
+msgid "Help & Keyboard Shortcuts"
+msgstr "Справка и сочетания клавиш"
+
+msgid "HomeScreen Keys"
+msgstr "Клавиши главного экрана"
 
 msgid "Invalid threads/retries"
-msgstr "Неважећи низови/поновни покушаји"
+msgstr "Неверные потоки/повторы"
+
+msgid "Invert"
+msgstr "Инвертировать"
+
+msgid "Invert selection"
+msgstr "Инвертировать выбор"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "Элемент #{num}: {name} ({size}) | {badge}\nURL: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "Тастери: ј/к или стрелице се померају · Ентер изаберите · Пребацивање размака · а све · н ниједно · д преузимање · ц чишћење · Л језик · подешавања · ? помоћ · к/Есц назад или затвори"
+msgstr "Клавиши: j/k или стрелки · Enter выбор · Пробел переключить · a все · n ничего · d скачать · c очистка · L язык · s настройки · ? справка · q/Esc назад или выход"
 
 msgid "Language"
-msgstr "Язык"
+msgstr "Језик"
 
 msgid "Language…"
 msgstr "Језик…"
 
+msgid "Library Output"
+msgstr "Излаз библиотеке"
+
 msgid "Library: {path}"
-msgstr "библиотека:{path}"
+msgstr "Библиотека: {path}"
+
+msgid "M3U Playlist"
+msgstr "M3U плејлиста"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "Претрага M3U плејлиста и преузимање медија"
 
 msgid "M3U not found: {path}"
-msgstr "М3У није пронађен:{path}"
+msgstr "M3U не найден: {path}"
 
 msgid "M3U path"
-msgstr "М3У пут"
+msgstr "Путь M3U"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "М3У:{path}· ланг:{lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
 msgstr "Имя"
+
+msgid "Navigate items"
+msgstr "Навигация по элементам"
+
+msgid "No"
+msgstr "Не"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "Нет активных загрузок. Найдите каналы, чтобы начать."
+
+msgid "None"
+msgstr "Ничего"
 
 msgid "Nothing to clean."
 msgstr "Нечего очищать."
 
 msgid "Output directory (empty = XDG library)"
-msgstr "Излазни директоријум (празно = КСДГ библиотека)"
+msgstr "Каталог вывода (пусто = библиотека XDG)"
 
 msgid "Output: {path}"
-msgstr "Излаз:{path}"
+msgstr "Излаз: {path}"
 
 msgid "Overall progress"
 msgstr "Общий прогресс"
 
+msgid "Plan"
+msgstr "План"
+
 msgid "Plan: {n} items ({size})"
-msgstr "План:{n}ставке ({size})"
+msgstr "План: {n} элементов ({size})"
 
 msgid "Preparing…"
 msgstr "Подготовка…"
@@ -129,43 +189,61 @@ msgid "Preview"
 msgstr "Просмотр"
 
 msgid "Progress"
-msgstr "Напредак"
+msgstr "Прогресс"
 
 msgid "Queued"
 msgstr "В очереди"
 
+msgid "Quick Navigation"
+msgstr "Брза навигација"
+
 msgid "Quit"
-msgstr "Выход"
+msgstr "Излаз"
 
 msgid "Rate"
-msgstr "Рате"
+msgstr "Скорость"
 
 msgid "Removed {n} items."
-msgstr "Уклоњено{n}ставке."
+msgstr "Удалено {n} элементов."
 
 msgid "Retries"
-msgstr "Поновни покушаји"
+msgstr "Повторы"
 
 msgid "Save"
-msgstr "Сохранить"
+msgstr "Сачувај"
 
 msgid "Saved {path}"
-msgstr "Сачувано{path}"
+msgstr "Сохранено {path}"
 
 msgid "Search"
-msgstr "Поиск"
+msgstr "Претрага"
 
 msgid "Search playlist"
-msgstr "Поиск в плейлисте"
+msgstr "Претражи плејлисту"
 
 msgid "Search tvg-id / tvg-name…"
-msgstr "Претражи твг-ид / твг-наме…"
+msgstr "Поиск tvg-id / tvg-name…"
+
+msgid "SearchScreen Keys"
+msgstr "Клавиши поиска"
+
+msgid "Searching…"
+msgstr "Поиск…"
+
+msgid "Select All"
+msgstr "Выбрать все"
+
+msgid "Select None"
+msgstr "Снять выбор"
+
+msgid "Select an item to view details"
+msgstr "Выберите элемент для подробностей"
 
 msgid "Select at least one item."
-msgstr "Изаберите најмање једну ставку."
+msgstr "Выберите хотя бы один элемент."
 
 msgid "Settings"
-msgstr "Настройки"
+msgstr "Подешавања"
 
 msgid "Size"
 msgstr "Размер"
@@ -177,32 +255,83 @@ msgid "Status"
 msgstr "Статус"
 
 msgid "Threads"
-msgstr "Тхреадс"
+msgstr "Потоки"
+
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "Нити: {threads} · Покушаји: {retries}"
+
+msgid "Toggle"
+msgstr "Переключить"
+
+msgid "Toggle & Down"
+msgstr "Переключить и вниз"
+
+msgid "Toggle / Add selection"
+msgstr "Переключить / добавить выбор"
+
+msgid "Toggle item"
+msgstr "Переключить элемент"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "Неизвестно"
+
+msgid "Unknown total size"
+msgstr "Неизвестный общий размер"
 
 msgid "Waiting…"
 msgstr "Ожидание…"
 
+msgid "Yes"
+msgstr "Да"
+
+msgid "[  UNSELECTED]"
+msgstr "[  НЕ ВЫБРАНО]"
+
+msgid "[1] Search playlist"
+msgstr "[1] Претражи плејлисту"
+
+msgid "[2] Cleanup library"
+msgstr "[2] Очисти библиотеку"
+
+msgid "[3] Settings"
+msgstr "[3] Подешавања"
+
+msgid "[4] Language"
+msgstr "[4] Језик"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] Ред преузимања"
+
+msgid "[6] Quit"
+msgstr "[6] Излаз"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ ВЫБРАНО]"
+
 msgid "m3utolocal"
-msgstr "м3утолоцал"
+msgstr "m3utolocal"
 
 msgid "orphan temporary file"
-msgstr "привремени фајл без родитеља"
+msgstr "осиротевший временный файл"
 
 msgid "stale partial download"
-msgstr "устајало делимично преузимање"
+msgstr "устаревшая частичная загрузка"
 
 msgid "zero-byte file"
-msgstr "датотека од нула бајта"
+msgstr "файл нулевого размера"
 
 msgid "{percent:.0f}% · {rate} · {eta}"
 msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "{n} файл"
+msgstr[1] "{n} файлов"
 
 msgid "{n} item"
 msgid_plural "{n} items"
-msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[0] "{n} элемент"
+msgstr[1] "{n} элементов"

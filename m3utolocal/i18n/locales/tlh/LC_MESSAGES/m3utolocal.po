@@ -8,38 +8,50 @@ msgstr ""
 "Language: tlh\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "Hoch"
+
 msgid "All downloads completed under {path}"
-msgstr "Descargas completadas en {path}"
+msgstr "Hoch SuqtaH rIn {path}"
 
 msgid "Apply"
 msgstr "lo'"
 
 msgid "Apply cleanup"
-msgstr "Aplicar limpieza"
+msgstr "Say'moH lo'"
 
 msgid "Back"
 msgstr "chev"
 
+msgid "Back or Quit"
+msgstr "chev pagh mej"
+
 msgid "Cancel"
-msgstr "Qo'"
+msgstr "qIl"
+
+msgid "Choose"
+msgstr "wIv"
 
 msgid "Cleanup"
 msgstr "Say'moH"
 
 msgid "Cleanup library"
-msgstr "Limpiar biblioteca"
+msgstr "paqDaq Say'moH"
 
 msgid "Cleanup preview"
-msgstr "Vista previa de limpieza"
+msgstr "Say'moH legh"
 
 msgid "Close"
 msgstr "SoQmoH"
 
 msgid "Complete"
-msgstr "Completo"
+msgstr "rIn"
 
 msgid "Confirm"
-msgstr "luq"
+msgstr "qay'"
+
+msgid "Current file"
+msgstr "DaH ghItlh"
 
 msgid "Done"
 msgstr "rIn"
@@ -48,10 +60,10 @@ msgid "Download selected"
 msgstr "wIv Suq"
 
 msgid "Download {n} files ({size})?"
-msgstr "¿Descargar {n} archivos ({size})?"
+msgstr "{n} ghItlh Suq'a' ({size})?"
 
 msgid "Downloading {name}…"
-msgstr "Descargando {name}…"
+msgstr "{name} SuqtaH…"
 
 msgid "Downloading…"
 msgstr "SuqtaH…"
@@ -59,11 +71,14 @@ msgstr "SuqtaH…"
 msgid "Downloads"
 msgstr "SuqmeH"
 
+msgid "Downloads Queue"
+msgstr "SuqmeH ngIq"
+
 msgid "ETA"
 msgstr "ETA"
 
 msgid "Error"
-msgstr "Error"
+msgstr "Qagh"
 
 msgid "Failed"
 msgstr "luj"
@@ -72,137 +87,251 @@ msgid "File"
 msgstr "ghItlh"
 
 msgid "Finished with {n} failure(s)."
-msgstr "Finalizado con {n} error(es)."
+msgstr "{n} luj rIn."
+
+msgid "Found 0 matches · 0 selected"
+msgstr "0 Sam · 0 wIv"
 
 msgid "Found {n} matches · {sel} selected"
-msgstr "Encontrados {n} · {sel} seleccionados"
+msgstr "{n} Sam · {sel} wIv"
+
+msgid "General Keys"
+msgstr "Hoch raS"
 
 msgid "Help"
 msgstr "QaH"
 
+msgid "Help & Keyboard Shortcuts"
+msgstr "QaH je raS mI'"
+
+msgid "HomeScreen Keys"
+msgstr "juH raS"
+
 msgid "Invalid threads/retries"
-msgstr "Hilos/reintentos no válidos"
+msgstr "raS/nID lughbe'"
+
+msgid "Invert"
+msgstr "tlhop"
+
+msgid "Invert selection"
+msgstr "wIv tlhop"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "Doch #{num}: {name} ({size}) | {badge}\nURL: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "Teclas: j/k o flechas · Enter seleccionar · Espacio alternar · a todo · n nada · d descargar · c limpiar · L idioma · s ajustes · ? ayuda · q/Esc atrás o salir"
+msgstr "raS: j/k pagh He · Enter wIv · Space choH · a Hoch · n pagh · d Suq · c Say'moH · L Hol · s SeH · ? QaH · q/Esc chev pagh mej"
 
 msgid "Language"
 msgstr "Hol"
 
 msgid "Language…"
-msgstr "Idioma…"
+msgstr "Hol…"
+
+msgid "Library Output"
+msgstr "paqDaq lIH"
 
 msgid "Library: {path}"
-msgstr "Biblioteca: {path}"
+msgstr "paqDaq: {path}"
+
+msgid "M3U Playlist"
+msgstr "M3U tetlh"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "M3U tetlh nej je SuqmeH"
 
 msgid "M3U not found: {path}"
-msgstr "M3U no encontrado: {path}"
+msgstr "M3U Sambe': {path}"
 
 msgid "M3U path"
-msgstr "Ruta M3U"
+msgstr "M3U He"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U: {path} · idioma: {lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
-msgstr "Nombre"
+msgstr "pong"
+
+msgid "Navigate items"
+msgstr "Doch jaH"
+
+msgid "No"
+msgstr "ghobe'"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "SuqtaH pagh. SuqmeHmeH nej."
+
+msgid "None"
+msgstr "pagh"
 
 msgid "Nothing to clean."
-msgstr "Nada que limpiar."
+msgstr "Say'moHmeH pagh."
 
 msgid "Output directory (empty = XDG library)"
-msgstr "Directorio de salida (vacío = biblioteca XDG)"
+msgstr "lIH pa' (chIm = XDG paqDaq)"
 
 msgid "Output: {path}"
-msgstr "Salida: {path}"
+msgstr "lIH: {path}"
 
 msgid "Overall progress"
 msgstr "Hoch ghu'"
 
+msgid "Plan"
+msgstr "nab"
+
 msgid "Plan: {n} items ({size})"
-msgstr "Plan: {n} elementos ({size})"
+msgstr "nab: {n} Doch ({size})"
 
 msgid "Preparing…"
 msgstr "ghuHmoHtaH…"
 
 msgid "Preview"
-msgstr "Vista previa"
+msgstr "legh"
 
 msgid "Progress"
-msgstr "Progreso"
+msgstr "ghu'"
 
 msgid "Queued"
 msgstr "poS"
+
+msgid "Quick Navigation"
+msgstr "nom jaH"
 
 msgid "Quit"
 msgstr "mej"
 
 msgid "Rate"
-msgstr "Velocidad"
+msgstr "Do"
 
 msgid "Removed {n} items."
-msgstr "Eliminados {n} elementos."
+msgstr "{n} Doch teq."
 
 msgid "Retries"
-msgstr "Reintentos"
+msgstr "nID"
 
 msgid "Save"
 msgstr "pol"
 
 msgid "Saved {path}"
-msgstr "Guardado {path}"
+msgstr "pol {path}"
 
 msgid "Search"
 msgstr "nej"
 
 msgid "Search playlist"
-msgstr "Buscar en la lista"
+msgstr "tetlh nej"
 
 msgid "Search tvg-id / tvg-name…"
-msgstr "Buscar tvg-id / tvg-name…"
+msgstr "tvg-id / tvg-name nej…"
+
+msgid "SearchScreen Keys"
+msgstr "nej raS"
+
+msgid "Searching…"
+msgstr "nejtaH…"
+
+msgid "Select All"
+msgstr "Hoch wIv"
+
+msgid "Select None"
+msgstr "pagh wIv"
+
+msgid "Select an item to view details"
+msgstr "De' leghmeH Doch wIv"
 
 msgid "Select at least one item."
-msgstr "Seleccione al menos un elemento."
+msgstr "wa' Doch wIv."
 
 msgid "Settings"
 msgstr "SeH"
 
 msgid "Size"
-msgstr "Tamaño"
+msgstr "'ab"
 
 msgid "Skipped"
-msgstr "Omitido"
+msgstr "jIj"
 
 msgid "Status"
 msgstr "Dotlh"
 
 msgid "Threads"
-msgstr "Hilos"
+msgstr "raS"
+
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "raS: {threads} · nID: {retries}"
+
+msgid "Toggle"
+msgstr "choH"
+
+msgid "Toggle & Down"
+msgstr "choH 'ej bIng"
+
+msgid "Toggle / Add selection"
+msgstr "choH / wIv chel"
+
+msgid "Toggle item"
+msgstr "Doch choH"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "Sovbe'"
+
+msgid "Unknown total size"
+msgstr "Hoch 'ab Sovbe'"
 
 msgid "Waiting…"
-msgstr "Esperando…"
+msgstr "loS…"
+
+msgid "Yes"
+msgstr "HIja'"
+
+msgid "[  UNSELECTED]"
+msgstr "[  wIvbe']"
+
+msgid "[1] Search playlist"
+msgstr "[1] tetlh nej"
+
+msgid "[2] Cleanup library"
+msgstr "[2] paqDaq Say'moH"
+
+msgid "[3] Settings"
+msgstr "[3] SeH"
+
+msgid "[4] Language"
+msgstr "[4] Hol"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] SuqmeH ngIq"
+
+msgid "[6] Quit"
+msgstr "[6] mej"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ wIv]"
 
 msgid "m3utolocal"
 msgstr "m3utolocal"
 
 msgid "orphan temporary file"
-msgstr "archivo temporal huérfano"
+msgstr "ghu' ghItlh"
 
 msgid "stale partial download"
-msgstr "descarga parcial antigua"
+msgstr "ngo' SuqtaH"
 
 msgid "zero-byte file"
-msgstr "archivo de cero bytes"
+msgstr "pagh ghItlh"
 
 msgid "{percent:.0f}% · {rate} · {eta}"
 msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "{n} ghItlh"
+msgstr[1] "{n} ghItlhmey"
 
 msgid "{n} item"
 msgid_plural "{n} items"
-msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[0] "{n} Doch"
+msgstr[1] "{n} Dochmey"

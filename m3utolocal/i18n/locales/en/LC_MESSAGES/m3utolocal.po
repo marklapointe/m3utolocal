@@ -8,6 +8,9 @@ msgstr ""
 "Language: en\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "All"
+
 msgid "All downloads completed under {path}"
 msgstr "All downloads completed under {path}"
 
@@ -20,8 +23,14 @@ msgstr "Apply cleanup"
 msgid "Back"
 msgstr "Back"
 
+msgid "Back or Quit"
+msgstr "Back or Quit"
+
 msgid "Cancel"
 msgstr "Cancel"
+
+msgid "Choose"
+msgstr "Choose"
 
 msgid "Cleanup"
 msgstr "Cleanup"
@@ -41,6 +50,9 @@ msgstr "Complete"
 msgid "Confirm"
 msgstr "Confirm"
 
+msgid "Current file"
+msgstr "Current file"
+
 msgid "Done"
 msgstr "Done"
 
@@ -59,6 +71,9 @@ msgstr "Downloading…"
 msgid "Downloads"
 msgstr "Downloads"
 
+msgid "Downloads Queue"
+msgstr "Downloads Queue"
+
 msgid "ETA"
 msgstr "ETA"
 
@@ -74,14 +89,35 @@ msgstr "File"
 msgid "Finished with {n} failure(s)."
 msgstr "Finished with {n} failure(s)."
 
+msgid "Found 0 matches · 0 selected"
+msgstr "Found 0 matches · 0 selected"
+
 msgid "Found {n} matches · {sel} selected"
 msgstr "Found {n} matches · {sel} selected"
+
+msgid "General Keys"
+msgstr "General Keys"
 
 msgid "Help"
 msgstr "Help"
 
+msgid "Help & Keyboard Shortcuts"
+msgstr "Help & Keyboard Shortcuts"
+
+msgid "HomeScreen Keys"
+msgstr "HomeScreen Keys"
+
 msgid "Invalid threads/retries"
 msgstr "Invalid threads/retries"
+
+msgid "Invert"
+msgstr "Invert"
+
+msgid "Invert selection"
+msgstr "Invert selection"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
 msgstr "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
@@ -92,8 +128,17 @@ msgstr "Language"
 msgid "Language…"
 msgstr "Language…"
 
+msgid "Library Output"
+msgstr "Library Output"
+
 msgid "Library: {path}"
 msgstr "Library: {path}"
+
+msgid "M3U Playlist"
+msgstr "M3U Playlist"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "M3U Playlist Search & Media Downloader"
 
 msgid "M3U not found: {path}"
 msgstr "M3U not found: {path}"
@@ -101,11 +146,23 @@ msgstr "M3U not found: {path}"
 msgid "M3U path"
 msgstr "M3U path"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "M3U: {path} · lang: {lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
 msgstr "Name"
+
+msgid "Navigate items"
+msgstr "Navigate items"
+
+msgid "No"
+msgstr "No"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "No active download jobs. Search for channels to start downloads."
+
+msgid "None"
+msgstr "None"
 
 msgid "Nothing to clean."
 msgstr "Nothing to clean."
@@ -118,6 +175,9 @@ msgstr "Output: {path}"
 
 msgid "Overall progress"
 msgstr "Overall progress"
+
+msgid "Plan"
+msgstr "Plan"
 
 msgid "Plan: {n} items ({size})"
 msgstr "Plan: {n} items ({size})"
@@ -133,6 +193,9 @@ msgstr "Progress"
 
 msgid "Queued"
 msgstr "Queued"
+
+msgid "Quick Navigation"
+msgstr "Quick Navigation"
 
 msgid "Quit"
 msgstr "Quit"
@@ -161,6 +224,21 @@ msgstr "Search playlist"
 msgid "Search tvg-id / tvg-name…"
 msgstr "Search tvg-id / tvg-name…"
 
+msgid "SearchScreen Keys"
+msgstr "SearchScreen Keys"
+
+msgid "Searching…"
+msgstr "Searching…"
+
+msgid "Select All"
+msgstr "Select All"
+
+msgid "Select None"
+msgstr "Select None"
+
+msgid "Select an item to view details"
+msgstr "Select an item to view details"
+
 msgid "Select at least one item."
 msgstr "Select at least one item."
 
@@ -179,8 +257,59 @@ msgstr "Status"
 msgid "Threads"
 msgstr "Threads"
 
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "Threads: {threads} · Retries: {retries}"
+
+msgid "Toggle"
+msgstr "Toggle"
+
+msgid "Toggle & Down"
+msgstr "Toggle & Down"
+
+msgid "Toggle / Add selection"
+msgstr "Toggle / Add selection"
+
+msgid "Toggle item"
+msgstr "Toggle item"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "Unknown"
+
+msgid "Unknown total size"
+msgstr "Unknown total size"
+
 msgid "Waiting…"
 msgstr "Waiting…"
+
+msgid "Yes"
+msgstr "Yes"
+
+msgid "[  UNSELECTED]"
+msgstr "[  UNSELECTED]"
+
+msgid "[1] Search playlist"
+msgstr "[1] Search playlist"
+
+msgid "[2] Cleanup library"
+msgstr "[2] Cleanup library"
+
+msgid "[3] Settings"
+msgstr "[3] Settings"
+
+msgid "[4] Language"
+msgstr "[4] Language"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] Downloads Queue"
+
+msgid "[6] Quit"
+msgstr "[6] Quit"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ SELECTED]"
 
 msgid "m3utolocal"
 msgstr "m3utolocal"

@@ -8,38 +8,50 @@ msgstr ""
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 
+msgid "All"
+msgstr "सभी"
+
 msgid "All downloads completed under {path}"
-msgstr "सभी डाउनलोड नीचे पूर्ण हो गए{path}"
+msgstr "सभी डाउनलोड {path} में पूर्ण"
 
 msgid "Apply"
 msgstr "लागू करें"
 
 msgid "Apply cleanup"
-msgstr "सफ़ाई लागू करें"
+msgstr "सफाई लागू करें"
 
 msgid "Back"
 msgstr "वापस"
 
+msgid "Back or Quit"
+msgstr "वापस या बंद"
+
 msgid "Cancel"
-msgstr "रद्द करें"
+msgstr "रद्द"
+
+msgid "Choose"
+msgstr "चुनें"
 
 msgid "Cleanup"
-msgstr "सफ़ाई"
+msgstr "सफाई"
 
 msgid "Cleanup library"
-msgstr "सफाई पुस्तकालय"
+msgstr "लाइब्रेरी साफ़ करें"
 
 msgid "Cleanup preview"
-msgstr "सफ़ाई पूर्वावलोकन"
+msgstr "सफाई पूर्वावलोकन"
 
 msgid "Close"
-msgstr "बंद करें"
+msgstr "बंद"
 
 msgid "Complete"
-msgstr "पूरा"
+msgstr "पूर्ण"
 
 msgid "Confirm"
-msgstr "पुष्टि करें"
+msgstr "पुष्टि"
+
+msgid "Current file"
+msgstr "वर्तमान फ़ाइल"
 
 msgid "Done"
 msgstr "हो गया"
@@ -48,22 +60,25 @@ msgid "Download selected"
 msgstr "चयनित डाउनलोड करें"
 
 msgid "Download {n} files ({size})?"
-msgstr "डाउनलोड करना{n}फ़ाइलें ({size})?"
+msgstr "{n} फ़ाइलें डाउनलोड करें ({size})?"
 
 msgid "Downloading {name}…"
-msgstr "डाउनलोड{name}…"
+msgstr "{name} डाउनलोड हो रहा…"
 
 msgid "Downloading…"
-msgstr "डाउनलोड हो रहा है…"
+msgstr "डाउनलोड हो रहा…"
 
 msgid "Downloads"
 msgstr "डाउनलोड"
 
+msgid "Downloads Queue"
+msgstr "डाउनलोड कतार"
+
 msgid "ETA"
-msgstr "ईटा"
+msgstr "ETA"
 
 msgid "Error"
-msgstr "गलती"
+msgstr "त्रुटि"
 
 msgid "Failed"
 msgstr "विफल"
@@ -72,19 +87,40 @@ msgid "File"
 msgstr "फ़ाइल"
 
 msgid "Finished with {n} failure(s)."
-msgstr "के साथ ख़त्म करना{n}विफलता(ओं)."
+msgstr "{n} विफलता(ओं) के साथ समाप्त।"
+
+msgid "Found 0 matches · 0 selected"
+msgstr "0 परिणाम · 0 चयनित"
 
 msgid "Found {n} matches · {sel} selected"
-msgstr "मिला{n}मिलान ·{sel}चयनित"
+msgstr "{n} परिणाम · {sel} चयनित"
+
+msgid "General Keys"
+msgstr "सामान्य कुंजियाँ"
 
 msgid "Help"
 msgstr "सहायता"
 
+msgid "Help & Keyboard Shortcuts"
+msgstr "सहायता और कीबोर्ड शॉर्टकट"
+
+msgid "HomeScreen Keys"
+msgstr "होम स्क्रीन कुंजियाँ"
+
 msgid "Invalid threads/retries"
-msgstr "अमान्य थ्रेड/पुनर्प्रयास"
+msgstr "अमान्य थ्रेड/पुनः प्रयास"
+
+msgid "Invert"
+msgstr "उलटा"
+
+msgid "Invert selection"
+msgstr "चयन उलटा"
+
+msgid "Item #{num}: {name} ({size}) | {badge}\nURL: {url}"
+msgstr "आइटम #{num}: {name} ({size}) | {badge}\nURL: {url}"
 
 msgid "Keys: j/k or arrows move · Enter select · Space toggle · a all · n none · d download · c cleanup · L language · s settings · ? help · q/Esc back or quit"
-msgstr "कुंजियाँ: जे/के या तीर चलते हैं · एंटर सेलेक्ट करें · स्पेस टॉगल · ए ऑल · एन नो · डी डाउनलोड · सी क्लीनअप · एल लैंग्वेज · एस सेटिंग्स · ? सहायता · क्यू/ईएससी वापस आएं या छोड़ें"
+msgstr "कुंजियाँ: j/k या तीर · Enter चुनें · Space टॉगल · a सभी · n कोई नहीं · d डाउनलोड · c सफाई · L भाषा · s सेटिंग · ? सहायता · q/Esc वापस या बंद"
 
 msgid "Language"
 msgstr "भाषा"
@@ -92,41 +128,65 @@ msgstr "भाषा"
 msgid "Language…"
 msgstr "भाषा…"
 
+msgid "Library Output"
+msgstr "लाइब्रेरी आउटपुट"
+
 msgid "Library: {path}"
-msgstr "पुस्तकालय:{path}"
+msgstr "लाइब्रेरी: {path}"
+
+msgid "M3U Playlist"
+msgstr "M3U प्लेलिस्ट"
+
+msgid "M3U Playlist Search & Media Downloader"
+msgstr "M3U प्लेलिस्ट खोज और मीडिया डाउनलोडर"
 
 msgid "M3U not found: {path}"
-msgstr "M3U नहीं मिला:{path}"
+msgstr "M3U नहीं मिला: {path}"
 
 msgid "M3U path"
 msgstr "M3U पथ"
 
-msgid "M3U: {path} · lang: {lang}"
-msgstr "एम3यू:{path}· लैंग:{lang}"
+msgid "M3U: {path}"
+msgstr "M3U: {path}"
 
 msgid "Name"
 msgstr "नाम"
 
+msgid "Navigate items"
+msgstr "आइटम नेविगेट करें"
+
+msgid "No"
+msgstr "नहीं"
+
+msgid "No active download jobs. Search for channels to start downloads."
+msgstr "कोई सक्रिय डाउनलोड नहीं। शुरू करने के लिए चैनल खोजें।"
+
+msgid "None"
+msgstr "कोई नहीं"
+
 msgid "Nothing to clean."
-msgstr "साफ़ करने के लिए कुछ भी नहीं."
+msgstr "साफ़ करने के लिए कुछ नहीं।"
 
 msgid "Output directory (empty = XDG library)"
 msgstr "आउटपुट निर्देशिका (खाली = XDG लाइब्रेरी)"
 
 msgid "Output: {path}"
-msgstr "आउटपुट:{path}"
+msgstr "आउटपुट: {path}"
 
 msgid "Overall progress"
-msgstr "कुल प्रगति"
+msgstr "समग्र प्रगति"
+
+msgid "Plan"
+msgstr "योजना"
 
 msgid "Plan: {n} items ({size})"
-msgstr "योजना:{n}सामान ({size})"
+msgstr "योजना: {n} आइटम ({size})"
 
 msgid "Preparing…"
-msgstr "तैयार हो रहा है…"
+msgstr "तैयारी…"
 
 msgid "Preview"
-msgstr "पूर्व दर्शन"
+msgstr "पूर्वावलोकन"
 
 msgid "Progress"
 msgstr "प्रगति"
@@ -134,35 +194,53 @@ msgstr "प्रगति"
 msgid "Queued"
 msgstr "कतार में"
 
+msgid "Quick Navigation"
+msgstr "त्वरित नेविगेशन"
+
 msgid "Quit"
-msgstr "बाहर निकलें"
+msgstr "बंद"
 
 msgid "Rate"
-msgstr "दर"
+msgstr "गति"
 
 msgid "Removed {n} items."
-msgstr "निकाला गया{n}सामान।"
+msgstr "{n} आइटम हटाए गए।"
 
 msgid "Retries"
-msgstr "पुनर्प्रयास"
+msgstr "पुनः प्रयास"
 
 msgid "Save"
 msgstr "सहेजें"
 
 msgid "Saved {path}"
-msgstr "सहेजा गया{path}"
+msgstr "सहेजा गया {path}"
 
 msgid "Search"
-msgstr "खोजें"
+msgstr "खोज"
 
 msgid "Search playlist"
 msgstr "प्लेलिस्ट खोजें"
 
 msgid "Search tvg-id / tvg-name…"
-msgstr "टीवीजी-आईडी / टीवीजी-नाम खोजें..."
+msgstr "tvg-id / tvg-name खोजें…"
+
+msgid "SearchScreen Keys"
+msgstr "खोज स्क्रीन कुंजियाँ"
+
+msgid "Searching…"
+msgstr "खोज रहा…"
+
+msgid "Select All"
+msgstr "सभी चुनें"
+
+msgid "Select None"
+msgstr "कुछ न चुनें"
+
+msgid "Select an item to view details"
+msgstr "विवरण देखने के लिए आइटम चुनें"
 
 msgid "Select at least one item."
-msgstr "कम से कम एक आइटम चुनें."
+msgstr "कम से कम एक आइटम चुनें।"
 
 msgid "Settings"
 msgstr "सेटिंग्स"
@@ -177,32 +255,83 @@ msgid "Status"
 msgstr "स्थिति"
 
 msgid "Threads"
-msgstr "धागे"
+msgstr "थ्रेड"
+
+msgid "Threads: {threads} · Retries: {retries}"
+msgstr "थ्रेड: {threads} · पुनः प्रयास: {retries}"
+
+msgid "Toggle"
+msgstr "टॉगल"
+
+msgid "Toggle & Down"
+msgstr "टॉगल और नीचे"
+
+msgid "Toggle / Add selection"
+msgstr "टॉगल / चयन जोड़ें"
+
+msgid "Toggle item"
+msgstr "आइटम टॉगल"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unknown"
+msgstr "अज्ञात"
+
+msgid "Unknown total size"
+msgstr "अज्ञात कुल आकार"
 
 msgid "Waiting…"
-msgstr "इंतज़ार में…"
+msgstr "प्रतीक्षा…"
+
+msgid "Yes"
+msgstr "हाँ"
+
+msgid "[  UNSELECTED]"
+msgstr "[  अचयनित]"
+
+msgid "[1] Search playlist"
+msgstr "[1] प्लेलिस्ट खोजें"
+
+msgid "[2] Cleanup library"
+msgstr "[2] लाइब्रेरी साफ़ करें"
+
+msgid "[3] Settings"
+msgstr "[3] सेटिंग्स"
+
+msgid "[4] Language"
+msgstr "[4] भाषा"
+
+msgid "[5] Downloads Queue"
+msgstr "[5] डाउनलोड कतार"
+
+msgid "[6] Quit"
+msgstr "[6] बंद"
+
+msgid "[✓ SELECTED]"
+msgstr "[✓ चयनित]"
 
 msgid "m3utolocal"
-msgstr "m3यूटोलोकल"
+msgstr "m3utolocal"
 
 msgid "orphan temporary file"
 msgstr "अनाथ अस्थायी फ़ाइल"
 
 msgid "stale partial download"
-msgstr "बासी आंशिक डाउनलोड"
+msgstr "पुराना आंशिक डाउनलोड"
 
 msgid "zero-byte file"
 msgstr "शून्य-बाइट फ़ाइल"
 
 msgid "{percent:.0f}% · {rate} · {eta}"
-msgstr "{percent:.0f}%·{rate} · {eta}"
+msgstr "{percent:.0f}% · {rate} · {eta}"
 
 msgid "{n} file"
 msgid_plural "{n} files"
-msgstr[0] "{n} file"
-msgstr[1] "{n} files"
+msgstr[0] "{n} फ़ाइल"
+msgstr[1] "{n} फ़ाइलें"
 
 msgid "{n} item"
 msgid_plural "{n} items"
-msgstr[0] "{n} item"
-msgstr[1] "{n} items"
+msgstr[0] "{n} आइटम"
+msgstr[1] "{n} आइटम"

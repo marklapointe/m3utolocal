@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 from m3utolocal.domain.job_builder import DownloadJob, build_jobs
-from utils import format_size
+from m3utolocal.utils import format_size
 
 
 @dataclass
@@ -52,7 +52,7 @@ class DownloadManager:
             self.states.append(JobState(job=j, total=initial_total))
 
     async def start_downloads(self, threads: int = 1) -> None:
-        from downloader import download_file
+        from m3utolocal.downloader import download_file
 
         if self.is_running:
             return

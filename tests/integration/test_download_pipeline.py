@@ -8,11 +8,11 @@ from pathlib import Path
 
 import pytest
 
-from downloader import download_file
+from m3utolocal.downloader import download_file
 from m3utolocal.domain.job_builder import build_jobs
 from m3utolocal.domain.models import Channel
 from m3utolocal.domain.match import find_matches
-from utils import parse_m3u
+from m3utolocal.utils import parse_m3u
 
 
 class _Handler(BaseHTTPRequestHandler):

@@ -1,0 +1,35 @@
+#!/bin/sh
+# Build a Linux .deb from this checkout. Requires dpkg-buildpackage.
+set -eu
+ROOT="$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)"
+cd "$ROOT"
+# Isolate from a checkout venv: dh/pybuild must use the system interpreter.
+unset VIRTUAL_ENV
+PATH="/usr/sbin:/usr/bin:/sbin:/bin"
+export PATH
+
+if ! command -v dpkg-buildpackage >/dev/null 2>&1; then
+  echo "dpkg-buildpackage not installed; skipping .deb (metadata lives in packaging/debian/)"
+  exit 0
+fi
+
+STAGE="$(mktemp -d)"
+trap 'rm -rf "$STAGE"' EXIT
+NAME="m3utolocal-1.2.0"
+mkdir -p "$STAGE/$NAME"
+rsync -a \
+  --exclude '.git' --exclude '.venv' --exclude '__pycache__' \
+  --exclude '.pytest_cache' --exclude '.idea' --exclude '.junie' \
+  --exclude 'dist' --exclude 'downloads' --exclude '*.pyc' \
+  --exclude '*.m3u' --exclude '*.m3u8' --exclude '*.part' \
+  --exclude '*.mp4' --exclude '*.mkv' \
+  "$ROOT"/ "$STAGE/$NAME/"
+rm -rf "$STAGE/$NAME/debian"
+cp -R "$ROOT/packaging/debian" "$STAGE/$NAME/debian"
+chmod +x "$STAGE/$NAME/debian/rules"
+cd "$STAGE/$NAME"
+dpkg-buildpackage -us -uc -b
+mkdir -p "$ROOT/dist"
+cp -f "$STAGE"/m3utolocal_*.deb "$ROOT/dist/"
+echo "Wrote Debian package(s) under $ROOT/dist/"
+ls -l "$ROOT/dist"/m3utolocal_*.deb

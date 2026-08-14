@@ -1,4 +1,4 @@
-from utils import parse_m3u
+from m3utolocal.utils import parse_m3u
 
 
 def test_parse_sample(sample_m3u):

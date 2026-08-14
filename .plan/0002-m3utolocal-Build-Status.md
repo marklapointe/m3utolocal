@@ -2,8 +2,13 @@
 
 | Check | Status |
 |-------|--------|
-| Unit + integration + UI | **34 passed** on app-test-001 (python3.12) |
-| FreeBSD pkg deps (py312) | requests, textual, pytest, pytest-asyncio |
-| Port stage + package | **OK** + `pkg install` places `/usr/local/bin/m3utolocal` |
-| Textual TUI | Home / Search / Downloads / Cleanup / Settings + modals |
-| XDG / cleanup / no CWD litter | Landed |
+| Unit + integration + UI | Local pytest after 1.2.0 packaging fold |
+| Command name | `m3utolocal` / `python -m m3utolocal` |
+| Default output | `$XDG_DATA_HOME/m3utolocal/library` (not CWD) |
+| pyproject sdist/wheel | `python -m build` |
+| FreeBSD port | pep517 + autoplist, DISTVERSION 1.2.0 |
+| Linux .deb | `packaging/debian` + `scripts/build-deb` |
+| macOS Homebrew | `packaging/homebrew/m3utolocal.rb` (head) |
+| `make install` | PREFIX `/usr/local`, fallback `~/.local`; no `.py` in bindir |
+
+T0–T9 from 0300 are implemented. Packaging is the 1.2.0 work.

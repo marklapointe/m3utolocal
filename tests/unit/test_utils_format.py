@@ -1,4 +1,4 @@
-from utils import format_size, format_time
+from m3utolocal.utils import format_size, format_time
 
 
 def test_format_size_bytes():

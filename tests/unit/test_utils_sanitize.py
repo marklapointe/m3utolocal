@@ -1,4 +1,4 @@
-from utils import sanitize_filename
+from m3utolocal.utils import sanitize_filename
 
 
 def test_sanitize_illegal_chars():

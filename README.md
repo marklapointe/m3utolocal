@@ -15,7 +15,9 @@ Search M3U playlists by `tvg-id` / `tvg-name` and download **VOD** media (mp4, m
 
 ## Install
 
-### FreeBSD (app-test-001 / ports)
+The installed command is **`m3utolocal`** on FreeBSD, Linux, and macOS.
+
+### FreeBSD (ports)
 
 ```bash
 sudo pkg install -y python312 py312-requests py312-textual
@@ -25,20 +27,36 @@ sudo make LOCAL_SRC_PATH=/path/to/m3utolocal -DLOCAL_SRC package
 sudo pkg install ./work-py312/pkg/m3utolocal-*.pkg
 ```
 
-### Makefile
+### Linux (.deb)
 
 ```bash
-make install          # system install
+# Debian 13 / Ubuntu 24.04+
+./scripts/build-deb
+sudo apt install ./dist/m3utolocal_*.deb
+```
+
+### macOS (Homebrew)
+
+```bash
+brew install --HEAD --formula packaging/homebrew/m3utolocal.rb
+```
+
+### Makefile / pip
+
+GNU make is required (`gmake` on FreeBSD and macOS).
+
+```bash
+make                  # sdist + wheel
+make install          # PREFIX=/usr/local, or ~/.local if not writable
 make test             # pytest
 make test-freebsd     # rsync + pytest on app-test-001
 ```
 
-### pip / venv
-
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -r requirements-dev.txt
-.venv/bin/pytest -q
+.venv/bin/pip install .
+.venv/bin/m3utolocal --help
 ```
 
 ## Quick start
@@ -46,17 +64,15 @@ python3 -m venv .venv
 ```bash
 # Interactive TUI
 m3utolocal
-# or
-python3 main.py
 
 # Headless download
-python3 main.py -y -m playlist.m3u -o /path/to/library "Movie Title"
+m3utolocal -y -m playlist.m3u -o /path/to/library "Movie Title"
 
 # Config + cleanup
-python3 main.py init
-python3 main.py cleanup --dry-run
-python3 main.py cleanup --apply
-python3 main.py cleanup --migrate-cwd --apply   # move *.mp4 etc from CWD into library
+m3utolocal init
+m3utolocal cleanup --dry-run
+m3utolocal cleanup --apply
+m3utolocal cleanup --migrate-cwd --apply   # move *.mp4 etc from CWD into library
 ```
 
 ## Options

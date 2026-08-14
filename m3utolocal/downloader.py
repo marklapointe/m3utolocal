@@ -4,7 +4,7 @@ import time
 
 import requests
 
-from utils import format_time
+from m3utolocal.utils import format_time
 
 
 def download_file(

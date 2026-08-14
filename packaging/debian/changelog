@@ -1,0 +1,5 @@
+m3utolocal (1.2.0-1) unstable; urgency=medium
+
+  * Package as the m3utolocal command from a pyproject sdist.
+
+ -- Mark LaPointe <mark@cloudbsd.org>  Fri, 14 Aug 2026 12:00:00 +0000

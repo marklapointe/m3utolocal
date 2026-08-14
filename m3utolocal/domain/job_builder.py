@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any, Mapping
 
 from m3utolocal.domain.models import Channel, DownloadJob
-from utils import sanitize_filename
+from m3utolocal.utils import sanitize_filename
 
 
 def extension_from_url(url: str) -> str:

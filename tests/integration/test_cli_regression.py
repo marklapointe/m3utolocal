@@ -10,7 +10,6 @@ from pathlib import Path
 import pytest
 
 ROOT = Path(__file__).resolve().parents[2]
-MAIN = ROOT / "main.py"
 PYTHON = sys.executable
 
 
@@ -20,7 +19,7 @@ def run_cli(args: list[str], env: dict | None = None) -> subprocess.CompletedPro
     if env:
         e.update(env)
     return subprocess.run(
-        [PYTHON, str(MAIN), *args],
+        [PYTHON, "-m", "m3utolocal", *args],
         cwd=str(ROOT),
         capture_output=True,
         text=True,
@@ -90,7 +89,7 @@ def test_cli_subprocess_svt_reaches_past_argparse():
     env["PYTHONPATH"] = str(ROOT)
     env["TERM"] = "xterm-256color"
     proc = subprocess.Popen(
-        [PYTHON, str(MAIN), "-m", "/home/mlapointe/chans.m3u", "--tui", "SVT"],
+        [PYTHON, "-m", "m3utolocal", "-m", "/home/mlapointe/chans.m3u", "--tui", "SVT"],
         cwd=str(ROOT),
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,

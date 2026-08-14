@@ -1,0 +1,15 @@
+Source: m3utolocal
+Section: net
+Priority: optional
+Maintainer: Mark LaPointe <mark@cloudbsd.org>
+Build-Depends: debhelper-compat (= 13), dh-python, pybuild-plugin-pyproject, python3-all, python3-setuptools, python3-wheel
+Standards-Version: 4.7.0
+Homepage: https://github.com/marklapointe/m3utolocal
+Rules-Requires-Root: no
+
+Package: m3utolocal
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}, python3-requests, python3-textual
+Description: Search M3U playlists and download VOD files
+ m3utolocal searches M3U playlists by tvg-id or tvg-name and downloads
+ VOD media to an XDG data library. The installed command is m3utolocal.

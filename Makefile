@@ -1,73 +1,79 @@
+# GNU make required (Linux: make; FreeBSD/macOS: gmake).
 PREFIX ?= /usr/local
-# FreeBSD default after Python ports upgrade; override on Linux if needed
-PYTHON ?= python3.12
-BINDIR ?= $(PREFIX)/bin
+PYTHON ?= python3
+BINNAME := m3utolocal
 MANDIR ?= $(PREFIX)/share/man/man1
-PORTSDIR ?= /usr/ports
-REMOTE ?= mlapointe@172.16.176.133
-REMOTE_DIR ?= ~/src/m3utolocal
+DESTDIR ?=
 
-.PHONY: all install uninstall run clean help install-port install-deps \
-	install-freebsd install-ubuntu install-generic test test-unit \
-	sync-freebsd test-freebsd
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Linux)
+FRAGMENT_OS := linux
+else ifeq ($(UNAME_S),FreeBSD)
+FRAGMENT_OS := freebsd
+else ifeq ($(UNAME_S),Darwin)
+FRAGMENT_OS := darwin
+else
+$(error unsupported OS: $(UNAME_S))
+endif
 
-all: help
+.PHONY: all build install uninstall test test-unit package \
+	sync-freebsd test-freebsd clean help install-port
 
-install: install-deps
-	mkdir -p $(DESTDIR)$(BINDIR)
-	mkdir -p $(DESTDIR)$(MANDIR)
-	sed "1s|.*|#!$$(command -v $(PYTHON) \|\| command -v python3)|" main.py > $(DESTDIR)$(BINDIR)/m3utolocal
-	chmod 755 $(DESTDIR)$(BINDIR)/m3utolocal
-	cp utils.py tui.py download_manager.py downloader.py $(DESTDIR)$(BINDIR)/
-	cp -R m3utolocal $(DESTDIR)$(BINDIR)/
-	chmod 644 $(DESTDIR)$(BINDIR)/utils.py $(DESTDIR)$(BINDIR)/tui.py \
-		$(DESTDIR)$(BINDIR)/download_manager.py $(DESTDIR)$(BINDIR)/downloader.py
-	cp man/m3utolocal.1 $(DESTDIR)$(MANDIR)/
-	chmod 644 $(DESTDIR)$(MANDIR)/m3utolocal.1
+all: build
 
-install-deps:
-	@if [ "$$(uname -s)" = "FreeBSD" ]; then \
-		$(MAKE) install-freebsd; \
-	elif [ "$$(uname -s)" = "Linux" ]; then \
-		if [ -f /etc/os-release ] && grep -qi ubuntu /etc/os-release; then \
-			$(MAKE) install-ubuntu; \
-		else \
-			$(MAKE) install-generic; \
-		fi \
-	else \
-		$(MAKE) install-generic; \
-	fi
+build:
+	$(PYTHON) -m build
 
-install-freebsd:
-	@echo "Installing dependencies for FreeBSD (Python 3.12)..."
-	pkg install -y python312 py312-requests
+_effective_prefix = $(PREFIX)
 
-install-ubuntu:
-	@echo "Installing dependencies for Ubuntu..."
-	apt-get update && apt-get install -y python3-requests python3-pytest || true
-	$(PYTHON) -m pip install -r requirements.txt || python3 -m pip install -r requirements.txt
-
-install-generic:
-	@echo "Installing dependencies via pip..."
-	$(PYTHON) -m pip install -r requirements.txt || python3 -m pip install -r requirements.txt
+install: 
+	@prefix="$(PREFIX)"; \
+	if [ -z "$(DESTDIR)" ]; then \
+		if [ ! -d "$$prefix" ]; then \
+			mkdir -p "$$prefix" 2>/dev/null || true; \
+		fi; \
+		if [ ! -w "$$prefix" ]; then \
+			prefix="$(HOME)/.local"; \
+			echo "PREFIX $(PREFIX) not writable; installing to $$prefix"; \
+		fi; \
+	fi; \
+	if [ ! -d dist ] || ! ls dist/$(BINNAME)-*.whl >/dev/null 2>&1; then \
+		$(PYTHON) -m build || $(PYTHON) -m pip wheel -w dist --no-deps .; \
+	fi; \
+	wheel=$$(ls -1 dist/$(BINNAME)-*.whl 2>/dev/null | tail -1); \
+	if [ -z "$$wheel" ]; then \
+		echo "error: no wheel in dist/; build failed" >&2; \
+		exit 1; \
+	fi; \
+	root_args=""; \
+	if [ -n "$(DESTDIR)" ]; then root_args="--root=$(DESTDIR)"; fi; \
+	$(PYTHON) -m pip install $$root_args --prefix="$$prefix" --no-deps --force-reinstall --disable-pip-version-check "$$wheel"; \
+	bindir="$(DESTDIR)$$prefix/bin"; \
+	mkdir -p "$$bindir"; \
+	cp scripts/$(BINNAME) "$$bindir/$(BINNAME)"; \
+	chmod 755 "$$bindir/$(BINNAME)"; \
+	mandir="$(DESTDIR)$$prefix/share/man/man1"; \
+	mkdir -p "$$mandir"; \
+	cp man/$(BINNAME).1 "$$mandir/"; \
+	echo "Installed $(BINNAME) to $$bindir/$(BINNAME)"
 
 uninstall:
-	rm -f $(DESTDIR)$(BINDIR)/m3utolocal
-	rm -f $(DESTDIR)$(BINDIR)/utils.py
-	rm -f $(DESTDIR)$(BINDIR)/tui.py
-	rm -f $(DESTDIR)$(BINDIR)/download_manager.py
-	rm -f $(DESTDIR)$(BINDIR)/downloader.py
-	rm -rf $(DESTDIR)$(BINDIR)/m3utolocal
-	rm -f $(DESTDIR)$(MANDIR)/m3utolocal.1
-
-run:
-	./main.py $(ARGS)
+	@prefix="$(PREFIX)"; \
+	if [ -z "$(DESTDIR)" ] && [ ! -w "$$prefix/bin/$(BINNAME)" ] && [ -x "$(HOME)/.local/bin/$(BINNAME)" ]; then \
+		prefix="$(HOME)/.local"; \
+	fi; \
+	rm -f "$(DESTDIR)$$prefix/bin/$(BINNAME)"; \
+	rm -f "$(DESTDIR)$$prefix/share/man/man1/$(BINNAME).1"; \
+	$(PYTHON) -c "import pathlib,sysconfig; p=pathlib.Path(sysconfig.get_path('purelib', vars={'base':'$$prefix','platbase':'$$prefix'}))/'m3utolocal'; import shutil; shutil.rmtree(p, ignore_errors=True); print('removed', p)"
 
 test:
 	$(PYTHON) -m pytest -q || python3 -m pytest -q
 
 test-unit:
 	$(PYTHON) -m pytest -q tests/unit || python3 -m pytest -q tests/unit
+
+REMOTE ?= mlapointe@172.16.176.133
+REMOTE_DIR ?= ~/src/m3utolocal
 
 sync-freebsd:
 	rsync -avz --delete \
@@ -77,23 +83,30 @@ sync-freebsd:
 test-freebsd: sync-freebsd
 	ssh $(REMOTE) 'cd $(REMOTE_DIR) && python3.12 -m pytest -q'
 
+package:
+ifeq ($(FRAGMENT_OS),linux)
+	./scripts/build-deb
+else ifeq ($(FRAGMENT_OS),freebsd)
+	@echo "FreeBSD: copy ports/net/m3utolocal into the ports tree and run make package"
+else ifeq ($(FRAGMENT_OS),darwin)
+	@echo "macOS: brew install --formula packaging/homebrew/m3utolocal.rb"
+endif
+
 clean:
-	rm -rf downloads/
-	rm -f *.tmp_*
+	rm -rf build/ dist/ *.egg-info
 	find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || true
+
+install-port:
+	mkdir -p $(DESTDIR)/usr/ports/net/m3utolocal
+	cp ports/net/m3utolocal/Makefile $(DESTDIR)/usr/ports/net/m3utolocal/
+	cp ports/net/m3utolocal/pkg-descr $(DESTDIR)/usr/ports/net/m3utolocal/
 
 help:
 	@echo "Usage:"
-	@echo "  make install         - Install m3utolocal to $(BINDIR)"
-	@echo "  make uninstall       - Remove m3utolocal"
-	@echo "  make test            - Run pytest"
-	@echo "  make sync-freebsd    - rsync to app-test-001"
-	@echo "  make test-freebsd    - sync + pytest on FreeBSD host"
-	@echo "  make run ARGS='...'  - Run locally"
-	@echo "  make clean           - Remove temp artifacts"
-	@echo "  make install-port    - Copy port files to $(PORTSDIR)"
-
-install-port:
-	mkdir -p $(DESTDIR)$(PORTSDIR)/net/m3utolocal
-	cp ports/net/m3utolocal/Makefile $(DESTDIR)$(PORTSDIR)/net/m3utolocal/
-	cp ports/net/m3utolocal/pkg-descr $(DESTDIR)$(PORTSDIR)/net/m3utolocal/
+	@echo "  make                 - build sdist and wheel"
+	@echo "  make install         - install $(BINNAME) to PREFIX ($(PREFIX))"
+	@echo "  make uninstall       - remove $(BINNAME)"
+	@echo "  make test            - run pytest"
+	@echo "  make package         - OS package ($(FRAGMENT_OS))"
+	@echo "  make test-freebsd    - sync + pytest on app-test-001"
+	@echo "  make && make install - build then install (use doas/sudo only for install)"

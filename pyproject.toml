@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "m3utolocal"
+version = "1.2.0"
+description = "Search M3U playlists and download VOD files to a local library"
+readme = "README.md"
+license = "BSD-2-Clause"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+authors = [{ name = "Mark LaPointe", email = "mark@cloudbsd.org" }]
+dependencies = [
+  "requests>=2.31.0",
+  "textual>=0.80.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+  "pytest-cov>=5.0.0",
+  "pytest-asyncio>=0.24.0",
+  "responses>=0.25.0",
+]
+
+[project.scripts]
+m3utolocal = "m3utolocal.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/marklapointe/m3utolocal"
+
+[tool.setuptools.packages.find]
+include = ["m3utolocal*"]
+
+[tool.setuptools.package-data]
+m3utolocal = [
+  "i18n/locales/**/*.mo",
+  "i18n/locales/**/*.po",
+  "i18n/locales/*.pot",
+  "i18n/complete_maps.json",
+  "ui/css/*.tcss",
+]

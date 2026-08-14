@@ -2,7 +2,7 @@
 
 import curses
 import time
-from utils import format_size
+from m3utolocal.utils import format_size
 
 
 def tui_select(matches):

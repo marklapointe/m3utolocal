@@ -12,7 +12,7 @@ from m3utolocal.services.config import Settings
 from m3utolocal.ui.app import M3UToLocalApp
 from m3utolocal.ui.modals import ErrorModal, CleanupPreviewModal
 from m3utolocal.ui.screens import SearchScreen, SettingsScreen
-from tui import tui_select
+from m3utolocal.tui import tui_select
 
 
 @pytest.mark.asyncio

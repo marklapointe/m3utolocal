@@ -33,7 +33,7 @@ from m3utolocal.ui.modals import (
     HelpModal,
     LanguageModal,
 )
-from utils import format_size, get_file_size, parse_m3u
+from m3utolocal.utils import format_size, get_file_size, parse_m3u
 
 
 class HomeScreen(Screen):

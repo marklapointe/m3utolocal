@@ -8,7 +8,7 @@ from pathlib import Path
 
 import pytest
 
-from downloader import download_file
+from m3utolocal.downloader import download_file
 
 
 class _RangeServer:

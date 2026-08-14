@@ -4,9 +4,10 @@ from m3utolocal.infra.paths import config_file, default_output_root
 from m3utolocal.services.config import load_settings, save_settings, validate_settings, Settings
 
 
-def test_default_output_is_cwd(xdg_env):
+def test_default_output_is_xdg_library(xdg_env):
     root = default_output_root()
-    assert root.resolve() == Path.cwd().resolve()
+    assert root == xdg_env / "data" / "m3utolocal" / "library"
+    assert root.resolve() != Path.cwd().resolve()
 
 
 def test_save_and_load(xdg_env):

@@ -1,24 +1,19 @@
 #!/bin/sh
-# Build release tarball + ports/net/m3utolocal/distinfo from the working tree.
+# Build the PEP 517 sdist and write ports/net/m3utolocal/distinfo.
 set -eu
 ROOT="$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)"
-VERSION="${1:-1.1.0}"
+VERSION="${1:-1.2.0}"
 NAME="m3utolocal-${VERSION}"
-STAGE="$(mktemp -d)"
-trap 'rm -rf "$STAGE"' EXIT
+cd "$ROOT"
 
-mkdir -p "$STAGE/$NAME" "$ROOT/dist"
-rsync -a \
-  --exclude '.git' --exclude '.venv' --exclude '__pycache__' \
-  --exclude '.pytest_cache' --exclude '.idea' --exclude '.junie' \
-  --exclude 'dist' --exclude 'dist/**' --exclude 'downloads' --exclude '*.pyc' \
-  --exclude '*.m3u' --exclude '*.m3u8' --exclude 'chans.m3u' \
-  --exclude '*.part' --exclude '*.mp4' --exclude '*.mkv' --exclude '*.avi' \
-  --exclude '*.ts' --exclude '*.webm' --exclude '*.m4v' \
-  "$ROOT"/ "$STAGE/$NAME/"
+PYTHON="${PYTHON:-python3}"
+"$PYTHON" -m build --sdist
 
 TARBALL="$ROOT/dist/${NAME}.tar.gz"
-tar -C "$STAGE" -czf "$TARBALL" "$NAME"
+if [ ! -f "$TARBALL" ]; then
+  echo "error: expected $TARBALL" >&2
+  exit 1
+fi
 
 if command -v sha256sum >/dev/null 2>&1; then
   SHA="$(sha256sum "$TARBALL" | awk '{print $1}')"

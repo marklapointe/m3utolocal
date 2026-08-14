@@ -41,8 +41,8 @@ def cache_dir() -> Path:
 
 
 def default_output_root() -> Path:
-    """Default library for downloads (present working directory)."""
-    return Path.cwd()
+    """Default library for downloads (XDG data, never CWD)."""
+    return data_dir() / "library"
 
 
 def config_file() -> Path:

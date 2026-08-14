@@ -150,7 +150,7 @@ class CleanupPreviewModal(ModalScreen[bool]):
         self.total_bytes = total_bytes
 
     def compose(self) -> ComposeResult:
-        from utils import format_size
+        from m3utolocal.utils import format_size
 
         with Vertical(classes="modal-box"):
             yield Static(_("Cleanup preview"), classes="modal-title", id="cleanup-title")

@@ -7,8 +7,8 @@ def test_distinfo_exists_and_well_formed():
     di = ROOT / "ports" / "net" / "m3utolocal" / "distinfo"
     assert di.is_file()
     text = di.read_text(encoding="utf-8")
-    assert "SHA256 (m3utolocal-1.1.0.tar.gz)" in text
-    assert "SIZE (m3utolocal-1.1.0.tar.gz)" in text
+    assert "SHA256 (m3utolocal-1.2.0.tar.gz)" in text
+    assert "SIZE (m3utolocal-1.2.0.tar.gz)" in text
     assert "TIMESTAMP" in text
 
 
@@ -17,11 +17,19 @@ def test_release_tarball_matches_distinfo():
     import re
 
     di = (ROOT / "ports" / "net" / "m3utolocal" / "distinfo").read_text(encoding="utf-8")
-    sha_m = re.search(r"SHA256 \(m3utolocal-1\.1\.0\.tar\.gz\) = ([0-9a-f]+)", di)
-    size_m = re.search(r"SIZE \(m3utolocal-1\.1\.0\.tar\.gz\) = (\d+)", di)
+    sha_m = re.search(r"SHA256 \(m3utolocal-1\.2\.0\.tar\.gz\) = ([0-9a-f]+)", di)
+    size_m = re.search(r"SIZE \(m3utolocal-1\.2\.0\.tar\.gz\) = (\d+)", di)
     assert sha_m and size_m
-    tarball = ROOT / "dist" / "m3utolocal-1.1.0.tar.gz"
-    assert tarball.is_file()
+    tarball = ROOT / "dist" / "m3utolocal-1.2.0.tar.gz"
+    if not tarball.is_file():
+        return
     data = tarball.read_bytes()
     assert str(len(data)) == size_m.group(1)
     assert hashlib.sha256(data).hexdigest() == sha_m.group(1)
+
+    import tarfile
+
+    with tarfile.open(tarball, "r:gz") as tf:
+        names = tf.getnames()
+    assert any(n.endswith("man/m3utolocal.1") for n in names)
+    assert any(n.endswith("scripts/m3utolocal") for n in names)

@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+# Copyright (c) 2026, Mark LaPointe <mark@cloudbsd.org>
+"""Installed command launcher. Finds sitelib under the same PREFIX as this script."""
+
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+
+def _extend_sys_path() -> None:
+    prefix = Path(__file__).resolve().parent.parent
+    lib = prefix / "lib"
+    if not lib.is_dir():
+        return
+    extras: list[Path] = []
+    extras.extend(sorted(lib.glob("python*/site-packages")))
+    extras.extend(sorted(lib.glob("python*/dist-packages")))
+    for candidate in extras:
+        text = str(candidate)
+        if text not in sys.path:
+            sys.path.insert(0, text)
+
+
+_extend_sys_path()
+
+from m3utolocal.cli import main  # noqa: E402
+
+if __name__ == "__main__":
+    main()

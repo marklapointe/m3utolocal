@@ -23,8 +23,12 @@ def test_download_manager_enqueue(tmp_path: Path):
 
 
 @pytest.mark.asyncio
-async def test_app_navigate_to_queue_screen(tmp_path: Path):
-    app = M3UToLocalApp(Settings(m3u_path=str(tmp_path / "chans.m3u")))
+async def test_app_navigate_to_queue_screen(tmp_path: Path, xdg_env):
+    lib = tmp_path / "library"
+    lib.mkdir()
+    app = M3UToLocalApp(
+        Settings(m3u_path=str(tmp_path / "chans.m3u"), output_dir=str(lib))
+    )
     async with app.run_test() as pilot:
         await pilot.pause()
         app.show_downloads_queue([{"tvg-id": "ch1", "url": "http://example.com/1.mp4", "size": 100}])

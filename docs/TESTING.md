@@ -5,6 +5,7 @@
 ```bash
 python3 -m pip install -r requirements-dev.txt
 python3 -m pytest -q
+python3 -m m3utolocal --help
 ```
 
 ## FreeBSD host (app-test-001)

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/m3uToLocal.iml" filepath="$PROJECT_DIR$/.idea/m3uToLocal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/m3utolocal.iml" filepath="$PROJECT_DIR$/.idea/m3utolocal.iml" />
     </modules>
   </component>
 </project>

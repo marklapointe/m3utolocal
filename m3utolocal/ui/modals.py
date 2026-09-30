@@ -30,7 +30,7 @@ class ConfirmModal(ModalScreen[bool]):
     def compose(self) -> ComposeResult:
         with Vertical(classes="modal-box"):
             yield Static(self.title_text, classes="modal-title", id="confirm-title")
-            yield Label(self.message, id="confirm-message")
+            yield Label(self.message, id="confirm-message", markup=False)
             with Horizontal(classes="action-bar"):
                 yield Button(_("Confirm"), variant="primary", id="btn-ok")
                 yield Button(_("Cancel"), variant="default", id="btn-cancel")
@@ -157,12 +157,13 @@ class CleanupPreviewModal(ModalScreen[bool]):
             yield Label(
                 _("Plan: {n} items ({size})").format(
                     n=len(self.lines), size=format_size(self.total_bytes)
-                )
+                ),
+                markup=False,
             )
             body = "\n".join(self.lines[:50]) or _("Nothing to clean.")
             if len(self.lines) > 50:
                 body += f"\n… +{len(self.lines) - 50}"
-            yield Static(body, id="cleanup-list")
+            yield Static(body, id="cleanup-list", markup=False)
             with Horizontal(classes="action-bar"):
                 yield Button(_("Apply cleanup"), variant="error", id="btn-ok")
                 yield Button(_("Cancel"), id="btn-cancel")
@@ -189,7 +190,7 @@ class ErrorModal(ModalScreen[None]):
     def compose(self) -> ComposeResult:
         with Vertical(classes="modal-box"):
             yield Static(_("Error"), classes="modal-title", id="error-title")
-            yield Label(self.message, id="error-message")
+            yield Label(self.message, id="error-message", markup=False)
             with Horizontal(classes="action-bar"):
                 yield Button(_("Close"), variant="primary", id="btn-close")
 

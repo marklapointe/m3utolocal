@@ -8,6 +8,8 @@ import pytest
 textual = pytest.importorskip("textual")
 pytest.importorskip("pytest_asyncio")
 
+from textual.widgets import DataTable
+
 from m3utolocal.services.config import Settings
 from m3utolocal.ui.app import M3UToLocalApp
 from m3utolocal.ui.modals import ErrorModal, CleanupPreviewModal
@@ -145,3 +147,72 @@ def test_tui_select_fallback():
         curses.wrapper = old_wrapper
         if old_has_colors:
             curses.has_colors = old_has_colors
+
+
+@pytest.mark.asyncio
+async def test_search_screen_brackets_and_badge_markup(tmp_path: Path):
+    """Ensure titles with square brackets and badges like [✓ SELECTED] do not raise MarkupError."""
+    m3u_file = tmp_path / "bracket_test.m3u"
+    m3u_file.write_text(
+        '#EXTINF:-1 tvg-id="[US] Rick And Morty [1080p]" tvg-name="[US] Rick And Morty [1080p]",Rick and Morty\n'
+        'http://example.com/stream/video.mp4\n',
+        encoding="utf-8",
+    )
+
+    settings = Settings(m3u_path=str(m3u_file), output_dir=str(tmp_path / "out"))
+    app = M3UToLocalApp(settings)
+
+    async with app.run_test() as pilot:
+        await pilot.press("slash")
+        await pilot.pause()
+
+        search_screen = app.screen
+        assert isinstance(search_screen, SearchScreen)
+        await search_screen._async_search("Rick")
+
+        inspector = search_screen.query_one("#item-inspector")
+        assert "[US] Rick And Morty [1080p]" in str(inspector.render())
+        assert "[✓ SELECTED]" in str(inspector.render())
+
+        # Toggle selection to ensure unselected badge renders without markup error
+        search_screen.action_select_none()
+        assert "[  UNSELECTED]" in str(inspector.render())
+
+
+@pytest.mark.asyncio
+async def test_search_selection_preserves_cursor_and_scroll(tmp_path: Path):
+    """Ensure toggling or changing selection preserves the cursor row instead of jumping to row 0."""
+    m3u_file = tmp_path / "long_list.m3u"
+    lines = ["#EXTM3U"]
+    for i in range(40):
+        lines.append(f'#EXTINF:-1 tvg-id="Show {i}",Show {i}\nhttp://example.com/{i}.mp4')
+    m3u_file.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    app = M3UToLocalApp(Settings(m3u_path=str(m3u_file)))
+    async with app.run_test() as pilot:
+        await pilot.press("slash")
+        await pilot.pause()
+
+        search_screen = app.screen
+        assert isinstance(search_screen, SearchScreen)
+        await search_screen._async_search("Show")
+
+        table = search_screen.query_one(DataTable)
+        table.move_cursor(row=25)
+        await pilot.pause()
+        assert table.cursor_row == 25
+
+        # Toggle individual item
+        search_screen._toggle_row_index(25)
+        await pilot.pause()
+        assert table.cursor_row == 25
+
+        # Invert, None, and All should also preserve row
+        search_screen.action_select_invert()
+        assert table.cursor_row == 25
+
+        search_screen.action_select_none()
+        assert table.cursor_row == 25
+
+        search_screen.action_select_all()
+        assert table.cursor_row == 25

@@ -72,12 +72,14 @@ class HomeScreen(Screen):
                             path=str(self.app.settings.resolved_output_dir())
                         ),
                         classes="stat-val",
+                        markup=False,
                     )
                 with Vertical(classes="stat-card", id="stat-m3u"):
                     yield Label(_("M3U Playlist"), classes="stat-title")
                     yield Label(
                         _("M3U: {path}").format(path=self.app.settings.m3u_path),
                         classes="stat-val",
+                        markup=False,
                     )
                 with Vertical(classes="stat-card", id="stat-cfg"):
                     yield Label(_("Settings"), classes="stat-title")
@@ -177,10 +179,11 @@ class SearchScreen(Screen):
             yield Static(
                 _("Found 0 matches · 0 selected"),
                 id="summary-bar",
+                markup=False,
             )
             yield DataTable(id="match-list", cursor_type="row", zebra_stripes=True)
-            yield Static(_("Select an item to view details"), id="item-inspector")
-            yield Static("", id="status")
+            yield Static(_("Select an item to view details"), id="item-inspector", markup=False)
+            yield Static("", id="status", markup=False)
             with Horizontal(classes="action-bar"):
                 yield Button(_("Search"), variant="primary", id="btn-go")
                 yield Button(_("All"), id="btn-all")
@@ -211,10 +214,22 @@ class SearchScreen(Screen):
             self._start_search_worker(q)
         elif bid == "btn-all":
             self.action_select_all()
+            try:
+                self.query_one("#match-list", DataTable).focus()
+            except Exception:
+                pass
         elif bid == "btn-none":
             self.action_select_none()
+            try:
+                self.query_one("#match-list", DataTable).focus()
+            except Exception:
+                pass
         elif bid == "btn-invert":
             self.action_select_invert()
+            try:
+                self.query_one("#match-list", DataTable).focus()
+            except Exception:
+                pass
         elif bid == "btn-dl":
             self.action_download()
         elif bid == "btn-back":
@@ -293,6 +308,11 @@ class SearchScreen(Screen):
         self._update_summary()
         self._update_inspector(0 if self.matches else None)
         status.update("")
+        if self.matches:
+            try:
+                table.focus()
+            except Exception:
+                pass
 
         def _probe_sizes():
             for i in range(min(50, len(self.matches))):
@@ -339,13 +359,34 @@ class SearchScreen(Screen):
             table = self.query_one("#match-list", DataTable)
         except Exception:
             return
-        table.clear()
-        for i, m in enumerate(self.matches):
-            name = m.get("tvg-id") or m.get("tvg-name") or "?"
-            size = format_size(int(m.get("size") or 0)) if int(m.get("size") or 0) > 0 else _("Unknown")
-            url = m.get("url") or "—"
-            mark = "[✓]" if i in self.selected else "[ ]"
-            table.add_row(str(i + 1), mark, name, size, url, key=str(i))
+
+        if table.row_count == len(self.matches):
+            for i, m in enumerate(self.matches):
+                mark = "[✓]" if i in self.selected else "[ ]"
+                sz_val = int(m.get("size") or 0)
+                size_str = format_size(sz_val) if sz_val > 0 else _("Unknown")
+                try:
+                    table.update_cell(str(i), "check", mark)
+                    table.update_cell(str(i), "size", size_str)
+                except Exception:
+                    pass
+        else:
+            saved_row = table.cursor_row
+            saved_scroll_y = getattr(table.scroll_offset, "y", 0)
+            table.clear()
+            for i, m in enumerate(self.matches):
+                name = m.get("tvg-id") or m.get("tvg-name") or "?"
+                size = format_size(int(m.get("size") or 0)) if int(m.get("size") or 0) > 0 else _("Unknown")
+                url = m.get("url") or "—"
+                mark = "[✓]" if i in self.selected else "[ ]"
+                table.add_row(str(i + 1), mark, name, size, url, key=str(i))
+            if saved_row is not None and 0 <= saved_row < len(self.matches):
+                try:
+                    table.move_cursor(row=saved_row)
+                    table.scroll_to(y=saved_scroll_y, animate=False)
+                except Exception:
+                    pass
+
         self._update_summary()
         if table.cursor_row is not None:
             self._update_inspector(table.cursor_row)
@@ -364,7 +405,17 @@ class SearchScreen(Screen):
                     def _probe(target_idx=idx, target_url=url):
                         sz = get_file_size(target_url)
                         self.matches[target_idx]["size"] = sz
-                        self.app.call_from_thread(self._refresh_checks)
+                        def _update_row_size():
+                            try:
+                                t = self.query_one("#match-list", DataTable)
+                                size_str = format_size(sz) if sz > 0 else _("Unknown")
+                                t.update_cell(str(target_idx), "size", size_str)
+                                self._update_summary()
+                                if t.cursor_row == target_idx:
+                                    self._update_inspector(target_idx)
+                            except Exception:
+                                pass
+                        self.app.call_from_thread(_update_row_size)
                     self.run_worker(asyncio.to_thread(_probe), exclusive=False)
 
         try:
@@ -448,11 +499,11 @@ class DownloadsScreen(Screen):
         with Vertical(classes="panel"):
             with Vertical(classes="dl-card"):
                 yield Static(_("Downloads"), id="dl-title")
-                yield Static(_("Preparing…"), id="dl-status")
+                yield Static(_("Preparing…"), id="dl-status", markup=False)
                 yield ProgressBar(total=100, show_eta=True, id="dl-overall")
-                yield Static("", id="dl-overall-detail")
+                yield Static("", id="dl-overall-detail", markup=False)
                 yield ProgressBar(total=100, show_eta=True, id="dl-current")
-                yield Static("", id="dl-current-detail")
+                yield Static("", id="dl-current-detail", markup=False)
             yield DataTable(id="dl-table", zebra_stripes=True)
             with Horizontal(classes="action-bar"):
                 yield Button(_("Back"), id="btn-back")
@@ -577,9 +628,10 @@ class CleanupScreen(Screen):
             yield Label(
                 _("Library: {path}").format(
                     path=self.app.settings.resolved_output_dir()
-                )
+                ),
+                markup=False,
             )
-            yield Static("", id="cu-status")
+            yield Static("", id="cu-status", markup=False)
             with Horizontal(classes="action-bar"):
                 yield Button(_("Preview"), variant="primary", id="btn-preview")
                 yield Button(_("Back"), id="btn-back")
@@ -643,7 +695,7 @@ class SettingsScreen(Screen):
                 yield Button(_("Save"), variant="primary", id="btn-save")
                 yield Button(_("Language…"), id="btn-lang")
                 yield Button(_("Back"), id="btn-back")
-            yield Static("", id="set-status")
+            yield Static("", id="set-status", markup=False)
         yield Footer()
 
     def on_button_pressed(self, event: Button.Pressed) -> None:

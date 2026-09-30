@@ -17,7 +17,8 @@ $(error unsupported OS: $(UNAME_S))
 endif
 
 .PHONY: all build install uninstall test test-unit package \
-	sync-freebsd test-freebsd clean help install-port
+	sync-freebsd test-freebsd clean help install-port \
+	deb install-deb uninstall-deb
 
 all: build
 
@@ -92,6 +93,38 @@ else ifeq ($(FRAGMENT_OS),darwin)
 	@echo "macOS: brew install --formula packaging/homebrew/m3utolocal.rb"
 endif
 
+deb:
+	./scripts/build-deb
+
+install-deb: deb
+	@deb=$$(ls -1t dist/$(BINNAME)_*.deb 2>/dev/null | head -1); \
+	if [ -z "$$deb" ]; then \
+		echo "error: no .deb found in dist/" >&2; \
+		exit 1; \
+	fi; \
+	echo "Installing $$deb..."; \
+	if [ "$$(id -u)" -eq 0 ]; then \
+		apt install -y "./$$deb"; \
+	elif command -v sudo >/dev/null 2>&1; then \
+		sudo apt install -y "./$$deb"; \
+	elif command -v doas >/dev/null 2>&1; then \
+		doas apt install -y "./$$deb"; \
+	else \
+		apt install -y "./$$deb"; \
+	fi
+
+uninstall-deb:
+	@echo "Removing $(BINNAME) package..."; \
+	if [ "$$(id -u)" -eq 0 ]; then \
+		apt remove -y $(BINNAME); \
+	elif command -v sudo >/dev/null 2>&1; then \
+		sudo apt remove -y $(BINNAME); \
+	elif command -v doas >/dev/null 2>&1; then \
+		doas apt remove -y $(BINNAME); \
+	else \
+		apt remove -y $(BINNAME); \
+	fi
+
 clean:
 	rm -rf build/ dist/ *.egg-info
 	find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || true
@@ -106,6 +139,9 @@ help:
 	@echo "  make                 - build sdist and wheel"
 	@echo "  make install         - install $(BINNAME) to PREFIX ($(PREFIX))"
 	@echo "  make uninstall       - remove $(BINNAME)"
+	@echo "  make deb             - build Debian package (.deb)"
+	@echo "  make install-deb     - build and install Debian package (.deb)"
+	@echo "  make uninstall-deb   - remove installed Debian package"
 	@echo "  make test            - run pytest"
 	@echo "  make package         - OS package ($(FRAGMENT_OS))"
 	@echo "  make test-freebsd    - sync + pytest on app-test-001"

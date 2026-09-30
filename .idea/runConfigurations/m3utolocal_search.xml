@@ -1,23 +1,25 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="m3utolocal search TUI" type="PythonConfigurationType" factoryName="Python">
-    <module name="m3uToLocal" />
+    <module name="m3utolocal" />
     <option name="ENV_FILES" value="" />
     <option name="INTERPRETER_OPTIONS" value="" />
     <option name="PARENT_ENVS" value="true" />
     <envs>
       <env name="PYTHONUNBUFFERED" value="1" />
       <env name="PYTHONPATH" value="$PROJECT_DIR$" />
-      <env name="M3UTOLOCAL_M3U" value="/home/mlapointe/chans.m3u" />
+      <env name="M3UTOLOCAL_M3U" value="$USER_HOME$/chans.m3u" />
     </envs>
     <option name="SDK_HOME" value="$PROJECT_DIR$/.venv/bin/python" />
-    <option name="SDK_NAME" value="Python 3.14 (m3uToLocal)" />
+    <option name="SDK_NAME" value="Python 3.14 (m3utolocal)" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    <option name="IS_MODULE_SDK" value="true" />
+    <option name="IS_MODULE_SDK" value="false" />
     <option name="ADD_CONTENT_ROOTS" value="true" />
     <option name="ADD_SOURCE_ROOTS" value="true" />
+    <option name="DEBUG_JUST_MY_CODE" value="true" />
+    <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+    <option name="RUN_TOOL" value="" />
     <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-    <!-- Query before/with flags: SVT is the query, not a subcommand -->
-    <option name="PARAMETERS" value="-m /home/mlapointe/chans.m3u --tui SVT" />
+    <option name="PARAMETERS" value="-m $USER_HOME$/chans.m3u --tui SVT" />
     <option name="SHOW_COMMAND_LINE" value="false" />
     <option name="EMULATE_TERMINAL" value="true" />
     <option name="MODULE_MODE" value="false" />

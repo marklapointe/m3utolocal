@@ -7,6 +7,47 @@ import requests
 from m3utolocal.utils import format_time
 
 
+class DownloadCancelled(Exception):
+    """Raised when a cooperative cancel_check aborts a download."""
+
+
+class RateEstimator:
+    """Exponential moving average smoother for network throughput."""
+
+    def __init__(self, alpha: float = 0.15) -> None:
+        self.alpha = alpha
+        self.smoothed_rate: float = 0.0
+        self.last_time: float = 0.0
+        self.last_bytes: int = 0
+        self._initialized = False
+
+    def update(self, current_bytes: int, now: float) -> float:
+        if not self._initialized:
+            self._initialized = True
+            self.last_time = now
+            self.last_bytes = current_bytes
+            return 0.0
+
+        dt = now - self.last_time
+        if dt < 0.1:
+            return self.smoothed_rate
+
+        d_bytes = current_bytes - self.last_bytes
+        instant_rate = d_bytes / dt if dt > 0 else 0.0
+
+        if self.smoothed_rate == 0.0:
+            self.smoothed_rate = instant_rate
+        else:
+            self.smoothed_rate = (
+                self.alpha * instant_rate
+                + (1.0 - self.alpha) * self.smoothed_rate
+            )
+
+        self.last_time = now
+        self.last_bytes = current_bytes
+        return self.smoothed_rate
+
+
 def download_file(
     url,
     target_filename,
@@ -15,6 +56,7 @@ def download_file(
     final=True,
     session=None,
     on_progress=None,
+    cancel_check=None,
 ):
     """Download *url* to *target_filename* with resume support.
 
@@ -32,6 +74,9 @@ def download_file(
     *on_progress* is an optional callable::
 
         on_progress(downloaded: int, total_size: int, rate_str: str, eta_str: str) -> None
+
+    *cancel_check* is an optional zero-arg callable returning True to abort.
+    On cancel, ``.part`` is preserved and :class:`DownloadCancelled` is raised.
     """
     display_name = os.path.basename(target_filename)
     rate_str = "0.0 KB/s"
@@ -220,13 +265,14 @@ def download_file(
                     file_id=file_id,
                     final=final,
                     on_progress=on_progress,
+                    cancel_check=cancel_check,
                     display_name=display_name,
                 )
         except Exception:
             response.close()
             raise
 
-    except KeyboardInterrupt:
+    except (KeyboardInterrupt, DownloadCancelled):
         raise
     except Exception as e:
         if manager:
@@ -251,22 +297,25 @@ def _write_body(
     final,
     on_progress,
     display_name,
+    cancel_check=None,
 ):
     rate_str = "0.0 KB/s"
     with open(temp_path, mode) as tmp_file:
         downloaded = downloaded_start
         start_time = time.time()
         last_update_time = start_time
-        downloaded_since_start = 0
         rate = 0.0
+        estimator = RateEstimator(alpha=0.15)
+        estimator.update(downloaded, start_time)
 
         try:
             for chunk in r.iter_content(chunk_size=64 * 1024):
+                if cancel_check and cancel_check():
+                    raise DownloadCancelled("download cancelled")
                 if not chunk:
                     continue
                 tmp_file.write(chunk)
                 downloaded += len(chunk)
-                downloaded_since_start += len(chunk)
 
                 current_time = time.time()
                 if (
@@ -289,16 +338,15 @@ def _write_body(
 
                 percent = 0.0
                 eta_str = "ETA: --"
-                elapsed = current_time - start_time
-                if elapsed > 0:
-                    rate = downloaded_since_start / elapsed
+                rate = estimator.update(downloaded, current_time)
+                if rate > 0:
                     if rate > 1024 * 1024:
                         rate_str = f"{rate / (1024 * 1024):5.1f} MB/s"
                     else:
                         rate_str = f"{rate / 1024:5.1f} KB/s"
                 if total_size > 0:
                     percent = min(100.0, downloaded / total_size * 100)
-                    if elapsed > 0 and rate > 0:
+                    if rate > 0:
                         remaining = max(0, total_size - downloaded)
                         eta_str = f"ETA: {format_time(remaining / rate)}"
 

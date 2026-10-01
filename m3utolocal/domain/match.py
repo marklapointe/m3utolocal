@@ -5,6 +5,8 @@ from __future__ import annotations
 import re
 from typing import Any, Iterable, Mapping
 
+from m3utolocal.domain.models import Channel
+
 # Extensions treated as live / non-VOD even though they match the general pattern.
 _DENY_EXTENSIONS = re.compile(r"\.(m3u8|m3u)(\?.*)?$", re.IGNORECASE)
 _VOD_EXTENSION = re.compile(r"\.[a-zA-Z0-9]{2,4}(\?.*)?$")
@@ -20,13 +22,25 @@ def is_vod_url(url: str) -> bool:
 
 
 def find_matches(
-    channels: Iterable[Mapping[str, Any]],
+    channels: Iterable[Channel | Mapping[str, Any]],
     query: str,
 ) -> list[dict[str, Any]]:
-    """Case-insensitive substring match on tvg-id / tvg-name; VOD URLs only."""
+    """Case-insensitive substring match on tvg-id / tvg-name; VOD URLs only.
+
+    Always returns mutable dicts so callers can probe and set ``size`` in place.
+    """
     q = (query or "").lower()
     matches: list[dict[str, Any]] = []
     for c in channels:
+        if isinstance(c, Channel):
+            url = c.url
+            if not is_vod_url(url):
+                continue
+            if q and q not in c._norm_id and q not in c._norm_name:
+                continue
+            matches.append(dict(c))
+            continue
+
         tvg_id = str(c.get("tvg-id") or c.get("tvg_id") or "")
         tvg_name = str(c.get("tvg-name") or c.get("tvg_name") or "")
         url = str(c.get("url") or "")

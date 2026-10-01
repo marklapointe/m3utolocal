@@ -55,7 +55,10 @@ class M3UToLocalApp(App[None]):
                 matches, self.settings.resolved_output_dir(), self.settings.threads
             )
             self.run_worker(
-                self.download_manager.start_downloads(self.settings.threads),
+                self.download_manager.start_downloads(
+                    self.settings.threads,
+                    retries=self.settings.retries,
+                ),
                 exclusive=False,
             )
         self.push_screen(DownloadsScreen())

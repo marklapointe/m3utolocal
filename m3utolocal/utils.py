@@ -1,7 +1,14 @@
+from __future__ import annotations
+
 import os
 import re
+from pathlib import Path
+from typing import Iterator
+
 import requests
-import time
+
+from m3utolocal.domain.models import Channel
+
 
 def format_size(size_bytes):
     if size_bytes is None or size_bytes <= 0:
@@ -49,39 +56,42 @@ def get_file_size(url):
         pass
     return 0
 
-def parse_m3u(file_path):
-    channels = []
-    current_channel = {}
-    
+def iter_m3u(file_path: str | Path) -> Iterator[Channel]:
+    """Yield Channel entities lazily from an M3U playlist."""
+    path = Path(file_path)
+    if not path.is_file():
+        return
+
+    with open(path, "r", encoding="utf-8", errors="replace") as f:
+        tvg_id = ""
+        tvg_name = ""
+        for line in f:
+            line = line.strip()
+            if line.startswith("#EXTINF:"):
+                id_m = re.search(r'tvg-id="([^"]*)"', line)
+                name_m = re.search(r'tvg-name="([^"]*)"', line)
+                tvg_id = id_m.group(1) if id_m else ""
+                if name_m:
+                    tvg_name = name_m.group(1)
+                else:
+                    parts = line.split(",")
+                    tvg_name = parts[-1] if len(parts) > 1 else ""
+            elif line and not line.startswith("#"):
+                if tvg_id or tvg_name:
+                    yield Channel(tvg_id=tvg_id, tvg_name=tvg_name, url=line)
+                tvg_id = ""
+                tvg_name = ""
+
+
+def parse_m3u(file_path: str | Path) -> list[Channel]:
+    """Parse an M3U into a list of Channel entities.
+
+    Prints an error and returns ``[]`` when the file is missing (legacy contract).
+    """
     if not os.path.exists(file_path):
         print(f"Error: {file_path} not found.")
         return []
-
-    with open(file_path, 'r', encoding='utf-8') as f:
-        for line in f:
-            line = line.strip()
-            if line.startswith('#EXTINF:'):
-                # Extract tvg-id
-                tvg_id_match = re.search(r'tvg-id="([^"]*)"', line)
-                tvg_id = tvg_id_match.group(1) if tvg_id_match else ""
-                
-                # Extract tvg-name if available, otherwise use everything after the last comma
-                tvg_name_match = re.search(r'tvg-name="([^"]*)"', line)
-                if tvg_name_match:
-                    tvg_name = tvg_name_match.group(1)
-                else:
-                    parts = line.split(',')
-                    tvg_name = parts[-1] if len(parts) > 1 else ""
-                
-                current_channel['tvg-id'] = tvg_id
-                current_channel['tvg-name'] = tvg_name
-            elif line and not line.startswith('#'):
-                current_channel['url'] = line
-                # Only keep channels that have either tvg-id or tvg-name
-                if current_channel.get('tvg-id') or current_channel.get('tvg-name'):
-                    channels.append(current_channel)
-                current_channel = {}
-    return channels
+    return list(iter_m3u(file_path))
 
 def sanitize_filename(filename, max_length=200):
     """Sanitize a filename for cross-platform safety.

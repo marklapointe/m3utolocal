@@ -492,6 +492,7 @@ class DownloadsScreen(Screen):
     BINDINGS = [
         Binding("escape", "back", "Back", key_display="Esc", show=True),
         Binding("q", "back", "Back", show=False),
+        Binding("c", "cancel_downloads", "Cancel", show=True),
     ]
 
     def compose(self) -> ComposeResult:
@@ -506,6 +507,7 @@ class DownloadsScreen(Screen):
                 yield Static("", id="dl-current-detail", markup=False)
             yield DataTable(id="dl-table", zebra_stripes=True)
             with Horizontal(classes="action-bar"):
+                yield Button(_("Cancel"), id="btn-cancel-dl")
                 yield Button(_("Back"), id="btn-back")
         yield Footer()
 
@@ -589,7 +591,7 @@ class DownloadsScreen(Screen):
                     sz_str,
                     f"{s.pct:5.1f}%",
                     s.rate,
-                    s.status,
+                    str(s.status),
                     key=str(s.job.id),
                 )
         else:
@@ -600,13 +602,18 @@ class DownloadsScreen(Screen):
                     table.update_cell(row_k, "size", sz_str)
                     table.update_cell(row_k, "progress", f"{s.pct:5.1f}%")
                     table.update_cell(row_k, "rate", s.rate)
-                    table.update_cell(row_k, "status", s.status)
+                    table.update_cell(row_k, "status", str(s.status))
                 except Exception:
                     pass
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "btn-back":
             self.action_back()
+        elif event.button.id == "btn-cancel-dl":
+            self.action_cancel_downloads()
+
+    def action_cancel_downloads(self) -> None:
+        self.app.download_manager.cancel()
 
     def action_back(self) -> None:
         self.app.pop_screen()
